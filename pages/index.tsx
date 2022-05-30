@@ -1,11 +1,10 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import CustomHeader from '../components/CustomHeader/CustomHeader'
+import { navLinks } from '../routing/navLinks'
 
 export default function HomePage() {
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      <CustomHeader links={navLinks} />
     </>
-  );
+  )
 }
