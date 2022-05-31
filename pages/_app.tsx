@@ -25,14 +25,13 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   return (
     <>
       <Head>
-        <title>Mantine next example</title>
+        <title>Portfolio Website</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
-
       <ColorSchemeProvider
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
@@ -41,6 +40,17 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           theme={{ colorScheme }}
           withGlobalStyles
           withNormalizeCSS
+          defaultProps={{
+            Container: {
+              sizes: {
+                xs: 540,
+                sm: 720,
+                md: 960,
+                lg: 1140,
+                xl: 1320,
+              },
+            },
+          }}
         >
           <NotificationsProvider>
             <Component {...pageProps} />
