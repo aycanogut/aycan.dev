@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core'
 
-export const HEADER_HEIGHT = 60
+export const HEADER_HEIGHT = 80
 
 export default createStyles((theme) => ({
   root: {
@@ -51,16 +51,16 @@ export default createStyles((theme) => ({
     textDecoration: 'none',
     color:
       theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
+        ? theme.colors.yellow[4]
+        : theme.colors.dark[7],
     fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+    fontWeight: 700,
 
     '&:hover': {
       backgroundColor:
         theme.colorScheme === 'dark'
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
+          ? theme.colors.dark[9]
+          : theme.colors.gray[1],
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -73,10 +73,12 @@ export default createStyles((theme) => ({
     '&, &:hover': {
       backgroundColor:
         theme.colorScheme === 'dark'
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
+          ? theme.colors.dark[6]
+          : theme.colors.gray[1],
       color:
-        theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7],
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[1]
+          : theme.colors.violet[6],
     },
   },
 }))

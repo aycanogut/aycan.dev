@@ -1,12 +1,12 @@
 import { Container } from '@mantine/core'
 import Layout from '../components/Layout/Layout'
 
-const HomePage = () => (
+const Blog = () => (
   <>
     <Layout>
-      <Container size="md">Homepage</Container>
+      <Container size="md">Blog</Container>
     </Layout>
   </>
 )
 
-export default HomePage
+export default Blog

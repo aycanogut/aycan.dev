@@ -10958,6 +10958,11 @@ synchronous-promise@^2.0.15:
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
 
+tabler-icons-react@^1.48.0-dev.2:
+  version "1.48.0-dev.2"
+  resolved "https://registry.yarnpkg.com/tabler-icons-react/-/tabler-icons-react-1.48.0-dev.2.tgz#cb80b75e01fdf13a6240646b1415ec5fcceb52ce"
+  integrity sha512-bICh2xrnpEHsfGZSYVourQzcLWRWJElzpd0MCqsp9w1lzZOs6jW3WwUyWBXCOJ6hjSiHHsFWbxC92oA+nCt1AQ==
+
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
