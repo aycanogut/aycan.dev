@@ -1,10 +1,12 @@
-import CustomHeader from '../components/CustomHeader/CustomHeader'
-import { navLinks } from '../routing/navLinks'
+import { Container } from '@mantine/core'
+import Layout from '../components/Layout/Layout'
 
-export default function HomePage() {
-  return (
-    <>
-      <CustomHeader links={navLinks} />
-    </>
-  )
-}
+const HomePage = () => (
+  <>
+    <Layout>
+      <Container size="md">test</Container>
+    </Layout>
+  </>
+)
+
+export default HomePage
