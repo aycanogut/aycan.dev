@@ -2,7 +2,6 @@ import { createStyles } from '@mantine/core'
 
 export default createStyles((theme) => ({
   footer: {
-    marginTop: 'auto',
     borderTop: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
@@ -26,8 +25,8 @@ export default createStyles((theme) => ({
         ? theme.colors.dark[0]
         : theme.colors.dark[7],
 
-    [theme.fn.smallerThan('xs')]: {
-      marginTop: theme.spacing.md,
+    [theme.fn.largerThan('lg')]: {
+      gap: '4rem',
     },
   },
 }))
