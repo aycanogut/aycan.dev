@@ -51,7 +51,7 @@ export default createStyles((theme) => ({
     textDecoration: 'none',
     color:
       theme.colorScheme === 'dark'
-        ? theme.colors.yellow[4]
+        ? theme.colors.dark[0]
         : theme.colors.dark[7],
     fontSize: theme.fontSizes.sm,
     fontWeight: 700,
@@ -77,7 +77,7 @@ export default createStyles((theme) => ({
           : theme.colors.gray[1],
       color:
         theme.colorScheme === 'dark'
-          ? theme.colors.dark[1]
+          ? theme.colors.yellow[4]
           : theme.colors.violet[6],
     },
   },

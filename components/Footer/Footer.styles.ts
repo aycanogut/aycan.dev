@@ -23,7 +23,7 @@ export default createStyles((theme) => ({
   links: {
     color:
       theme.colorScheme === 'dark'
-        ? theme.colors.yellow[4]
+        ? theme.colors.dark[0]
         : theme.colors.dark[7],
 
     [theme.fn.smallerThan('xs')]: {
