@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {
   Header,
   Container,
@@ -14,29 +16,33 @@ import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
 
 interface ICustomHeaderProps {
-  links: { link: string; label: string }[]
+  links: { link: string; label: string; tabIndex: number }[]
 }
 
 const CustomHeader = ({ links }: ICustomHeaderProps) => {
   const [opened, toggleOpened] = useBooleanToggle(false)
   const [active, setActive] = useState(links[0].link)
   const { classes, cx } = useStyles()
+  const router = useRouter()
 
   const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, {
-        [classes.linkActive]: active === link.link,
-      })}
-      onClick={(event) => {
-        event.preventDefault()
-        setActive(link.link)
-        toggleOpened(false)
-      }}
-    >
-      {link.label}
-    </a>
+    <Link key={link.label} href={link.link}>
+      <a
+        tabIndex={link.tabIndex}
+        role="link"
+        className={cx(
+          classes.link,
+          router.pathname === link.link ? classes.linkActive : ''
+        )}
+        onClick={() => {
+          setActive(link.link)
+          toggleOpened(false)
+        }}
+        onKeyDown={undefined}
+      >
+        {link.label}
+      </a>
+    </Link>
   ))
 
   return (

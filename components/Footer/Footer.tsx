@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Group spacing={48} className={classes.links} position="center" noWrap>
+        <Group className={classes.links} position="center" noWrap>
           <a
             href="https://www.github.com/aycanogut"
             target="_blank"
