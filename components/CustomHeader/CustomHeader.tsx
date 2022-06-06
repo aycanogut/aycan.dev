@@ -28,7 +28,7 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
   const items = links.map((link) => (
     <Link key={link.label} href={link.link}>
       <a
-        tabIndex={link.tabIndex}
+        tabIndex={0}
         role="link"
         className={cx(
           classes.link,
