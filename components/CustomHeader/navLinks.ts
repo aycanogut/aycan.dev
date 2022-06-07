@@ -1,4 +1,4 @@
-import { urls } from './urls'
+import { urls } from '../../routing/urls'
 
 export const navLinks = [
   {
@@ -12,6 +12,10 @@ export const navLinks = [
   {
     link: urls.Blog,
     label: 'Blog',
+  },
+  {
+    link: urls.Bookmarks,
+    label: 'Bookmarks',
   },
   {
     link: urls.About,

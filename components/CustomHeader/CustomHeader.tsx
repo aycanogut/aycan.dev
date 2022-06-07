@@ -16,7 +16,7 @@ import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
 
 interface ICustomHeaderProps {
-  links: { link: string; label: string; tabIndex: number }[]
+  links: { link: string; label: string }[]
 }
 
 const CustomHeader = ({ links }: ICustomHeaderProps) => {

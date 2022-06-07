@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import CustomHeader from './CustomHeader'
-import { navLinks } from '../../routing/navLinks'
+import { navLinks } from './navLinks'
 
 describe('Welcome component', () => {
   it('has correct Next.js theming section link', () => {
