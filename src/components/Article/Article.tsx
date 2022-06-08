@@ -1,15 +1,14 @@
 import React, { FC } from 'react'
-import { Heart } from 'tabler-icons-react'
 import {
   Card,
-  Image,
   Text,
   Group,
   Badge,
-  Button,
   Anchor,
   useMantineTheme,
 } from '@mantine/core'
+
+import CustomImage from '../CustomImage/CustomImage'
 
 import useStyles from './Article.styles'
 
@@ -35,7 +34,7 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
       <Anchor className={classes.anchor} href={link} target="_blank">
         <Group className={classes.group}>
           <Card.Section>
-            <Image src={thumbnail} alt={title} height={100} width={200} />
+            <CustomImage src={thumbnail} alt={title} height={100} width={200} />
           </Card.Section>
           <Text size="xl" weight={700} align="center" className={classes.text}>
             {title}
