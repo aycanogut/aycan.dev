@@ -34,7 +34,13 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
       <Anchor className={classes.anchor} href={link} target="_blank">
         <Group className={classes.group}>
           <Card.Section>
-            <CustomImage src={thumbnail} alt={title} height={100} width={200} />
+            <CustomImage
+              src={thumbnail}
+              alt={title}
+              width={200}
+              height={100}
+              objectFit="cover"
+            />
           </Card.Section>
           <Text size="xl" weight={700} align="center" className={classes.text}>
             {title}
