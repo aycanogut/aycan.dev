@@ -23,4 +23,10 @@ export default createStyles((theme) => ({
       justifyContent: 'center',
     },
   },
+
+  text: {
+    [theme.fn.largerThan('sm')]: {
+      margin: '0 0 0 20px',
+    },
+  },
 }))
