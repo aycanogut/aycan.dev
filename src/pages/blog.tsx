@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC } from 'react'
-import { Container, Grid } from '@mantine/core'
+import { Container, Grid, Title } from '@mantine/core'
 import Layout from '../components/Layout/Layout'
 import Card from '../components/Article/Article'
 
@@ -22,6 +22,7 @@ interface IPostProps {
 const Blog: FC<IBlogProps> = ({ posts }) => (
   <Layout>
     <Container size="md" px="xl">
+      <Title order={1}>My Blog Posts</Title>
       <Card
         thumbnail="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
         title="Front End Resources"
