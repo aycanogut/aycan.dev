@@ -16,7 +16,7 @@ import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
 
 interface ICustomHeaderProps {
-  links: { link: string; label: string; tabIndex: number }[]
+  links: { link: string; label: string }[]
 }
 
 const CustomHeader = ({ links }: ICustomHeaderProps) => {
@@ -28,7 +28,7 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
   const items = links.map((link) => (
     <Link key={link.label} href={link.link}>
       <a
-        tabIndex={link.tabIndex}
+        tabIndex={0}
         role="link"
         className={cx(
           classes.link,
@@ -46,7 +46,7 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
   ))
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+    <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing={5} className={classes.links}>
           {items}

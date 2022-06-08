@@ -21,7 +21,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <ActionIcon size="xl" className={classes.links}>
-              <BrandGithub size={32} />
+              <BrandGithub size={32} aria-label="Github Icon" />
             </ActionIcon>
           </a>
           <a
@@ -30,7 +30,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <ActionIcon size="xl" className={classes.links}>
-              <BrandLinkedin size={32} />
+              <BrandLinkedin size={32} aria-label="LinkedIn Icon" />
             </ActionIcon>
           </a>
           <a
@@ -39,7 +39,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <ActionIcon size="xl" className={classes.links}>
-              <BrandMedium size={32} />
+              <BrandMedium size={32} aria-label="Medium Icon" />
             </ActionIcon>
           </a>
           <a
@@ -48,7 +48,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <ActionIcon size="xl" className={classes.links}>
-              <BrandTwitter size={32} />
+              <BrandTwitter size={32} aria-label="Twitter Icon" />
             </ActionIcon>
           </a>
         </Group>

@@ -1,5 +1,5 @@
 import CustomHeader from './CustomHeader'
-import { navLinks } from '../../routing/navLinks'
+import { navLinks } from './navLinks'
 
 export default {
   title: 'Header',
