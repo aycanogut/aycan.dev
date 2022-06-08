@@ -6,6 +6,11 @@ export default createStyles((theme) => ({
   root: {
     position: 'relative',
     zIndex: 1,
+    marginBottom: '120px',
+
+    [theme.fn.smallerThan('md')]: {
+      marginBottom: '100px',
+    },
   },
 
   dropdown: {
