@@ -17,7 +17,7 @@ interface IArticleProps {
   thumbnail: string
   title: string
   link: string
-  categories: []
+  categories: [string, string, string, string, string]
 }
 
 const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {

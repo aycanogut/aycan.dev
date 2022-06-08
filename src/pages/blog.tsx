@@ -15,15 +15,22 @@ interface IPostProps {
   thumbnail: string
   title: string
   link: string
-  categories: []
+  categories: any
   pubDate: string
 }
 
 const Blog: FC<IBlogProps> = ({ posts }) => (
   <Layout>
     <Container size="md" px="xl">
+      <Card
+        thumbnail="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
+        title="Front End Resources"
+        categories={['Web Development', 'Design', 'HTML', 'CSS', 'JavaScript']}
+        link="https://www.github.com/aycanogut/front-end-resources"
+      />
       {posts.items.map((post: IPostProps) => (
         <Card
+          key={post.title}
           thumbnail={post.thumbnail}
           title={post.title}
           categories={post.categories}
