@@ -7,11 +7,7 @@ interface ICustomImageProps {
   width?: number
   height?: number
   layout?: 'fixed' | 'fill' | 'intrinsic' | 'responsive' | 'raw' | undefined
-<<<<<<< HEAD
   objectFit: any
-=======
-  objectFit: 
->>>>>>> 8f4bc7d514d380e563eb66725abf82e10f3bf2a9
 }
 
 const CustomImage: FC<ICustomImageProps> = ({
