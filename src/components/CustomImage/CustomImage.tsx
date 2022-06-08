@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Image, { ImageLoader } from 'next/image'
+import Image from 'next/image'
 
 interface ICustomImageProps {
   src: string
@@ -7,7 +7,7 @@ interface ICustomImageProps {
   width?: number
   height?: number
   layout?: 'fixed' | 'fill' | 'intrinsic' | 'responsive' | 'raw' | undefined
-  loader?: ImageLoader
+  objectFit: any
 }
 
 const CustomImage: FC<ICustomImageProps> = ({
@@ -16,7 +16,7 @@ const CustomImage: FC<ICustomImageProps> = ({
   width,
   height,
   layout,
-  loader,
+  objectFit,
 }) => (
   <Image
     src={src}
@@ -24,7 +24,7 @@ const CustomImage: FC<ICustomImageProps> = ({
     width={width}
     height={height}
     layout={layout}
-    loader={loader}
+    objectFit={objectFit}
   />
 )
 
