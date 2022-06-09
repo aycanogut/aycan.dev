@@ -40,17 +40,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           theme={{ colorScheme }}
           withGlobalStyles
           withNormalizeCSS
-          defaultProps={{
-            Container: {
-              sizes: {
-                xs: 540,
-                sm: 720,
-                md: 960,
-                lg: 1140,
-                xl: 1320,
-              },
-            },
-          }}
         >
           <NotificationsProvider>
             <Component {...pageProps} />
