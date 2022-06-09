@@ -1,12 +1,10 @@
-import { Container, Title } from '@mantine/core'
+import { Title } from '@mantine/core'
 import Layout from '../components/Layout/Layout'
 
-const Bookmarks = () => (
+const Blog = () => (
   <Layout>
-    <Container size="md">
-      <Title order={1}>Bookmarks that I liked all around the web</Title>
-    </Container>
+    <Title order={1}>Bookmarks that I liked all around the web</Title>
   </Layout>
 )
 
-export default Bookmarks
+export default Blog
