@@ -40,7 +40,7 @@ const Blog: FC<IBlogProps> = ({ posts }) => (
   </Layout>
 )
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut'
   )
