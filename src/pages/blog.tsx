@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Title } from '@mantine/core'
 import Layout from '../components/Layout/Layout'
-import Card from '../components/Article/Article'
+import Article from '../components/Article/Article'
 
 interface IBlogProps {
   posts: {
@@ -22,14 +22,14 @@ interface IPostProps {
 const Blog: FC<IBlogProps> = ({ posts }) => (
   <Layout>
     <Title order={1}>My Blog Posts</Title>
-    <Card
+    <Article
       thumbnail="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
       title="Front End Resources"
       categories={['Web Development', 'Design', 'HTML', 'CSS', 'JavaScript']}
       link="https://www.github.com/aycanogut/front-end-resources"
     />
     {posts.items.map((post: IPostProps) => (
-      <Card
+      <Article
         key={post.title}
         thumbnail={post.thumbnail}
         title={post.title}
