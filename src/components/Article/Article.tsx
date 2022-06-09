@@ -32,8 +32,8 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
   return (
     <Card withBorder radius="md" p="xl" my={30} className={classes.card}>
       <Anchor className={classes.anchor} href={link} target="_blank">
-        <Group className={classes.group}>
-          <Card.Section>
+        <Card.Section>
+          <Group className={classes.group}>
             <CustomImage
               src={thumbnail}
               alt={title}
@@ -41,11 +41,16 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
               height={100}
               objectFit="cover"
             />
-          </Card.Section>
-          <Text size="xl" weight={700} align="center" className={classes.text}>
-            {title}
-          </Text>
-        </Group>
+            <Text
+              size="xl"
+              weight={700}
+              align="center"
+              className={classes.text}
+            >
+              {title}
+            </Text>
+          </Group>
+        </Card.Section>
       </Anchor>
       <Card.Section>
         <Group spacing={10} m={20} className={classes.group}>
