@@ -7,9 +7,7 @@ import {
   Anchor,
   useMantineTheme,
 } from '@mantine/core'
-
 import CustomImage from '../CustomImage/CustomImage'
-
 import useStyles from './Article.styles'
 
 interface IArticleProps {

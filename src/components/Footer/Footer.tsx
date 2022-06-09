@@ -5,7 +5,6 @@ import {
   BrandMedium,
   BrandTwitter,
 } from 'tabler-icons-react'
-
 import useStyles from './Footer.styles'
 
 const Footer = () => {
