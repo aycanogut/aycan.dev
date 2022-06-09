@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { Box } from '@mantine/core'
+import { Container } from '@mantine/core'
 import CustomHeader from '../CustomHeader/CustomHeader'
 import Footer from '../Footer/Footer'
 import { navLinks } from '../CustomHeader/navLinks'
@@ -9,11 +9,13 @@ interface ILayoutProps {
 }
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
-  <Box>
+  <>
     <CustomHeader links={navLinks} />
-    <Box>{children}</Box>
+    <Container size="md" px="xl">
+      {children}
+    </Container>
     <Footer />
-  </Box>
+  </>
 )
 
 export default Layout
