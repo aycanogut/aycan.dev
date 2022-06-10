@@ -3,7 +3,7 @@ import CustomImage from './CustomImage'
 
 describe('Welcome component', () => {
   it('has correct Next.js theming section link', () => {
-    render(<CustomImage src={''} alt={''} />)
+    render(<CustomImage src={''} alt={''} objectFit={undefined} />)
     expect(screen.getByText('this guide')).toHaveAttribute(
       'href',
       'https://mantine.dev/theming/next/'
