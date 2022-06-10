@@ -10,4 +10,7 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ['www.simplilearn.com', 'cdn-images-1.medium.com'],
   },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
 })
