@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Footer from './Footer'
+import Footer from './CustomFooter'
 
 describe('Welcome component', () => {
   it('has correct Next.js theming section link', () => {

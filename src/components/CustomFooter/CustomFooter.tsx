@@ -1,17 +1,17 @@
-import { Container, Group, ActionIcon } from '@mantine/core'
+import { Container, Group, ActionIcon, Footer } from '@mantine/core'
 import {
   BrandGithub,
   BrandLinkedin,
   BrandMedium,
   BrandTwitter,
 } from 'tabler-icons-react'
-import useStyles from './Footer.styles'
+import useStyles from './CustomFooter.styles'
 
-const Footer = () => {
+const CustomFooter = () => {
   const { classes } = useStyles()
 
   return (
-    <div className={classes.footer}>
+    <Footer className={classes.footer} height="">
       <Container className={classes.inner}>
         <Group className={classes.links} position="center" noWrap>
           <a
@@ -52,8 +52,8 @@ const Footer = () => {
           </a>
         </Group>
       </Container>
-    </div>
+    </Footer>
   )
 }
 
-export default Footer
+export default CustomFooter
