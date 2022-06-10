@@ -37,6 +37,11 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           #__next {
             height: 100vh;
           }
+
+          //! remove it
+          ::-webkit-scrollbar {
+            display: none;
+          }
         `}
       </style>
       <ColorSchemeProvider
