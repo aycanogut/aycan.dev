@@ -21,7 +21,9 @@ interface IPostProps {
 
 const Blog: FC<IBlogProps> = ({ posts }) => (
   <Layout>
-    <Title order={1}>My Blog Posts</Title>
+    <Title order={1} mb={30}>
+      My Blog Posts
+    </Title>
     <Article
       thumbnail="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
       title="Front End Resources"

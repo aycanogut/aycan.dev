@@ -28,7 +28,7 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
   ))
 
   return (
-    <Card withBorder radius="md" p="xl" my={30} className={classes.card}>
+    <Card withBorder radius="md" p="xl" mb={30} className={classes.card}>
       <Anchor className={classes.anchor} href={link} target="_blank">
         <Card.Section>
           <Group className={classes.group}>
