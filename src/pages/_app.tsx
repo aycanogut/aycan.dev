@@ -32,6 +32,13 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
+      <style jsx global>
+        {`
+          #__next {
+            height: 100vh;
+          }
+        `}
+      </style>
       <ColorSchemeProvider
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
