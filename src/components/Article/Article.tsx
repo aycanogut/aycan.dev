@@ -1,23 +1,20 @@
 import React, { FC } from 'react'
-import { Heart } from 'tabler-icons-react'
 import {
   Card,
-  Image,
   Text,
   Group,
   Badge,
-  Button,
   Anchor,
   useMantineTheme,
 } from '@mantine/core'
-
+import CustomImage from '../CustomImage/CustomImage'
 import useStyles from './Article.styles'
 
 interface IArticleProps {
   thumbnail: string
   title: string
   link: string
-  categories: []
+  categories: [string, string, string, string, string]
 }
 
 const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
@@ -31,20 +28,27 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
   ))
 
   return (
-    <Card withBorder radius="md" p="xl" my={30} className={classes.card}>
+    <Card withBorder radius="md" p="xl" mb={30} className={classes.card}>
       <Anchor className={classes.anchor} href={link} target="_blank">
-        <Group className={classes.group}>
-          <Card.Section>
-            <Image src={thumbnail} alt={title} height={100} width={200} />
-          </Card.Section>
-          <Card.Section mt="md">
-            <Group position="apart">
-              <Text size="lg" weight={500}>
-                {title}
-              </Text>
-            </Group>
-          </Card.Section>
-        </Group>
+        <Card.Section>
+          <Group className={classes.group}>
+            <CustomImage
+              src={thumbnail}
+              alt={title}
+              width={200}
+              height={100}
+              objectFit="cover"
+            />
+            <Text
+              size="xl"
+              weight={700}
+              align="center"
+              className={classes.text}
+            >
+              {title}
+            </Text>
+          </Group>
+        </Card.Section>
       </Anchor>
       <Card.Section>
         <Group spacing={10} m={20} className={classes.group}>

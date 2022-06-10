@@ -6,11 +6,7 @@ export default createStyles((theme) => ({
   root: {
     position: 'relative',
     zIndex: 1,
-    marginBottom: '120px',
-
-    [theme.fn.smallerThan('md')]: {
-      marginBottom: '100px',
-    },
+    marginBottom: '100px',
   },
 
   dropdown: {
@@ -83,7 +79,7 @@ export default createStyles((theme) => ({
       color:
         theme.colorScheme === 'dark'
           ? theme.colors.yellow[4]
-          : theme.colors.violet[6],
+          : theme.colors.violet[8],
     },
   },
 }))

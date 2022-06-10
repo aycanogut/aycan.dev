@@ -1,7 +1,7 @@
-import Card from './Article'
+import Article from './Article'
 
 export default {
-  title: 'Card',
+  title: 'Article',
 }
 
-export const Usage = (args: any) => <Card {...args} />
+export const Usage = (args: any) => <Article {...args} />

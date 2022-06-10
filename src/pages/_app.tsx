@@ -25,13 +25,25 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   return (
     <>
       <Head>
-        <title>Portfolio Website</title>
+        <title>Aycan&apos;s website</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
+      <style jsx global>
+        {`
+          #__next {
+            height: 100vh;
+          }
+
+          //! remove it
+          ::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
       <ColorSchemeProvider
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
@@ -40,17 +52,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           theme={{ colorScheme }}
           withGlobalStyles
           withNormalizeCSS
-          defaultProps={{
-            Container: {
-              sizes: {
-                xs: 540,
-                sm: 720,
-                md: 960,
-                lg: 1140,
-                xl: 1320,
-              },
-            },
-          }}
         >
           <NotificationsProvider>
             <Component {...pageProps} />

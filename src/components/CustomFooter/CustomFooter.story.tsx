@@ -1,4 +1,4 @@
-import Footer from './Footer'
+import Footer from './CustomFooter'
 
 export default {
   title: 'Footer',
