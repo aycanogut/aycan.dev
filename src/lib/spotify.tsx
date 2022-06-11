@@ -1,7 +1,7 @@
 // https://leerob.io/snippets/spotify
 
-const client_id = process.SPOTIFY_CLIENT_ID
-const client_secret = process.SPOTIFY_CLIENT_SECRET
+const client_id = process.env.SPOTIFY_CLIENT_ID
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64')
@@ -31,7 +31,7 @@ export const getNowPlaying = async () => {
 
   return fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
-      Authhorization: `Bearer ${access_token}`,
+      Authorization: `Bearer ${access_token}`,
     },
   })
 }
