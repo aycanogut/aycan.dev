@@ -10,11 +10,15 @@ export default async function handler(
   const response = await getTopTracks()
   const { items } = await response.json()
 
-  const tracks = items.slice(0, 10).map((track) => ({
-    artist: track.artists.map((_artist) => _artist.name).join(', '),
-    songUrl: track.external_urls_spotify,
-    title: track.name,
-  }))
+  const tracks = items
+    .slice(0, 10)
+    .map(
+      (track: { artists: any[]; external_urls_spotify: any; name: any }) => ({
+        artist: track.artists.map((_artist) => _artist.name).join(', '),
+        songUrl: track.external_urls_spotify,
+        title: track.name,
+      })
+    )
 
   res.setHeader(
     'Cache-Control',
