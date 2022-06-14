@@ -15,7 +15,8 @@ interface IFilteredBookmarksProps {
 
 const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
   const [value, setValue] = useState<string>('blog')
-  const filteredBookmarks = bookmarks.items.filter(
+
+  const filteredBookmarks = bookmarks.items?.filter(
     (filteredBookmark: IFilteredBookmarksProps) =>
       filteredBookmark.tags[0] === value
   )
@@ -41,7 +42,7 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {filteredBookmarks.map((bookmark: IBookmarkProps) => (
+      {filteredBookmarks?.map((bookmark: IBookmarkProps) => (
         <Bookmark
           key={bookmark._id}
           title={bookmark.title}
