@@ -35,7 +35,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       <style jsx global>
         {`
           #__next {
-            height: 100vh;
+            min-height: 100vh;
           }
 
           //! remove it

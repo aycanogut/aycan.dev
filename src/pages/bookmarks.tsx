@@ -33,36 +33,35 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
         mb={30}
         sx={{ width: '100%' }}
       />
-      {bookmarks.items.map((bookmark: IBookmarkProps) => (
+      {/* {bookmarks.items.map((bookmark: IBookmarkProps) => (
         <Bookmark
           key={bookmark._id}
           title={bookmark.title}
           link={bookmark.link}
         />
-      ))}
-      {console.log(bookmarks)}
+      ))} */}
     </Layout>
   )
 }
 
-export async function getServerSideProps() {
-  const res = await fetch(
-    `https://api.raindrop.io/rest/v1/raindrops/${bookmarkIds.blogs}`,
-    {
-      method: 'get',
-      headers: {
-        Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
-      },
-    }
-  )
+// export async function getServerSideProps() {
+//   const res = await fetch(
+//     'https://api.raindrop.io/rest/v1/raindrops/25244220',
+//     {
+//       method: 'get',
+//       headers: {
+//         Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
+//       },
+//     }
+//   )
 
-  const bookmarks = await res.json()
+//   const bookmarks = await res.json()
 
-  return {
-    props: {
-      bookmarks,
-    },
-  }
-}
+//   return {
+//     props: {
+//       bookmarks,
+//     },
+//   }
+// }
 
 export default Bookmarks

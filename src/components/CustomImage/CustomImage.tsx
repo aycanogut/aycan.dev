@@ -7,7 +7,8 @@ interface ICustomImageProps {
   width?: number
   height?: number
   layout?: 'fixed' | 'fill' | 'intrinsic' | 'responsive' | 'raw' | undefined
-  objectFit: any
+  objectFit?: any
+  className?: string
 }
 
 const CustomImage: FC<ICustomImageProps> = ({
@@ -17,6 +18,7 @@ const CustomImage: FC<ICustomImageProps> = ({
   height,
   layout,
   objectFit,
+  className,
 }) => (
   <Image
     src={src}
@@ -25,6 +27,7 @@ const CustomImage: FC<ICustomImageProps> = ({
     height={height}
     layout={layout}
     objectFit={objectFit}
+    className={className}
   />
 )
 
