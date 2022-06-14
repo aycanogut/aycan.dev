@@ -15,7 +15,8 @@ interface IFilteredBookmarksProps {
 
 const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
   const [value, setValue] = useState<string>('blog')
-  const filteredBookmarks = bookmarks.items.filter(
+
+  const filteredBookmarks = bookmarks.items?.filter(
     (filteredBookmark: IFilteredBookmarksProps) =>
       filteredBookmark.tags[0] === value
   )
