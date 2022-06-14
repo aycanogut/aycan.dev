@@ -8,7 +8,7 @@ module.exports = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['www.simplilearn.com', 'cdn-images-1.medium.com'],
+    domains: ['www.simplilearn.com', 'cdn-images-1.medium.com', 'i.scdn.co'],
   },
   env: {
     BASE_URL: process.env.BASE_URL,
