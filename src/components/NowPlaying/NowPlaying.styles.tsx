@@ -68,4 +68,8 @@ export default createStyles(() => ({
     width: 40,
     height: 40,
   },
+
+  notListening: {
+    color: '#a2a2a2',
+  },
 }))
