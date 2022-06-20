@@ -8,7 +8,7 @@ import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 interface IBookmarksProps {
   length: IBookmarksProps | undefined
   items: []
-  // filter: Function
+  filter: Function
   map: Function
   data: []
 }
@@ -21,6 +21,7 @@ const Bookmarks: FC = () => {
   const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
 
+  // eslint-disable-next-line no-console
   data && data.length && data.map((item: any) => console.log(item))
 
   return (
@@ -47,10 +48,10 @@ const Bookmarks: FC = () => {
       {data &&
         data.length &&
         data
-          // ?.filter(
-          //   (filteredBookmark: IFilteredBookmarksProps) =>
-          //     filteredBookmark.tags[0] === value
-          // )
+          .filter(
+            (filteredBookmark: IFilteredBookmarksProps) =>
+              filteredBookmark.tags[0] === value
+          )
           .map((bookmark: IBookmarkProps) => (
             <Bookmark
               key={bookmark._id}
