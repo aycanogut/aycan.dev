@@ -1,22 +1,24 @@
 import { FC, useState } from 'react'
 import { SegmentedControl, Title } from '@mantine/core'
+import useSWR from 'swr'
+import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
 import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
-  bookmarks: {
-    items: []
-  }
+  items: []
+  filter: Function
 }
 
 interface IFilteredBookmarksProps {
   tags: [string]
 }
 
-const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
+const Bookmarks: FC = () => {
+  const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
 
-  const filteredBookmarks = bookmarks.items?.filter(
+  const filteredBookmarks = data?.filter(
     (filteredBookmark: IFilteredBookmarksProps) =>
       filteredBookmark.tags[0] === value
   )
@@ -51,26 +53,6 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
       ))}
     </Layout>
   )
-}
-
-export async function getServerSideProps() {
-  const res = await fetch(
-    'https://api.raindrop.io/rest/v1/raindrops/0?perpage=50&collectionId=25244220',
-    {
-      method: 'get',
-      headers: {
-        Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
-      },
-    }
-  )
-
-  const bookmarks = await res.json()
-
-  return {
-    props: {
-      bookmarks,
-    },
-  }
 }
 
 export default Bookmarks
