@@ -7,18 +7,14 @@ import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
   bookmarks: { items: [] }
-  map: Function
 }
 
 interface IFilteredBookmarksProps {
   tags: [string]
 }
 
-const Bookmarks: FC<IBookmarksProps> = () => {
-  const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
+const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
   const [value, setValue] = useState<string>('blog')
-
-  console.log(data)
 
   return (
     <Layout>
@@ -41,15 +37,28 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {data?.map((bookmark: IBookmarkProps) => (
+      {bookmarks?.items.map((bookmark: IBookmarkProps) => (
         <Bookmark
-          key={bookmark._id}
+          key={bookmark.title}
           title={bookmark.title}
           link={bookmark.link}
         />
       ))}
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut'
+  )
+  const bookmarks = await res.json()
+
+  return {
+    props: {
+      bookmarks,
+    },
+  }
 }
 
 export default Bookmarks
