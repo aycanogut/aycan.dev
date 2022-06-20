@@ -18,11 +18,6 @@ const Bookmarks: FC = () => {
   const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
 
-  const filteredBookmarks = data?.filter(
-    (filteredBookmark: IFilteredBookmarksProps) =>
-      filteredBookmark.tags[0] === value
-  )
-
   return (
     <Layout>
       <Title order={1} mb={30}>
@@ -44,13 +39,18 @@ const Bookmarks: FC = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {filteredBookmarks?.map((bookmark: IBookmarkProps) => (
-        <Bookmark
-          key={bookmark._id}
-          title={bookmark.title}
-          link={bookmark.link}
-        />
-      ))}
+      {data
+        ?.filter(
+          (filteredBookmark: IFilteredBookmarksProps) =>
+            filteredBookmark.tags[0] === value
+        )
+        .map((bookmark: IBookmarkProps) => (
+          <Bookmark
+            key={bookmark._id}
+            title={bookmark.title}
+            link={bookmark.link}
+          />
+        ))}
     </Layout>
   )
 }
