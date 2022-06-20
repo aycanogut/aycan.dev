@@ -7,7 +7,8 @@ import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
   items: []
-  filter: Function
+  // filter: Function
+  map: Function
 }
 
 interface IFilteredBookmarksProps {
@@ -39,18 +40,19 @@ const Bookmarks: FC = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {data
-        ?.filter(
-          (filteredBookmark: IFilteredBookmarksProps) =>
-            filteredBookmark.tags[0] === value
-        )
-        .map((bookmark: IBookmarkProps) => (
-          <Bookmark
-            key={bookmark._id}
-            title={bookmark.title}
-            link={bookmark.link}
-          />
-        ))}
+      {data &&
+        data
+          // ?.filter(
+          //   (filteredBookmark: IFilteredBookmarksProps) =>
+          //     filteredBookmark.tags[0] === value
+          // )
+          .map((bookmark: IBookmarkProps) => (
+            <Bookmark
+              key={bookmark._id}
+              title={bookmark.title}
+              link={bookmark.link}
+            />
+          ))}
     </Layout>
   )
 }
