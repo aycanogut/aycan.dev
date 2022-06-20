@@ -7,7 +7,7 @@ import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
   bookmarks: { items: [] }
-  filter: Function
+  map: Function
 }
 
 interface IFilteredBookmarksProps {
@@ -15,8 +15,10 @@ interface IFilteredBookmarksProps {
 }
 
 const Bookmarks: FC<IBookmarksProps> = () => {
-  const { data } = useSWR<IBookmarksProps>('/api/raindrop', fetcher)
+  const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
+
+  console.log(data)
 
   return (
     <Layout>
@@ -39,19 +41,13 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {data &&
-        data
-          .filter(
-            (filteredBookmark: IFilteredBookmarksProps) =>
-              filteredBookmark.tags[0] === value
-          )
-          .map((bookmark: IBookmarkProps) => (
-            <Bookmark
-              key={bookmark._id}
-              title={bookmark.title}
-              link={bookmark.link}
-            />
-          ))}
+      {data?.map((bookmark: IBookmarkProps) => (
+        <Bookmark
+          key={bookmark._id}
+          title={bookmark.title}
+          link={bookmark.link}
+        />
+      ))}
     </Layout>
   )
 }
