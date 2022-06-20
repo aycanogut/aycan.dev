@@ -18,8 +18,10 @@ interface IFilteredBookmarksProps {
 }
 
 const Bookmarks: FC = () => {
-  const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
+  const { data, error } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
+
+  console.log(error)
 
   // eslint-disable-next-line no-console
   data && data.length && data.map((item: any) => console.log(item))
