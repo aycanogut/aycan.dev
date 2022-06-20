@@ -6,22 +6,15 @@ import Layout from '../components/Layout/Layout'
 import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
-  length: IBookmarksProps | undefined
-  items: []
-  filter: Function
-  map: Function
-  data: []
+  bookmarks: { items: [] }
 }
 
 interface IFilteredBookmarksProps {
   tags: [string]
 }
 
-const Bookmarks: FC = () => {
-  const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
+const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
   const [value, setValue] = useState<string>('blog')
-
-  // eslint-disable-next-line no-console
 
   return (
     <Layout>
@@ -44,22 +37,28 @@ const Bookmarks: FC = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {data &&
-        data.length &&
-        data
-          .filter(
-            (filteredBookmark: IFilteredBookmarksProps) =>
-              filteredBookmark.tags[0] === value
-          )
-          .map((bookmark: IBookmarkProps) => (
-            <Bookmark
-              key={bookmark._id}
-              title={bookmark.title}
-              link={bookmark.link}
-            />
-          ))}
+      {bookmarks?.items.map((bookmark: IBookmarkProps) => (
+        <Bookmark
+          key={bookmark.title}
+          title={bookmark.title}
+          link={bookmark.link}
+        />
+      ))}
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut'
+  )
+  const bookmarks = await res.json()
+
+  return {
+    props: {
+      bookmarks,
+    },
+  }
 }
 
 export default Bookmarks
