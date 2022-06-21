@@ -1,12 +1,11 @@
 import { FC, useState } from 'react'
 import { SegmentedControl, Title } from '@mantine/core'
-import useSWR from 'swr'
-import fetcher from '../lib/fetcher'
+import { getBookmarks } from '../lib/raindrop'
 import Layout from '../components/Layout/Layout'
 import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
-  bookmarks: { items: [] }
+  bookmarks: { items: []; filter: Function }
 }
 
 interface IFilteredBookmarksProps {
@@ -37,22 +36,24 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {bookmarks?.items.map((bookmark: IBookmarkProps) => (
-        <Bookmark
-          key={bookmark.title}
-          title={bookmark.title}
-          link={bookmark.link}
-        />
-      ))}
+      {bookmarks
+        .filter(
+          (filteredBookmark: IFilteredBookmarksProps) =>
+            filteredBookmark.tags[0] === value
+        )
+        .map((bookmark: IBookmarkProps) => (
+          <Bookmark
+            key={bookmark._id}
+            title={bookmark.title}
+            link={bookmark.link}
+          />
+        ))}
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut'
-  )
-  const bookmarks = await res.json()
+  const bookmarks = await getBookmarks()
 
   return {
     props: {
