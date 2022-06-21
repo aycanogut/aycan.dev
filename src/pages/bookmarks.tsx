@@ -36,18 +36,24 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {bookmarks
-        .filter(
-          (filteredBookmark: IFilteredBookmarksProps) =>
-            filteredBookmark.tags[0] === value
-        )
-        .map((bookmark: IBookmarkProps) => (
-          <Bookmark
-            key={bookmark._id}
-            title={bookmark.title}
-            link={bookmark.link}
-          />
-        ))}
+      {bookmarks ? (
+        bookmarks
+          .filter(
+            (filteredBookmark: IFilteredBookmarksProps) =>
+              filteredBookmark.tags[0] === value
+          )
+          .map((bookmark: IBookmarkProps) => (
+            <Bookmark
+              key={bookmark._id}
+              title={bookmark.title}
+              link={bookmark.link}
+            />
+          ))
+      ) : (
+        <Title order={3} align="center">
+          Connection error
+        </Title>
+      )}
     </Layout>
   )
 }
