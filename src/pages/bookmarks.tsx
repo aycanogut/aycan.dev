@@ -5,7 +5,7 @@ import Layout from '../components/Layout/Layout'
 import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
-  bookmarks: { items: []; filter: Function }
+  bookmarks: any
 }
 
 interface IFilteredBookmarksProps {
@@ -36,7 +36,7 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {bookmarks ? (
+      {typeof bookmarks !== undefined ? (
         bookmarks
           .filter(
             (filteredBookmark: IFilteredBookmarksProps) =>
