@@ -11,6 +11,6 @@ module.exports = withBundleAnalyzer({
     domains: ['www.simplilearn.com', 'cdn-images-1.medium.com', 'i.scdn.co'],
   },
   env: {
-    BASE_URL: process.env.BASE_URL,
+    RAINDROP_TOKEN: process.env.RAINDROP_TOKEN,
   },
 })

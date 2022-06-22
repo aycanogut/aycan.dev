@@ -8,16 +8,17 @@ export default async function handler(
   const response = await getBookmarks()
 
   if (response.status === 204 || response.status > 400) {
-    return res.status(200).json({ data: false })
+    console.log('error')
+    return res.status(200).json({ isBookmark: false })
   }
-
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=60, stale-while-revalidate=30'
-  )
 
   const result = await response
   const bookmarks = result.items
+
+  if (bookmarks === null) {
+    console.log('empty')
+    return res.status(200).json({ isBookmark: false })
+  }
 
   return res.status(200).json(bookmarks)
 }
