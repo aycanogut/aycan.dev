@@ -1,6 +1,6 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { SegmentedControl, Title } from '@mantine/core'
-import { getBookmarks } from '../lib/raindrop'
+// import { getBookmarks } from '../lib/raindrop'
 import Layout from '../components/Layout/Layout'
 import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
@@ -12,8 +12,29 @@ interface IFilteredBookmarksProps {
   tags: [string]
 }
 
-const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
+const Bookmarks: FC<IBookmarksProps> = () => {
   const [value, setValue] = useState<string>('blog')
+  const [bookmarks, setBookmarks] = useState([])
+
+  useEffect(() => {
+    const getBookmarks = async () => {
+      const res = await fetch(
+        'https://api.raindrop.io/rest/v1/raindrops/0?perpage=50&collectionId=25244220',
+        {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
+          },
+        }
+      )
+
+      const data: { items: [] } = await res.json()
+      const items: [] = data?.items
+
+      setBookmarks(items)
+    }
+    getBookmarks()
+  }, [])
 
   return (
     <Layout>
@@ -36,36 +57,20 @@ const Bookmarks: FC<IBookmarksProps> = ({ bookmarks }) => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {typeof bookmarks !== undefined ? (
-        bookmarks
-          .filter(
-            (filteredBookmark: IFilteredBookmarksProps) =>
-              filteredBookmark.tags[0] === value
-          )
-          .map((bookmark: IBookmarkProps) => (
-            <Bookmark
-              key={bookmark._id}
-              title={bookmark.title}
-              link={bookmark.link}
-            />
-          ))
-      ) : (
-        <Title order={3} align="center">
-          Connection error
-        </Title>
-      )}
+      {bookmarks
+        .filter(
+          (filteredBookmark: IFilteredBookmarksProps) =>
+            filteredBookmark.tags[0] === value
+        )
+        .map((bookmark: IBookmarkProps) => (
+          <Bookmark
+            key={bookmark._id}
+            title={bookmark.title}
+            link={bookmark.link}
+          />
+        ))}
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  const bookmarks = await getBookmarks()
-
-  return {
-    props: {
-      bookmarks,
-    },
-  }
 }
 
 export default Bookmarks
