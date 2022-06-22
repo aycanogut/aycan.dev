@@ -1,11 +1,14 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 import { SegmentedControl, Title } from '@mantine/core'
-// import { getBookmarks } from '../lib/raindrop'
+import useSWR from 'swr'
+import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
 import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
 
 interface IBookmarksProps {
-  bookmarks: any
+  title: string
+  link: string
+  filter: Function
 }
 
 interface IFilteredBookmarksProps {
@@ -13,28 +16,8 @@ interface IFilteredBookmarksProps {
 }
 
 const Bookmarks: FC<IBookmarksProps> = () => {
+  const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
-  const [bookmarks, setBookmarks] = useState([])
-
-  useEffect(() => {
-    const getBookmarks = async () => {
-      const res = await fetch(
-        'https://api.raindrop.io/rest/v1/raindrops/0?perpage=50&collectionId=25244220',
-        {
-          method: 'GET',
-          headers: {
-            Authorization: 'Bearer 4d324425-6f14-47a5-b5e8-942cb724173d',
-          },
-        }
-      )
-
-      const data: { items: [] } = await res.json()
-      const items: [] = data?.items
-
-      setBookmarks(items)
-    }
-    getBookmarks()
-  }, [])
 
   return (
     <Layout>
@@ -57,18 +40,19 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
       />
-      {bookmarks
-        .filter(
-          (filteredBookmark: IFilteredBookmarksProps) =>
-            filteredBookmark.tags[0] === value
-        )
-        .map((bookmark: IBookmarkProps) => (
-          <Bookmark
-            key={bookmark._id}
-            title={bookmark.title}
-            link={bookmark.link}
-          />
-        ))}
+      {data &&
+        data
+          .filter(
+            (filteredBookmark: IFilteredBookmarksProps) =>
+              filteredBookmark.tags[0] === value
+          )
+          .map((bookmark: IBookmarkProps) => (
+            <Bookmark
+              key={bookmark._id}
+              title={bookmark.title}
+              link={bookmark.link}
+            />
+          ))}
     </Layout>
   )
 }
