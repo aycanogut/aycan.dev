@@ -23,7 +23,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         {
           method: 'GET',
           headers: {
-            Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
+            Authorization: 'Bearer 4d324425-6f14-47a5-b5e8-942cb724173d',
           },
         }
       )
