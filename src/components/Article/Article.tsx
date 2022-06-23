@@ -8,14 +8,8 @@ import {
   useMantineTheme,
 } from '@mantine/core'
 import CustomImage from '../CustomImage/CustomImage'
+import { IArticleProps } from '../../ts/interfaces/Article.interface'
 import useStyles from './Article.styles'
-
-interface IArticleProps {
-  thumbnail: string
-  title: string
-  link: string
-  categories: [string, string, string, string, string]
-}
 
 const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
   const { classes } = useStyles()

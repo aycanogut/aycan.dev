@@ -2,22 +2,7 @@ import React, { FC } from 'react'
 import { Title } from '@mantine/core'
 import Layout from '../components/Layout/Layout'
 import Article from '../components/Article/Article'
-
-interface IBlogProps {
-  posts: {
-    feed: {}
-    items: []
-    status: string
-  }
-}
-
-interface IPostProps {
-  thumbnail: string
-  title: string
-  link: string
-  categories: any
-  pubDate: string
-}
+import { IBlogProps, IPostProps } from '../ts/interfaces/Blog.interface'
 
 const Blog: FC<IBlogProps> = ({ posts }) => (
   <Layout>

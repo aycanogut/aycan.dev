@@ -1,12 +1,8 @@
-import React, { FC, Key } from 'react'
+import React, { FC } from 'react'
 import { Card, Text } from '@mantine/core'
+import { IBookmarkProps } from '../../ts/interfaces/Bookmark.interface'
 import useStyles from './Bookmark.styles'
 
-export interface IBookmarkProps {
-  link: string
-  title: string
-  [x: string]: Key | null | undefined
-}
 const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
   const { classes } = useStyles()
 
