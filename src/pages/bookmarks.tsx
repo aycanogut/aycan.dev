@@ -1,4 +1,5 @@
 import { FC, useState } from 'react'
+import { useViewportSize } from '@mantine/hooks'
 import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../lib/fetcher'
@@ -18,6 +19,7 @@ interface IFilteredBookmarksProps {
 const Bookmarks: FC<IBookmarksProps> = () => {
   const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
+  const { width } = useViewportSize()
 
   return (
     <Layout>
@@ -39,6 +41,8 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         mb={30}
         sx={{ width: '100%' }}
         transitionDuration={300}
+        fullWidth
+        orientation={width > 450 ? 'horizontal' : 'vertical'}
       />
       {data &&
         data
