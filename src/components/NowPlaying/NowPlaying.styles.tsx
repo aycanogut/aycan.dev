@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core'
 
-export default createStyles(() => ({
+export default createStyles((theme) => ({
   animatedBards: {
     display: 'flex',
     justifyContent: 'center',
@@ -33,12 +33,17 @@ export default createStyles(() => ({
   spotifyWidget: {
     display: 'flex',
     alignItems: 'center',
-    width: 450,
+    width: 320,
     minHeight: 80,
-    margin: '100px auto 0',
+    margin: '50px auto 0',
     padding: 0,
     background: '#2e2e2e',
     borderRadius: 24,
+
+    [theme.fn.largerThan('sm')]: {
+      width: 450,
+      margin: '100px auto 0',
+    },
   },
 
   nowPlaying: {
