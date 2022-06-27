@@ -7,10 +7,17 @@ const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
   const { classes } = useStyles()
 
   return (
-    <Card withBorder radius="xs" p="sm" mb={14} className={classes.card}>
-      <Text component="a" href={link} target="_blank" weight={600}>
-        {title}
-      </Text>
+    <Card
+      component="a"
+      href={link}
+      target="_blank"
+      withBorder
+      radius="xs"
+      p="sm"
+      mb={14}
+      className={classes.card}
+    >
+      <Text weight={600}>{title}</Text>
     </Card>
   )
 }
