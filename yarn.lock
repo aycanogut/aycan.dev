@@ -1559,6 +1559,11 @@
   dependencies:
     prism-react-renderer "^1.2.1"
 
+"@mantine/spotlight@^4.2.11":
+  version "4.2.11"
+  resolved "https://registry.yarnpkg.com/@mantine/spotlight/-/spotlight-4.2.11.tgz#db980b95814d05540c0009dc45a74710a135af3c"
+  integrity sha512-nIEi57wn3q4Tn9J5EYVtLPgwi3iUTFmrk2Zwh6kzgPo3RIvkNzcALbWquqXqlMoxjCiz7T0TVfj0umDoEZhwNw==
+
 "@mantine/ssr@4.2.2":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-4.2.2.tgz#83c4d2bc6393d4fe9bfcc2f635731489b1bb8fbf"
