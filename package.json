@@ -18,6 +18,9 @@
     "storybook": "start-storybook -p 7001",
     "storybook:build": "build-storybook"
   },
+  "resolutions": {
+    "@types/react": "17.0.30"
+  },
   "dependencies": {
     "@mantine/core": "4.2.2",
     "@mantine/dates": "4.2.2",
