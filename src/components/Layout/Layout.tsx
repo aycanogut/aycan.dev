@@ -1,12 +1,9 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import { Container } from '@mantine/core'
 import CustomHeader from '../CustomHeader/CustomHeader'
 import Footer from '../CustomFooter/CustomFooter'
+import { ILayoutProps } from '../../ts/interfaces/Layout.interface'
 import { navLinks } from '../CustomHeader/navLinks'
-
-interface ILayoutProps {
-  children: ReactNode
-}
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
   <>

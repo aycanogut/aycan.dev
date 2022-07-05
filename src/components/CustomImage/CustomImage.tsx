@@ -1,15 +1,6 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
-
-interface ICustomImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  layout?: 'fixed' | 'fill' | 'intrinsic' | 'responsive' | 'raw' | undefined
-  objectFit?: any
-  className?: string
-}
+import { ICustomImageProps } from '../../ts/interfaces/CustomImage.interface'
 
 const CustomImage: FC<ICustomImageProps> = ({
   src,

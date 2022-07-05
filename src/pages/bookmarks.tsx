@@ -4,17 +4,12 @@ import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
-import Bookmark, { IBookmarkProps } from '../components/Bookmark/Bookmark'
-
-interface IBookmarksProps {
-  title: string
-  link: string
-  filter: Function
-}
-
-interface IFilteredBookmarksProps {
-  tags: [string]
-}
+import Bookmark from '../components/Bookmark/Bookmark'
+import {
+  IBookmarksProps,
+  IBookmarkProps,
+  IFilteredBookmarksProps,
+} from '../ts/interfaces/Bookmark.interface'
 
 const Bookmarks: FC<IBookmarksProps> = () => {
   const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)

@@ -3,16 +3,20 @@ import { useState } from 'react'
 import { AppProps } from 'next/app'
 import { getCookie, setCookies } from 'cookies-next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import {
   MantineProvider,
   ColorScheme,
   ColorSchemeProvider,
 } from '@mantine/core'
+import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight'
 import { NotificationsProvider } from '@mantine/notifications'
+import { SpotlightContent } from '../helpers/SpotlightContent'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
+  const router = useRouter()
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
@@ -21,6 +25,13 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       maxAge: 60 * 60 * 24 * 30,
     })
   }
+
+  const actions: SpotlightAction[] = SpotlightContent?.map((item) => ({
+    title: item.title,
+    onTrigger: item.url
+      ? () => router.push(`/${item.url}`)
+      : () => toggleColorScheme(),
+  }))
 
   return (
     <>
@@ -53,9 +64,11 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           withGlobalStyles
           withNormalizeCSS
         >
-          <NotificationsProvider>
-            <Component {...pageProps} />
-          </NotificationsProvider>
+          <SpotlightProvider actions={actions}>
+            <NotificationsProvider>
+              <Component {...pageProps} />
+            </NotificationsProvider>
+          </SpotlightProvider>
         </MantineProvider>
       </ColorSchemeProvider>
     </>

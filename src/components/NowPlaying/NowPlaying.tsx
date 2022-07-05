@@ -1,21 +1,13 @@
 // https://github.com/leerob/leerob.io/blob/main/components/NowPlaying.tsx
 
 import { useEffect } from 'react'
-import { Box, Paper, Text, Title } from '@mantine/core'
+import { Box, Paper, Text } from '@mantine/core'
 import useSWR from 'swr'
 import { animate } from 'motion'
 import fetcher from '../../lib/fetcher'
-import useStyles from './NowPlaying.styles'
 import CustomImage from '../CustomImage/CustomImage'
-
-type NowPlayingSong = {
-  album: string
-  albumImageUrl: string
-  artist: string
-  isPlaying: boolean
-  songUrl: string
-  title: string
-}
+import { NowPlayingSong } from '../../ts/interfaces/NowPlaying.type'
+import useStyles from './NowPlaying.styles'
 
 const AnimatedBars = () => {
   const { classes } = useStyles()
