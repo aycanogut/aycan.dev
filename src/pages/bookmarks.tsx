@@ -1,10 +1,11 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useViewportSize } from '@mantine/hooks'
 import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
 import Bookmark from '../components/Bookmark/Bookmark'
+import CustomLoader from '../components/CustomLoader/CustomLoader'
 import {
   IBookmarksProps,
   IBookmarkProps,
@@ -14,7 +15,14 @@ import {
 const Bookmarks: FC<IBookmarksProps> = () => {
   const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
+  const [isLoading, setIsLoading] = useState<boolean>(true)
   const { width } = useViewportSize()
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+  }, [])
 
   return (
     <Layout>
@@ -39,7 +47,10 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         fullWidth
         orientation={width > 450 ? 'horizontal' : 'vertical'}
       />
-      {data &&
+      {isLoading ? (
+        <CustomLoader />
+      ) : (
+        data &&
         data
           .filter(
             (filteredBookmark: IFilteredBookmarksProps) =>
@@ -51,7 +62,8 @@ const Bookmarks: FC<IBookmarksProps> = () => {
               title={bookmark.title}
               link={bookmark.link}
             />
-          ))}
+          ))
+      )}
     </Layout>
   )
 }
