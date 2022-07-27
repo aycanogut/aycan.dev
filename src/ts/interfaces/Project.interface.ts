@@ -1,4 +1,5 @@
 export interface IProjectProps {
+  id: number
   image: string
   title: string
   description: string
