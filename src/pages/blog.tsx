@@ -17,7 +17,7 @@ const Blog: FC<IBlogProps> = ({ posts }) => {
   return (
     <Layout>
       <Title order={1} mb={30}>
-        My Blog Posts
+        Blog Posts
       </Title>
       <Article
         thumbnail="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
