@@ -12,7 +12,7 @@ const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
       href={link}
       target="_blank"
       withBorder
-      radius="xs"
+      radius="sm"
       p="sm"
       mb={14}
       className={classes.card}

@@ -15,7 +15,7 @@ const Project: FC<IProjectProps> = ({
   const { classes } = useStyles()
 
   return (
-    <Card withBorder radius="xs" p="lg" mb={14}>
+    <Card withBorder radius="sm" p="lg" mb={40}>
       <Grid>
         <Grid.Col span={12} xs={4} className={classes.imageWrapper}>
           <CustomImage
