@@ -8,7 +8,6 @@ export default async function handler(
   const response = await getBookmarks()
 
   if (response.status === 204 || response.status > 400) {
-    console.log('error')
     return res.status(200).json({ isBookmark: false })
   }
 
@@ -16,7 +15,6 @@ export default async function handler(
   const bookmarks = result.items
 
   if (bookmarks === null) {
-    console.log('empty')
     return res.status(200).json({ isBookmark: false })
   }
 
