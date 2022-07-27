@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Title } from '@mantine/core'
-import CustomLoader from '../components/CustomLoader/CustomLoader'
+import { projects } from '../helpers/projectsDummyData'
 import Layout from '../components/Layout/Layout'
 import Project from '../components/Project/Project'
 
@@ -18,14 +18,17 @@ const Projects = () => {
       <Title order={1} mb={30}>
         Projects
       </Title>
-      <Project
-        image="https://github.com/aycanogut/todo-app-react/raw/main/src/assets/images/screenshot.gif"
-        title="Todo App"
-        description="Simple responsive todo app built with React. Users can add, complete and delete todo items. When the page is loaded, the app collects previous todos from localStorage."
-        stack="React.js, styled-components"
-        github="https://github.com/aycanogut/todo-app-react"
-        vercel="https://todo-app-react-rosy.vercel.app/"
-      />
+      {projects.map((project) => (
+        <Project
+          id={project.id}
+          image={project.image}
+          title={project.title}
+          description={project.description}
+          stack={project.stack}
+          github={project.github}
+          vercel={project.vercel}
+        />
+      ))}
     </Layout>
   )
 }
