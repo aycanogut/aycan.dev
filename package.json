@@ -1,5 +1,6 @@
 {
-  "name": "mantine-next-template",
+  "name": "portfolio-next",
+  "author": "Aycan Ogut",
   "version": "1.0.0",
   "private": true,
   "scripts": {

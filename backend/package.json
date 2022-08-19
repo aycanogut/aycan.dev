@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "portfolio-next",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -11,16 +11,14 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.1.12",
-    "@strapi/plugin-users-permissions": "4.1.12",
-    "@strapi/plugin-i18n": "4.1.12",
+    "@strapi/strapi": "4.3.4",
+    "@strapi/plugin-users-permissions": "4.3.4",
+    "@strapi/plugin-i18n": "4.3.4",
     "better-sqlite3": "7.4.6"
   },
-  "author": {
-    "name": "A Strapi developer"
-  },
+  "author": "Aycan Ogut",
   "strapi": {
-    "uuid": "533d4f4b-e066-4eb8-b5e6-8154620a2cf9"
+    "uuid": "b2d1606a-7084-45c4-a2f3-781b48628f24"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",
