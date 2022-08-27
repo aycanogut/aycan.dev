@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react'
-import { useViewportSize } from '@mantine/hooks'
 import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../lib/fetcher'
+import useWidth from '../hooks/useWidth'
 import Layout from '../components/Layout/Layout'
 import Bookmark from '../components/Bookmark/Bookmark'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
@@ -16,13 +16,21 @@ const Bookmarks: FC<IBookmarksProps> = () => {
   const { data } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
   const [value, setValue] = useState<string>('blog')
   const [isLoading, setIsLoading] = useState<boolean>(true)
-  const { width } = useViewportSize()
+  const { width } = useWidth()
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
     }, 500)
   }, [])
+
+  const setLandscape = () => {
+    if (width && width > 450) {
+      return 'horizontal'
+    }
+
+    return 'vertical'
+  }
 
   return (
     <Layout>
@@ -45,7 +53,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
         fullWidth
-        orientation={width > 450 ? 'horizontal' : 'vertical'}
+        orientation={setLandscape()}
       />
       {isLoading ? (
         <CustomLoader />

@@ -9,12 +9,14 @@ export default createStyles((theme) => ({
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
     cursor: 'pointer',
+    transition: '.2s ease-in-out',
 
     '&:hover': {
       backgroundColor:
         theme.colorScheme === 'dark'
-          ? theme.colors.dark[7]
+          ? theme.colors.dark[5]
           : theme.colors.gray[1],
+      transition: '.2s ease-in-out',
     },
   },
 
