@@ -24,6 +24,14 @@ const Bookmarks: FC<IBookmarksProps> = () => {
     }, 500)
   }, [])
 
+  const setLandscape = () => {
+    if (width && width > 450) {
+      return 'horizontal'
+    }
+
+    return 'vertical'
+  }
+
   return (
     <Layout>
       <Title order={1} mb={30}>
@@ -45,7 +53,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         sx={{ width: '100%' }}
         transitionDuration={300}
         fullWidth
-        orientation={width < 450 ? 'vertical' : 'horizontal'}
+        orientation={setLandscape()}
       />
       {isLoading ? (
         <CustomLoader />
