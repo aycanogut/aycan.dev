@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Card, Grid, Text, Title, Group } from '@mantine/core'
+import { Card, Grid, Text, Title, Group, Badge, Button } from '@mantine/core'
 import CustomImage from '../CustomImage/CustomImage'
 import { IProjectProps } from '../../ts/interfaces/Project.interface'
 import useStyles from './Project.styles'
@@ -9,8 +9,7 @@ const Project: FC<IProjectProps> = ({
   title,
   description,
   stack,
-  github,
-  vercel,
+  links,
 }) => {
   const { classes } = useStyles()
 
@@ -31,29 +30,33 @@ const Project: FC<IProjectProps> = ({
             <Title order={3}>{title}</Title>
             <Text>{description}</Text>
           </Group>
-          <Text weight={700} mt={22}>
-            Tech Stack:
-          </Text>
-          <Text>{stack}</Text>
+          <Group mt={28}>
+            <Text weight={700}>Tech Stack:</Text>
+            {stack &&
+              stack.map((tech: string, i: number) => (
+                <Badge key={i} color="yellow" size="xs" variant="outline">
+                  {tech}
+                </Badge>
+              ))}
+          </Group>
           <Group className={classes.social} mt={22} spacing="lg">
-            <Text
-              component="a"
-              variant="link"
-              href={github}
-              weight="500"
-              target="_blank"
-            >
-              Github
-            </Text>
-            <Text
-              component="a"
-              variant="link"
-              href={vercel}
-              weight="500"
-              target="_blank"
-            >
-              Vercel
-            </Text>
+            <Text weight={700}>Links:</Text>
+            {links &&
+              links.map((link: any, index: number) => (
+                <Button key={index} variant="default" color="yellow" size="xs">
+                  <Text
+                    className={classes.button}
+                    component="a"
+                    variant="link"
+                    href={link.link}
+                    weight="600"
+                    target="_blank"
+                    transform="capitalize"
+                  >
+                    {link.name}
+                  </Text>
+                </Button>
+              ))}
           </Group>
         </Grid.Col>
       </Grid>
