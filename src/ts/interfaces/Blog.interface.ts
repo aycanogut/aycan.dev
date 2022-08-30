@@ -1,5 +1,5 @@
 export interface IBlogProps {
-  posts: {
+  data: {
     feed: {}
     items: []
     status: string
@@ -12,4 +12,5 @@ export interface IPostProps {
   link: string
   categories: any
   pubDate: string
+  map: Function
 }
