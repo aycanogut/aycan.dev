@@ -42,21 +42,28 @@ const Project: FC<IProjectProps> = ({
           <Group className={classes.social} mt={22} spacing="lg">
             <Text weight={700}>Links:</Text>
             {links &&
-              links.map((link: any, index: number) => (
-                <Button key={index} variant="default" color="yellow" size="xs">
-                  <Text
-                    className={classes.button}
-                    component="a"
-                    variant="link"
-                    href={link.link}
-                    weight="600"
-                    target="_blank"
-                    transform="capitalize"
+              links.map(
+                (link: { name: string; link: string }, index: number) => (
+                  <Button
+                    key={index}
+                    variant="default"
+                    color="yellow"
+                    size="xs"
                   >
-                    {link.name}
-                  </Text>
-                </Button>
-              ))}
+                    <Text
+                      className={classes.button}
+                      component="a"
+                      variant="link"
+                      href={link.link}
+                      weight="600"
+                      target="_blank"
+                      transform="capitalize"
+                    >
+                      {link.name}
+                    </Text>
+                  </Button>
+                )
+              )}
           </Group>
         </Grid.Col>
       </Grid>
