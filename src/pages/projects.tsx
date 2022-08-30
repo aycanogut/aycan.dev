@@ -30,8 +30,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             stack={project.stack}
-            github={project.github}
-            vercel={project.vercel}
+            links={project.links}
           />
         ))
       )}

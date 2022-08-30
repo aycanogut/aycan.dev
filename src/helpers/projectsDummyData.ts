@@ -6,9 +6,17 @@ export const projects = [
     title: 'Todo App',
     description:
       'Simple responsive todo app built with React. Users can add, complete and delete todo items. When the page is loaded, the app collects previous todos from localStorage.',
-    stack: 'React.js, styled-components',
-    github: 'https://github.com/aycanogut/todo-app-react',
-    vercel: 'https://todo-app-react-rosy.vercel.app/',
+    stack: ['React.js', 'styled-components'],
+    links: [
+      {
+        name: 'github',
+        link: 'https://github.com/aycanogut/todo-app-react',
+      },
+      {
+        name: 'vercel',
+        link: 'https://todo-app-react-rosy.vercel.app/',
+      },
+    ],
   },
   {
     id: 2,
@@ -17,9 +25,17 @@ export const projects = [
     title: 'REST Countries API',
     description:
       'This is a solution to the REST Countries API with color theme switcher challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
-    stack: 'React.js, TypeScript, styled-components, axios',
-    github: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
-    vercel: 'https://fem-rest-countries-flag-api.vercel.app/',
+    stack: ['React.js', 'TypeScript', 'styled-components', 'axios'],
+    links: [
+      {
+        name: 'github',
+        link: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
+      },
+      {
+        name: 'vercel',
+        link: 'https://fem-rest-countries-flag-api.vercel.app/',
+      },
+    ],
   },
   {
     id: 3,
@@ -28,9 +44,17 @@ export const projects = [
     title: 'Weather App React',
     description:
       "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: 'React.js, vite.js, Material UI, styled-components',
-    github: 'https://github.com/aycanogut/weather-app-react',
-    vercel: 'https://weather-app-react-beta.vercel.app/',
+    stack: ['React.js', 'vite.js', ' Material UI', 'styled-components'],
+    links: [
+      {
+        name: 'github',
+        link: 'https://github.com/aycanogut/weather-app-react',
+      },
+      {
+        name: 'vercel',
+        link: 'https://weather-app-react-beta.vercel.app/',
+      },
+    ],
   },
   {
     id: 4,
@@ -39,9 +63,17 @@ export const projects = [
     title: 'React Calculator',
     description:
       "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: 'React.js, vite.js, Material UI, styled-components',
-    github: 'https://github.com/aycanogut/weather-app-react',
-    vercel: 'https://weather-app-react-beta.vercel.app/',
+    stack: ['React.js', 'vite.js', 'Material UI', 'styled-components'],
+    links: [
+      {
+        name: 'github',
+        link: 'https://github.com/aycanogut/weather-app-react',
+      },
+      {
+        name: 'vercel',
+        link: 'https://weather-app-react-beta.vercel.app/',
+      },
+    ],
   },
   {
     id: 5,
@@ -50,8 +82,12 @@ export const projects = [
     title: 'SASS Boilerplate',
     description:
       'Ready to use SASS boilerplate to develop web projects with gulp.js including SASS features like mixins, breakpoints, variables and normalize.css.',
-    stack: 'gulp.js, cssnano, babel, autoprefixer, postcss',
-    github: 'https://github.com/aycanogut/sass-boilerplate',
-    vercel: '',
+    stack: ['gulp.js', 'cssnano', 'babel', 'autoprefixer', 'postcss'],
+    links: [
+      {
+        name: 'github',
+        link: 'https://github.com/aycanogut/sass-boilerplate',
+      },
+    ],
   },
 ]

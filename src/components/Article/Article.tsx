@@ -15,7 +15,7 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
   const { classes } = useStyles()
   const theme = useMantineTheme()
 
-  const badges = categories.map((category: any, i) => (
+  const badges = categories.map((category: {}, i: number) => (
     <Badge color={theme.colorScheme === 'dark' ? 'dark' : 'gray'} key={i}>
       {category}
     </Badge>
