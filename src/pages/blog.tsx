@@ -1,18 +1,17 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import { Title } from '@mantine/core'
+import useSWR from 'swr'
+import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
 import Article from '../components/Article/Article'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
+import Error from '../components/Error/Error'
 import { IBlogProps, IPostProps } from '../ts/interfaces/Blog.interface'
 
-const Blog: FC<IBlogProps> = ({ posts }) => {
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+const Blog: FC<IBlogProps> = () => {
+  const { data, error } = useSWR<IPostProps>('api/medium', fetcher)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 500)
-  }, [])
+  if (error) return <Error />
 
   return (
     <Layout>
@@ -25,10 +24,11 @@ const Blog: FC<IBlogProps> = ({ posts }) => {
         categories={['Web Development', 'Design', 'HTML', 'CSS', 'JavaScript']}
         link="https://www.github.com/aycanogut/front-end-resources"
       />
-      {isLoading ? (
+      {!data ? (
         <CustomLoader />
       ) : (
-        posts.items.map((post: IPostProps) => (
+        data &&
+        data.map((post: IPostProps) => (
           <Article
             key={post.title}
             thumbnail={post.thumbnail}
@@ -40,19 +40,6 @@ const Blog: FC<IBlogProps> = ({ posts }) => {
       )}
     </Layout>
   )
-}
-
-export async function getServerSideProps() {
-  const res = await fetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut'
-  )
-  const posts = await res.json()
-
-  return {
-    props: {
-      posts,
-    },
-  }
 }
 
 export default Blog
