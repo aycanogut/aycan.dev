@@ -41,7 +41,9 @@ const Project: FC<IProjectProps> = ({
             <Text>{description}</Text>
           </Group>
           <Group mt={28}>
-            <Text weight={700}>Tech Stack:</Text>
+            <Text weight={700} size="sm">
+              Tech Stack:
+            </Text>
             {stack &&
               stack.map((tech: string, i: number) => (
                 <Badge
@@ -54,8 +56,10 @@ const Project: FC<IProjectProps> = ({
                 </Badge>
               ))}
           </Group>
-          <Group className={classes.social} mt={22} spacing="lg">
-            <Text weight={700}>Links:</Text>
+          <Group mt={22} spacing="sm">
+            <Text weight={700} size="sm">
+              Links:
+            </Text>
             {links &&
               links.map(
                 (link: { name: string; link: string }, index: number) => (
@@ -70,7 +74,8 @@ const Project: FC<IProjectProps> = ({
                       component="a"
                       variant="link"
                       href={link.link}
-                      weight="600"
+                      weight="700"
+                      size="xs"
                       target="_blank"
                       transform="capitalize"
                     >

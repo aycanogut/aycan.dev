@@ -21,10 +21,4 @@ export default createStyles((theme) => ({
       textDecoration: 'none',
     },
   },
-
-  social: {
-    [theme.fn.smallerThan('xs')]: {
-      justifyContent: 'center',
-    },
-  },
 }))
