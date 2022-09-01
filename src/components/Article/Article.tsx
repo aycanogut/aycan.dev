@@ -16,7 +16,12 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
   const theme = useMantineTheme()
 
   const badges = categories.map((category: {}, i: number) => (
-    <Badge color={theme.colorScheme === 'dark' ? 'dark' : 'gray'} key={i}>
+    <Badge
+      key={i}
+      color={theme.colorScheme === 'dark' ? 'yellow' : 'grape'}
+      size="xs"
+      variant="outline"
+    >
       {category}
     </Badge>
   ))
@@ -45,7 +50,7 @@ const Article: FC<IArticleProps> = ({ thumbnail, title, link, categories }) => {
         </Card.Section>
       </Anchor>
       <Card.Section>
-        <Group spacing={10} m={20} className={classes.group}>
+        <Group spacing={8} m={20} className={classes.group}>
           {badges}
         </Group>
       </Card.Section>

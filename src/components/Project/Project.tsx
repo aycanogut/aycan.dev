@@ -1,5 +1,14 @@
 import React, { FC } from 'react'
-import { Card, Grid, Text, Title, Group, Badge, Button } from '@mantine/core'
+import {
+  Card,
+  Grid,
+  Text,
+  Title,
+  Group,
+  Badge,
+  Button,
+  useMantineTheme,
+} from '@mantine/core'
 import CustomImage from '../CustomImage/CustomImage'
 import { IProjectProps } from '../../ts/interfaces/Project.interface'
 import useStyles from './Project.styles'
@@ -12,6 +21,7 @@ const Project: FC<IProjectProps> = ({
   links,
 }) => {
   const { classes } = useStyles()
+  const theme = useMantineTheme()
 
   return (
     <Card withBorder radius="sm" p="lg" mb={40} className={classes.card}>
@@ -34,7 +44,12 @@ const Project: FC<IProjectProps> = ({
             <Text weight={700}>Tech Stack:</Text>
             {stack &&
               stack.map((tech: string, i: number) => (
-                <Badge key={i} color="yellow" size="xs" variant="outline">
+                <Badge
+                  key={i}
+                  color={theme.colorScheme === 'dark' ? 'yellow' : 'grape'}
+                  size="xs"
+                  variant="outline"
+                >
                   {tech}
                 </Badge>
               ))}
