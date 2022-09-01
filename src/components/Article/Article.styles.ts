@@ -20,6 +20,10 @@ export default createStyles((theme) => ({
     },
   },
 
+  image: {
+    textAlign: 'center',
+  },
+
   anchor: {
     color:
       theme.colorScheme === 'dark'
@@ -34,14 +38,23 @@ export default createStyles((theme) => ({
   },
 
   group: {
-    [theme.fn.smallerThan('sm')]: {
+    margin: '20px',
+
+    [theme.fn.largerThan('sm')]: {
+      margin: '20px 20px 20px 56px',
+    },
+
+    [theme.fn.smallerThan('xs')]: {
       justifyContent: 'center',
     },
   },
 
   text: {
+    textAlign: 'center',
+
     [theme.fn.largerThan('sm')]: {
       margin: '0 0 0 20px',
+      textAlign: 'left',
     },
   },
 }))
