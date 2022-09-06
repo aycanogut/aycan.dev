@@ -53,7 +53,6 @@ export default createStyles((theme) => ({
     textAlign: 'center',
 
     [theme.fn.largerThan('sm')]: {
-      margin: '0 0 0 20px',
       textAlign: 'left',
     },
   },
