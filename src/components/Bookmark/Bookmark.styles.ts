@@ -2,8 +2,6 @@ import { createStyles } from '@mantine/core'
 
 export default createStyles((theme) => ({
   card: {
-    ...theme.fn.focusStyles(),
-
     color:
       theme.colorScheme === 'dark'
         ? theme.colors.yellow[4]
@@ -22,4 +20,6 @@ export default createStyles((theme) => ({
       transition: '.2s ease-in-out',
     },
   },
+
+  ...theme.fn.focusStyles(),
 }))
