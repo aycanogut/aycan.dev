@@ -23,8 +23,8 @@ const Blog: FC<IBlogProps> = () => {
           <CustomLoader />
         ) : (
           data &&
-          data.map((article: IArticleProps) => (
-            <Grid.Col sm={6} md={4}>
+          data.map((article: IArticleProps, i: number) => (
+            <Grid.Col sm={6} md={4} key={i}>
               <Article
                 key={article.title}
                 title={article.title}
