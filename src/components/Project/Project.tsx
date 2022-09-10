@@ -24,7 +24,14 @@ const Project: FC<IProjectProps> = ({
   const theme = useMantineTheme()
 
   return (
-    <Card withBorder radius="sm" p="lg" mb={40} className={classes.card}>
+    <Card
+      className={classes.card}
+      withBorder
+      radius="sm"
+      p="lg"
+      mb={40}
+      shadow="md"
+    >
       <Grid>
         <Grid.Col span={12} xs={4} className={classes.imageWrapper}>
           <CustomImage

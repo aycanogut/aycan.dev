@@ -30,7 +30,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
   ))
 
   return (
-    <Card withBorder radius="sm" className={classes.card}>
+    <Card className={classes.card} withBorder radius="sm" shadow="md">
       <Card.Section px="sm" pt="sm">
         <Group position="apart">
           <Text size="xs" color="dimmed">
