@@ -19,7 +19,7 @@ export default createStyles((theme) => ({
           : theme.colors.gray[1],
       transition: '.2s ease-in-out',
     },
-  },
 
-  ...theme.fn.focusStyles(),
+    ...theme.fn.focusStyles(),
+  },
 }))
