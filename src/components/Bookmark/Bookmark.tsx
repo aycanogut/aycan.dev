@@ -8,6 +8,7 @@ const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
 
   return (
     <Card
+      className={classes.card}
       component="a"
       href={link}
       target="_blank"
@@ -15,7 +16,7 @@ const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
       radius="sm"
       p="sm"
       mb={14}
-      className={classes.card}
+      shadow="xs"
     >
       <Text weight={600}>{title}</Text>
     </Card>

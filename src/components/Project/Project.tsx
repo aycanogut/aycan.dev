@@ -1,5 +1,14 @@
 import React, { FC } from 'react'
-import { Card, Grid, Text, Title, Group, Badge, Button } from '@mantine/core'
+import {
+  Card,
+  Grid,
+  Text,
+  Title,
+  Group,
+  Badge,
+  Button,
+  useMantineTheme,
+} from '@mantine/core'
 import CustomImage from '../CustomImage/CustomImage'
 import { IProjectProps } from '../../ts/interfaces/Project.interface'
 import useStyles from './Project.styles'
@@ -12,9 +21,17 @@ const Project: FC<IProjectProps> = ({
   links,
 }) => {
   const { classes } = useStyles()
+  const theme = useMantineTheme()
 
   return (
-    <Card withBorder radius="sm" p="lg" mb={40} className={classes.card}>
+    <Card
+      className={classes.card}
+      withBorder
+      radius="sm"
+      p="lg"
+      mb={40}
+      shadow="md"
+    >
       <Grid>
         <Grid.Col span={12} xs={4} className={classes.imageWrapper}>
           <CustomImage
@@ -31,16 +48,25 @@ const Project: FC<IProjectProps> = ({
             <Text>{description}</Text>
           </Group>
           <Group mt={28}>
-            <Text weight={700}>Tech Stack:</Text>
+            <Text weight={700} size="sm">
+              Tech Stack:
+            </Text>
             {stack &&
               stack.map((tech: string, i: number) => (
-                <Badge key={i} color="yellow" size="xs" variant="outline">
+                <Badge
+                  key={i}
+                  color={theme.colorScheme === 'dark' ? 'yellow' : 'grape'}
+                  size="xs"
+                  variant="outline"
+                >
                   {tech}
                 </Badge>
               ))}
           </Group>
-          <Group className={classes.social} mt={22} spacing="lg">
-            <Text weight={700}>Links:</Text>
+          <Group mt={22} spacing="sm">
+            <Text weight={700} size="sm">
+              Links:
+            </Text>
             {links &&
               links.map(
                 (link: { name: string; link: string }, index: number) => (
@@ -55,7 +81,8 @@ const Project: FC<IProjectProps> = ({
                       component="a"
                       variant="link"
                       href={link.link}
-                      weight="600"
+                      weight="700"
+                      size="xs"
                       target="_blank"
                       transform="capitalize"
                     >

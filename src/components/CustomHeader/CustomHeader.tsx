@@ -16,7 +16,7 @@ import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
 
 const CustomHeader = ({ links }: ICustomHeaderProps) => {
   const [opened, toggleOpened] = useBooleanToggle(false)
-  const [active, setActive] = useState(links[0].link)
+  const [_active, setActive] = useState(links[0].link)
   const { classes, cx } = useStyles()
   const router = useRouter()
 

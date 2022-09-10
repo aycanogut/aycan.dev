@@ -6,7 +6,7 @@ export interface IBlogProps {
   }
 }
 
-export interface IPostProps {
+export interface IArticleProps {
   thumbnail: string
   title: string
   link: string
