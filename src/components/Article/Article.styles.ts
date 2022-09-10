@@ -2,58 +2,29 @@ import { createStyles } from '@mantine/core'
 
 export default createStyles((theme) => ({
   card: {
-    ...theme.fn.focusStyles(),
+    position: 'relative',
+    minHeight: 160,
+    margin: 8,
 
     backgroundColor:
       theme.colorScheme === 'dark'
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
-    cursor: 'pointer',
-    transition: '.2s ease-in-out',
 
-    '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[5]
-          : theme.colors.gray[1],
-      transition: '.2s ease-in-out',
-    },
-  },
-
-  image: {
-    textAlign: 'center',
-  },
-
-  anchor: {
-    color:
-      theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.colors.dark[7],
-    fontSize: theme.fontSizes.md,
-    fontWeight: 700,
-
-    '&:hover': {
-      textDecoration: 'none',
-    },
-  },
-
-  group: {
-    margin: '20px',
+    ...theme.fn.focusStyles(),
 
     [theme.fn.largerThan('sm')]: {
-      margin: '20px 20px 20px 56px',
+      minHeight: 200,
     },
 
-    [theme.fn.smallerThan('xs')]: {
-      justifyContent: 'center',
+    [theme.fn.largerThan('md')]: {
+      minHeight: 228,
     },
   },
 
-  text: {
-    textAlign: 'center',
-
-    [theme.fn.largerThan('sm')]: {
-      textAlign: 'left',
-    },
+  badges: {
+    position: 'absolute',
+    left: 12,
+    bottom: 12,
   },
 }))
