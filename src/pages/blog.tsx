@@ -24,7 +24,7 @@ const Blog: FC<IBlogProps> = () => {
         ) : (
           data &&
           data.map((article: IArticleProps, i: number) => (
-            <Grid.Col sm={6} md={4} key={i}>
+            <Grid.Col xs={12} sm={6} md={4} key={i}>
               <Article
                 key={article.title}
                 title={article.title}
