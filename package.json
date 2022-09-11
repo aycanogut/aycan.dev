@@ -30,7 +30,6 @@
     "@mantine/notifications": "4.2.2",
     "@mantine/prism": "4.2.2",
     "@mantine/spotlight": "^4.2.11",
-    "@modulz/radix-icons": "^4.0.0",
     "@next/bundle-analyzer": "^12.1.4",
     "cookies-next": "^2.0.4",
     "dayjs": "^1.11.5",
