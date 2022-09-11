@@ -26,12 +26,16 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     })
   }
 
-  const actions: SpotlightAction[] = SpotlightContent?.map((item) => ({
-    title: item.title,
-    onTrigger: item.url
-      ? () => router.push(`/${item.url}`)
-      : () => toggleColorScheme(),
-  }))
+  const actions: SpotlightAction[] = SpotlightContent?.map(
+    (item: { title: string; url: string }) => ({
+      title: item.title,
+      onTrigger: item.url
+        ? () => router.push(`/${item.url}`)
+        : () => toggleColorScheme(),
+    })
+  )
+
+  console.log(actions)
 
   return (
     <>
