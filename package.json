@@ -33,6 +33,7 @@
     "@next/bundle-analyzer": "^12.1.4",
     "cookies-next": "^2.0.4",
     "dayjs": "^1.11.5",
+    "framer-motion": "^7.3.2",
     "motion": "^10.10.0",
     "next": "12",
     "next-i18next": "^11.0.0",
