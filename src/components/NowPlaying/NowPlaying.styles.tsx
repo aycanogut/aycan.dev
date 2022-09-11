@@ -33,14 +33,13 @@ export default createStyles((theme) => ({
   spotifyWidget: {
     display: 'flex',
     alignItems: 'center',
-    width: 320,
+    width: '100%',
     minHeight: 80,
     margin: '50px auto 0',
-    padding: 0,
     background: '#2e2e2e',
     borderRadius: 24,
 
-    [theme.fn.largerThan('sm')]: {
+    [theme.fn.largerThan('xs')]: {
       width: 450,
       margin: '100px auto 0',
     },
@@ -61,6 +60,7 @@ export default createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     margin: '11px 0 0 16px',
+    paddingBottom: 12,
   },
 
   notPlaying: {
