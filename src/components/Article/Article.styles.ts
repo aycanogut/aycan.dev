@@ -4,7 +4,6 @@ export default createStyles((theme) => ({
   card: {
     position: 'relative',
     minHeight: 160,
-    margin: 8,
 
     backgroundColor:
       theme.colorScheme === 'dark'

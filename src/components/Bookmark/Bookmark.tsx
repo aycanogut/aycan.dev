@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Card, Text } from '@mantine/core'
-import { IBookmarkProps } from '../../ts/interfaces/Bookmark.interface'
+import { IBookmarkProps } from '../../interfaces/Bookmark.interface'
 import useStyles from './Bookmark.styles'
 
 const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {

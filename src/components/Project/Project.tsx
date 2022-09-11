@@ -10,7 +10,7 @@ import {
   useMantineTheme,
 } from '@mantine/core'
 import CustomImage from '../CustomImage/CustomImage'
-import { IProjectProps } from '../../ts/interfaces/Project.interface'
+import { IProjectProps } from '../../interfaces/Project.interface'
 import useStyles from './Project.styles'
 
 const Project: FC<IProjectProps> = ({

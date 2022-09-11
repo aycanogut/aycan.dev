@@ -6,7 +6,7 @@ import Layout from '../components/Layout/Layout'
 import Article from '../components/Article/Article'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
 import Error from '../components/Error/Error'
-import { IBlogProps, IArticleProps } from '../ts/interfaces/Blog.interface'
+import { IBlogProps, IArticleProps } from '../interfaces/Blog.interface'
 
 const Blog: FC<IBlogProps> = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
@@ -18,7 +18,7 @@ const Blog: FC<IBlogProps> = () => {
       <Title order={1} mb={30}>
         Blog Posts
       </Title>
-      <Grid>
+      <Grid gutter="xl">
         {!data ? (
           <CustomLoader />
         ) : (

@@ -11,7 +11,7 @@ import {
   IBookmarksProps,
   IBookmarkProps,
   IFilteredBookmarksProps,
-} from '../ts/interfaces/Bookmark.interface'
+} from '../interfaces/Bookmark.interface'
 
 const Bookmarks: FC<IBookmarksProps> = () => {
   const { data, error } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
