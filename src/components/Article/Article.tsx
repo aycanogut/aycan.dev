@@ -11,7 +11,7 @@ import {
 } from '@mantine/core'
 import dayjs from 'dayjs'
 import { ExternalLink } from 'tabler-icons-react'
-import { IArticleProps } from '../../ts/interfaces/Article.interface'
+import { IArticleProps } from '../../interfaces/Article.interface'
 import useStyles from './Article.styles'
 
 const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {

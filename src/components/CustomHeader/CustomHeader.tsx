@@ -11,7 +11,7 @@ import {
 } from '@mantine/core'
 import { useBooleanToggle } from '@mantine/hooks'
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
-import { ICustomHeaderProps } from '../../ts/interfaces/CustomHeader.interface'
+import { ICustomHeaderProps } from '../../interfaces/CustomHeader.interface'
 import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
 
 const CustomHeader = ({ links }: ICustomHeaderProps) => {

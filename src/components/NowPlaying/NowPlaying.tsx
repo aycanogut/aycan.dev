@@ -6,7 +6,7 @@ import useSWR from 'swr'
 import { animate } from 'motion'
 import fetcher from '../../lib/fetcher'
 import CustomImage from '../CustomImage/CustomImage'
-import { NowPlayingSong } from '../../ts/interfaces/NowPlaying.type'
+import { NowPlayingSong } from '../../interfaces/NowPlaying.type'
 import useStyles from './NowPlaying.styles'
 
 const AnimatedBars = () => {
