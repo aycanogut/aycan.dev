@@ -47,7 +47,7 @@ export default createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: '12px 14px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color:
@@ -60,7 +60,7 @@ export default createStyles((theme) => ({
     '&:hover': {
       backgroundColor:
         theme.colorScheme === 'dark'
-          ? theme.colors.dark[9]
+          ? theme.colors.dark[8]
           : theme.colors.gray[1],
     },
 
