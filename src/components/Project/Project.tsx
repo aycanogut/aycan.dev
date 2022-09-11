@@ -9,7 +9,7 @@ import {
   Button,
   useMantineTheme,
 } from '@mantine/core'
-import CustomImage from '../CustomImage/CustomImage'
+import NextImage from 'next/future/image'
 import { IProjectProps } from '../../interfaces/Project.interface'
 import useStyles from './Project.styles'
 
@@ -34,12 +34,11 @@ const Project: FC<IProjectProps> = ({
     >
       <Grid>
         <Grid.Col span={12} xs={4} className={classes.imageWrapper}>
-          <CustomImage
+          <NextImage
             src={image}
             alt={`Image of ${title} project`}
-            width={249.3}
-            height={218}
-            layout="intrinsic"
+            width="160"
+            height="160"
           />
         </Grid.Col>
         <Grid.Col span={12} xs={8}>
