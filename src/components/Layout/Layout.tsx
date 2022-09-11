@@ -8,7 +8,7 @@ const Layout: FC<ILayoutProps> = ({ children }) => (
   <>
     <CustomHeader links={navLinks} />
     <main>
-      <Container size="md" px="xl">
+      <Container size="md" px="xl" mb={60}>
         {children}
       </Container>
     </main>
