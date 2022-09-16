@@ -13,8 +13,7 @@ const Layout: FC<ILayoutProps> = ({ children }) => (
         <motion.div
           initial={{ y: 16 }}
           animate={{ y: 0 }}
-          exit={{ y: 16 }}
-          transition={{ duration: 0.18 }}
+          transition={{ duration: 0.25 }}
         >
           {children}
         </motion.div>
