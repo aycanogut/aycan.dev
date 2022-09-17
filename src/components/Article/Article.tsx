@@ -36,7 +36,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
       transition={{ type: 'spring', stiffness: 100, damping: 10 }}
     >
       <Card className={classes.card} withBorder radius="sm" shadow="sm">
-        <Card.Section px="sm" pt="sm">
+        <Card.Section pl="md" pr="sm" pt="sm">
           <Group position="apart">
             <Text size="xs" color="dimmed">
               {dayjs(pubDate).format('MMMM D, YYYY')}
