@@ -6,14 +6,12 @@ export const projects = [
     title: 'Todo App',
     description:
       'Simple responsive todo app built with React. Users can add, complete and delete todo items. When the page is loaded, the app collects previous todos from localStorage.',
-    stack: ['React.js', 'styled-components'],
+    stack: ['React', 'styled'],
     links: [
       {
-        name: 'github',
         link: 'https://github.com/aycanogut/todo-app-react',
       },
       {
-        name: 'vercel',
         link: 'https://todo-app-react-rosy.vercel.app/',
       },
     ],
@@ -25,14 +23,12 @@ export const projects = [
     title: 'REST Countries API',
     description:
       'This is a solution to the REST Countries API with color theme switcher challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
-    stack: ['React.js', 'TypeScript', 'styled-components', 'axios'],
+    stack: ['React', 'TS'],
     links: [
       {
-        name: 'github',
         link: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
       },
       {
-        name: 'vercel',
         link: 'https://fem-rest-countries-flag-api.vercel.app/',
       },
     ],
@@ -44,14 +40,12 @@ export const projects = [
     title: 'Weather App React',
     description:
       "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: ['React.js', 'vite.js', ' Material UI', 'styled-components'],
+    stack: ['React', ' Material'],
     links: [
       {
-        name: 'github',
         link: 'https://github.com/aycanogut/weather-app-react',
       },
       {
-        name: 'vercel',
         link: 'https://weather-app-react-beta.vercel.app/',
       },
     ],
@@ -63,14 +57,12 @@ export const projects = [
     title: 'React Calculator',
     description:
       "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: ['React.js', 'vite.js', 'Material UI', 'styled-components'],
+    stack: ['React', 'vite'],
     links: [
       {
-        name: 'github',
         link: 'https://github.com/aycanogut/weather-app-react',
       },
       {
-        name: 'vercel',
         link: 'https://weather-app-react-beta.vercel.app/',
       },
     ],
@@ -82,10 +74,9 @@ export const projects = [
     title: 'SASS Boilerplate',
     description:
       'Ready to use SASS boilerplate to develop web projects with gulp.js including SASS features like mixins, breakpoints, variables and normalize.css.',
-    stack: ['gulp.js', 'cssnano', 'babel', 'autoprefixer', 'postcss'],
+    stack: ['gulp', 'babel'],
     links: [
       {
-        name: 'github',
         link: 'https://github.com/aycanogut/sass-boilerplate',
       },
     ],

@@ -3,15 +3,18 @@ import {
   Text,
   Title,
   Group,
-  Button,
   useMantineTheme,
   Paper,
+  Badge,
+  Anchor,
+  Box,
 } from '@mantine/core'
 import { motion } from 'framer-motion'
+import { BrandGithub, BrandVercel } from 'tabler-icons-react'
 import { IProjectProps } from '../../interfaces/Project.interface'
 import useStyles from './Project.styles'
 
-const Project: FC<IProjectProps> = ({ title, description, links }) => {
+const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
   const { classes } = useStyles()
   const theme = useMantineTheme()
 
@@ -20,31 +23,72 @@ const Project: FC<IProjectProps> = ({ title, description, links }) => {
       whileHover={{ scale: 1.01 }}
       transition={{ type: 'spring', stiffness: 100, damping: 10 }}
     >
-      <Paper className={classes.card} withBorder radius="sm" shadow="md" p="lg">
-        <Title order={3}>{title}</Title>
-        <Text my="auto">{description}</Text>
-        <Group spacing="xs" mt="auto">
-          <Text weight={700} size="xs">
-            Links:
-          </Text>
-          {links &&
-            links.map((link: { name: string; link: string }, i: number) => (
-              <Button key={i} variant="default" color="yellow" size="xs">
-                <Text
-                  className={classes.button}
-                  component="a"
-                  variant="link"
-                  href={link.link}
-                  weight="600"
-                  size="xs"
-                  target="_blank"
-                  transform="capitalize"
-                >
-                  {link.name}
-                </Text>
-              </Button>
-            ))}
-        </Group>
+      <Paper
+        className={classes.card}
+        withBorder
+        radius="sm"
+        shadow="md"
+        pt="md"
+        px="md"
+        pb="xs"
+      >
+        <Title order={4} mb="xs">
+          {title}
+        </Title>
+        <Text className={classes.text} size="sm" my="auto">
+          {description}
+        </Text>
+        <Paper mt="auto" pt={8} sx={{ background: 'none' }}>
+          <Group position="apart">
+            <Box>
+              {links &&
+                links.map((link: { name: string; link: string }, i: number) =>
+                  link.link.includes('github') ? (
+                    <Anchor
+                      key={i}
+                      component="a"
+                      href={link.link}
+                      target="_blank"
+                      mr={12}
+                    >
+                      <BrandGithub
+                        size={28}
+                        strokeWidth={2}
+                        color={theme.colorScheme === 'dark' ? 'white' : 'black'}
+                      />
+                    </Anchor>
+                  ) : (
+                    <Anchor
+                      key={i}
+                      component="a"
+                      href={link.link}
+                      target="_blank"
+                    >
+                      <BrandVercel
+                        size={28}
+                        strokeWidth={2}
+                        color={theme.colorScheme === 'dark' ? 'white' : 'black'}
+                      />
+                    </Anchor>
+                  )
+                )}
+            </Box>
+            <Box mb={8}>
+              {stack &&
+                stack.map((item: string, i: number) => (
+                  <Badge
+                    size="xs"
+                    variant="outline"
+                    color={theme.colorScheme === 'dark' ? 'yellow' : 'violet'}
+                    key={i}
+                    ml={10}
+                  >
+                    {item}
+                  </Badge>
+                ))}
+            </Box>
+          </Group>
+        </Paper>
       </Paper>
     </motion.div>
   )
