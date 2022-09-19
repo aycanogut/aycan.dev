@@ -1,11 +1,11 @@
 // https://github.com/leerob/leerob.io/blob/main/components/NowPlaying.tsx
 
 import { useEffect } from 'react'
+import NextImage from 'next/future/image'
 import { Box, Paper, Text } from '@mantine/core'
 import useSWR from 'swr'
 import { animate } from 'motion'
 import fetcher from '../../lib/fetcher'
-import CustomImage from '../CustomImage/CustomImage'
 import { NowPlayingSong } from '../../interfaces/NowPlaying.type'
 import useStyles from './NowPlaying.styles'
 
@@ -79,7 +79,7 @@ const NowPlaying = () => {
     <Box className={classes.spotifyWidget}>
       {data?.songUrl ? (
         <Box className={classes.nowPlaying}>
-          <CustomImage
+          <NextImage
             className={classes.songImage}
             src={data.albumImageUrl}
             alt={data.title}

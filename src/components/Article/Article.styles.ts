@@ -4,11 +4,16 @@ export default createStyles((theme) => ({
   card: {
     position: 'relative',
     minHeight: 160,
-
+    transition: 'box-shadow .2s ease-in',
     backgroundColor:
       theme.colorScheme === 'dark'
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
+
+    '&:hover': {
+      boxShadow: theme.shadows.md,
+      transition: 'box-shadow .2s ease-in',
+    },
 
     ...theme.fn.focusStyles(),
 

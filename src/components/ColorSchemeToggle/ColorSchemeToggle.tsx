@@ -1,5 +1,5 @@
 import { ActionIcon, Group, useMantineColorScheme } from '@mantine/core'
-import { SunIcon, MoonIcon } from '@modulz/radix-icons'
+import { MoonStars, Sun } from 'tabler-icons-react'
 
 export function ColorSchemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
@@ -21,9 +21,9 @@ export function ColorSchemeToggle() {
         })}
       >
         {colorScheme === 'dark' ? (
-          <SunIcon width={20} height={20} aria-label="Toggle Sun Icon" />
+          <Sun size={24} strokeWidth={2} color="#FFD43B" />
         ) : (
-          <MoonIcon width={20} height={20} aria-label="Toggle Moon Icon" />
+          <MoonStars size={24} strokeWidth={2} color="#1A1B1E" />
         )}
       </ActionIcon>
     </Group>
