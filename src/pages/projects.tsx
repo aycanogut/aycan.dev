@@ -26,7 +26,7 @@ const Projects = () => {
           <CustomLoader />
         ) : (
           projects.map((project: IProjectProps) => (
-            <Grid.Col xs={12} sm={6} key={project.id}>
+            <Grid.Col span={12} xs={6} key={project.id}>
               <Project
                 id={project.id}
                 image={project.image}
