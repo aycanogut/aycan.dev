@@ -9,22 +9,20 @@ export default createStyles((theme) => ({
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
 
+    [theme.fn.largerThan('xs')]: {
+      minHeight: 265,
+    },
+
     [theme.fn.largerThan('sm')]: {
-      minHeight: 230,
+      minHeight: 224,
     },
 
     ...theme.fn.focusStyles(),
   },
 
-  imageWrapper: {
-    [theme.fn.smallerThan('xs')]: {
-      textAlign: 'center',
-    },
-  },
-
-  button: {
-    '&:hover': {
-      textDecoration: 'none',
+  text: {
+    [theme.fn.smallerThan('sm')]: {
+      marginBlock: 12,
     },
   },
 }))
