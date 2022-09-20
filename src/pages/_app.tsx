@@ -11,7 +11,7 @@ import {
 } from '@mantine/core'
 import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight'
 import { NotificationsProvider } from '@mantine/notifications'
-import { SpotlightContent } from '../helpers/SpotlightContent'
+import { SpotlightContent } from '../utils/spotlight'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props

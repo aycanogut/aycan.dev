@@ -6,7 +6,7 @@ export const projects = [
     title: 'Todo App',
     description:
       'Simple responsive todo app built with React. Users can add, complete and delete todo items. When the page is loaded, the app collects previous todos from localStorage.',
-    stack: ['React', 'styled'],
+    stack: ['React', 'styled', 'typescript', 'axios'],
     links: [
       {
         link: 'https://github.com/aycanogut/todo-app-react',
@@ -23,7 +23,7 @@ export const projects = [
     title: 'REST Countries API',
     description:
       'This is a solution to the REST Countries API with color theme switcher challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
-    stack: ['React', 'TS'],
+    stack: ['React', 'styled', 'typescript', 'axios'],
     links: [
       {
         link: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
@@ -40,7 +40,7 @@ export const projects = [
     title: 'Weather App React',
     description:
       "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: ['React', ' Material'],
+    stack: ['React', 'styled', 'typescript', 'axios'],
     links: [
       {
         link: 'https://github.com/aycanogut/weather-app-react',
@@ -57,7 +57,7 @@ export const projects = [
     title: 'React Calculator',
     description:
       "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: ['React', 'vite'],
+    stack: ['React', 'styled', 'typescript', 'axios'],
     links: [
       {
         link: 'https://github.com/aycanogut/weather-app-react',
@@ -74,7 +74,7 @@ export const projects = [
     title: 'SASS Boilerplate',
     description:
       'Ready to use SASS boilerplate to develop web projects with gulp.js including SASS features like mixins, breakpoints, variables and normalize.css.',
-    stack: ['gulp', 'babel'],
+    stack: ['React', 'styled', 'typescript', 'axios'],
     links: [
       {
         link: 'https://github.com/aycanogut/sass-boilerplate',

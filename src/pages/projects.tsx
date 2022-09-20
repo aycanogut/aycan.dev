@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Grid, Title } from '@mantine/core'
-import { projects } from '../helpers/projectsDummyData'
+import { projects } from '../utils/projects'
 import Layout from '../components/Layout/Layout'
 import Project from '../components/Project/Project'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
