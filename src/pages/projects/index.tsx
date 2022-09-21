@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Grid, Title } from '@mantine/core'
+import Link from 'next/link'
+import { Grid, Title, Group, useMantineTheme } from '@mantine/core'
 import { projects } from '../../utils/projects'
 import Layout from '../../components/Layout/Layout'
 import Project from '../../components/Project/Project'
@@ -8,6 +9,7 @@ import { IProjectProps } from '../../interfaces/Project.interface'
 
 const Projects = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  const theme = useMantineTheme()
 
   //TODO replace with CustomLoader when API is ready
   useEffect(() => {
@@ -18,11 +20,27 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Title order={1} mb={30}>
-        Projects
-      </Title>
-
-      <Grid gutter="xl">
+      <Group position="apart" mb={30}>
+        <Title order={1}>Projects</Title>
+        <Title order={3}>
+          <Link href="projects/repos">
+            <a
+              tabIndex={0}
+              role="link"
+              style={{
+                textDecoration: 'none',
+                color:
+                  theme.colorScheme === 'dark'
+                    ? theme.colors.yellow[4]
+                    : theme.colors.dark[9],
+              }}
+            >
+              Github Repos
+            </a>
+          </Link>
+        </Title>
+      </Group>
+      <Grid gutter="xl" grow>
         {isLoading ? (
           <CustomLoader />
         ) : (
