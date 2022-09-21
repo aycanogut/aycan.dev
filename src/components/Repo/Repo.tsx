@@ -2,17 +2,18 @@ import React, { FC } from 'react'
 import {
   Card,
   Group,
+  Stack,
   useMantineTheme,
-  Title,
   Anchor,
   Text,
+  Title,
 } from '@mantine/core'
 import { motion } from 'framer-motion'
 import { Star } from 'tabler-icons-react'
 import { IRepoProps } from '../../interfaces/Repo.interface'
 import useStyles from './Repo.styles'
 
-const Repo: FC<IRepoProps> = ({ title, starCount, url }) => {
+const Repo: FC<IRepoProps> = ({ title, description, url, starCount }) => {
   const { classes } = useStyles()
   const theme = useMantineTheme()
 
@@ -21,23 +22,24 @@ const Repo: FC<IRepoProps> = ({ title, starCount, url }) => {
       whileHover={{ scale: 1.01 }}
       transition={{ type: 'spring', stiffness: 100, damping: 10 }}
     >
-      <Card withBorder radius="md" p="sm">
-        <Group position="apart" direction="column">
-          <Anchor href={url} target="_blank" className={classes.link}>
-            <Title order={5} mb="sm" color="red">
-              {title}
-            </Title>
-          </Anchor>
-          <Group spacing={4}>
-            <Text size="sm">{starCount}</Text>
-            <Star
-              size={20}
-              strokeWidth={2}
-              color={theme.colorScheme === 'dark' ? '#ffd43b' : '#808080'}
-            />
-          </Group>
-        </Group>
-      </Card>
+      <Anchor href={url} target="_blank" className={classes.link}>
+        <Card withBorder radius="md" className={classes.card}>
+          <Stack>
+            <Title order={5}>{title}</Title>
+            <Text size="sm" my="md">
+              {description}
+            </Text>
+            <Group spacing={4}>
+              <Text size="sm">{starCount}</Text>
+              <Star
+                size={20}
+                strokeWidth={2}
+                color={theme.colorScheme === 'dark' ? '#ffd43b' : '#FFA500'}
+              />
+            </Group>
+          </Stack>
+        </Card>
+      </Anchor>
     </motion.div>
   )
 }
