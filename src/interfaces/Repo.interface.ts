@@ -1,5 +1,6 @@
 export interface IRepoProps {
   title: string
-  starCount: number
+  description: string
   url: string
+  starCount: number
 }
