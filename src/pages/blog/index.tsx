@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
-import fetcher from '../lib/fetcher'
-import Layout from '../components/Layout/Layout'
-import Article from '../components/Article/Article'
-import CustomLoader from '../components/CustomLoader/CustomLoader'
-import Error from '../components/Error/Error'
-import { IBlogProps, IArticleProps } from '../interfaces/Blog.interface'
+import fetcher from '../../lib/fetcher'
+import Layout from '../../components/Layout/Layout'
+import Article from '../../components/Article/Article'
+import CustomLoader from '../../components/CustomLoader/CustomLoader'
+import Error from '../../components/Error/Error'
+import { IBlogProps, IArticleProps } from '../../interfaces/Blog.interface'
 
 const Blog: FC<IBlogProps> = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
@@ -18,7 +18,7 @@ const Blog: FC<IBlogProps> = () => {
       <Title order={1} mb={30}>
         Blog Posts
       </Title>
-      <Grid gutter="xl">
+      <Grid gutter="xl" grow>
         {!data ? (
           <CustomLoader />
         ) : (

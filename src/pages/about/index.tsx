@@ -1,7 +1,7 @@
 import { Title, Text } from '@mantine/core'
 import GitHubCalendar from 'react-github-calendar'
-import Layout from '../components/Layout/Layout'
-import NowPlaying from '../components/NowPlaying/NowPlaying'
+import Layout from '../../components/Layout/Layout'
+import NowPlaying from '../../components/NowPlaying/NowPlaying'
 
 const About = () => (
   <Layout>

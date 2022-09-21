@@ -1,17 +1,17 @@
 import { FC, useState } from 'react'
 import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
-import fetcher from '../lib/fetcher'
-import useWidth from '../hooks/useWidth'
-import Layout from '../components/Layout/Layout'
-import Bookmark from '../components/Bookmark/Bookmark'
-import CustomLoader from '../components/CustomLoader/CustomLoader'
-import Error from '../components/Error/Error'
+import fetcher from '../../lib/fetcher'
+import useWidth from '../../hooks/useWidth'
+import Layout from '../../components/Layout/Layout'
+import Bookmark from '../../components/Bookmark/Bookmark'
+import CustomLoader from '../../components/CustomLoader/CustomLoader'
+import Error from '../../components/Error/Error'
 import {
   IBookmarksProps,
   IBookmarkProps,
   IFilteredBookmarksProps,
-} from '../interfaces/Bookmark.interface'
+} from '../../interfaces/Bookmark.interface'
 
 const Bookmarks: FC<IBookmarksProps> = () => {
   const { data, error } = useSWR<IBookmarksProps>('api/raindrop', fetcher)
