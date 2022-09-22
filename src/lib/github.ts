@@ -1,4 +1,4 @@
-const token_endpoint = 'https://api.github.com/users/aycanogut/repos'
+const token_endpoint = process.env.GITHUB_URL
 
 export const getRepos = async () => {
   const response = await fetch(token_endpoint, {
