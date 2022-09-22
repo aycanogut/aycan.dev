@@ -28,7 +28,7 @@ export default createStyles((theme) => ({
 
   badges: {
     position: 'absolute',
-    left: 12,
-    bottom: 12,
+    left: 16,
+    bottom: 16,
   },
 }))
