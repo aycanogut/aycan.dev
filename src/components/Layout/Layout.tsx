@@ -9,7 +9,7 @@ const Layout: FC<ILayoutProps> = ({ children }) => (
   <>
     <CustomHeader links={navLinks} />
     <main>
-      <Container size="md" px="xl" mb={60}>
+      <Container size="md" px="xl" pt={60} pb={70}>
         <motion.div
           initial={{ y: 16 }}
           animate={{ y: 0 }}

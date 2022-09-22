@@ -6,7 +6,6 @@ export default createStyles((theme) => ({
   root: {
     position: 'relative',
     zIndex: 1,
-    marginBottom: '60px',
   },
 
   dropdown: {
