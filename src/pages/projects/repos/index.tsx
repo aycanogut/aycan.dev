@@ -1,14 +1,20 @@
 import { FC } from 'react'
 import { Grid, Title } from '@mantine/core'
+import useSWR from 'swr'
+import fetcher from '../../../lib/fetcher'
 import Layout from '../../../components/Layout/Layout'
 import Repo from '../../../components/Repo/Repo'
 import CustomLoader from '../../../components/CustomLoader/CustomLoader'
 import Error from '../../../components/Error/Error'
-import { getRepos } from '../../../lib/github'
 import { IRepoProps } from '../../../interfaces/Repo.interface'
 
-const Repos: FC<IRepoProps> = ({ repos }: any) => {
-  if (!repos) return <Error />
+const Repos: FC<IRepoProps> = () => {
+  const { data, error } = useSWR<IRepoProps>(
+    'https://api.github.com/users/aycanogut/repos',
+    fetcher
+  )
+
+  if (error) return <Error />
 
   return (
     <Layout>
@@ -16,11 +22,11 @@ const Repos: FC<IRepoProps> = ({ repos }: any) => {
         Repos
       </Title>
       <Grid gutter="lg" grow>
-        {!repos ? (
+        {!data ? (
           <CustomLoader />
         ) : (
-          repos &&
-          repos
+          data &&
+          data
             .sort((a, b) => b.stargazers_count - a.stargazers_count)
             .map((repo: any) => (
               <Grid.Col span={12} xs={6} sm={4} key={repo.id}>
@@ -36,16 +42,6 @@ const Repos: FC<IRepoProps> = ({ repos }: any) => {
       </Grid>
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  const repos = await getRepos()
-
-  return {
-    props: {
-      repos,
-    },
-  }
 }
 
 export default Repos

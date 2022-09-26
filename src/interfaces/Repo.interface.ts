@@ -3,4 +3,5 @@ export interface IRepoProps {
   description: string
   url: string
   starCount: number
+  [x: string]: any
 }
