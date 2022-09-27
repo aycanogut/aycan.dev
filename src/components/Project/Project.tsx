@@ -79,7 +79,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                   <Badge
                     size="xs"
                     variant="outline"
-                    color={theme.colorScheme === 'dark' ? 'yellow' : 'violet'}
+                    color={theme.colorScheme === 'dark' ? 'yellow' : 'orange'}
                     key={i}
                     ml={theme.breakpoints.xs ? 0 : 10}
                     mr={theme.breakpoints.xs ? 10 : 0}

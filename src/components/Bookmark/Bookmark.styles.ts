@@ -6,16 +6,16 @@ export default createStyles((theme) => ({
     color:
       theme.colorScheme === 'dark'
         ? theme.colors.yellow[4]
-        : theme.colors.violet[8],
+        : theme.colors.orange[7],
     backgroundColor:
       theme.colorScheme === 'dark'
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
 
-        '&:hover': {
-          boxShadow: theme.shadows.sm,
-          transition: 'box-shadow .2s ease-in',
-        },
+    '&:hover': {
+      boxShadow: theme.shadows.sm,
+      transition: 'box-shadow .2s ease-in',
+    },
 
     ...theme.fn.focusStyles(),
   },

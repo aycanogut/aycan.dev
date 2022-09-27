@@ -13,4 +13,5 @@ export interface IArticleProps {
   categories: any
   pubDate: string
   map: Function
+  slice: Function
 }

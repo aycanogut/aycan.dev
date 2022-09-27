@@ -11,7 +11,7 @@ const CustomLoader: FC = () => {
       color={
         theme.colorScheme === 'dark'
           ? theme.colors.yellow[4]
-          : theme.colors.violet[8]
+          : theme.colors.orange[7]
       }
       sx={{ margin: '1rem auto', width: '100%' }}
     />
