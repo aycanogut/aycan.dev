@@ -6,7 +6,7 @@ export default createStyles((theme) => ({
     color:
       theme.colorScheme === 'dark'
         ? theme.colors.yellow[4]
-        : theme.colors.violet[8],
+        : theme.colors.orange[7],
     backgroundColor:
       theme.colorScheme === 'dark'
         ? theme.colors.dark[6]
