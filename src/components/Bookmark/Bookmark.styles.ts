@@ -12,10 +12,10 @@ export default createStyles((theme) => ({
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
 
-        '&:hover': {
-          boxShadow: theme.shadows.sm,
-          transition: 'box-shadow .2s ease-in',
-        },
+    '&:hover': {
+      boxShadow: theme.shadows.sm,
+      transition: 'box-shadow .2s ease-in',
+    },
 
     ...theme.fn.focusStyles(),
   },
