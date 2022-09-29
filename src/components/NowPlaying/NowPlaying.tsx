@@ -1,6 +1,6 @@
 // https://github.com/leerob/leerob.io/blob/main/components/NowPlaying.tsx
 
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import NextImage from 'next/future/image'
 import { Box, Paper, Text } from '@mantine/core'
 import useSWR from 'swr'
@@ -71,7 +71,7 @@ const AnimatedBars = () => {
   )
 }
 
-const NowPlaying = () => {
+const NowPlaying: FC = () => {
   const { data } = useSWR<NowPlayingSong>('api/spotify-now-playing', fetcher)
   const { classes } = useStyles()
 

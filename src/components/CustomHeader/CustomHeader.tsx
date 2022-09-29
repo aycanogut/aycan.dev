@@ -10,7 +10,7 @@ import {
   Transition,
 } from '@mantine/core'
 import { useBooleanToggle } from '@mantine/hooks'
-import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
+import ColorSchemeToggle from '../ColorSchemeToggle/ColorSchemeToggle'
 import { ICustomHeaderProps } from '../../interfaces/CustomHeader.interface'
 import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
 

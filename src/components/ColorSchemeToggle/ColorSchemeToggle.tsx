@@ -1,7 +1,8 @@
+import { FC } from 'react'
 import { ActionIcon, Group, useMantineColorScheme } from '@mantine/core'
 import { MoonStars, Sun } from 'tabler-icons-react'
 
-export function ColorSchemeToggle() {
+const ColorSchemeToggle: FC = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 
   return (
@@ -30,3 +31,5 @@ export function ColorSchemeToggle() {
     </Group>
   )
 }
+
+export default ColorSchemeToggle
