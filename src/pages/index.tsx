@@ -34,83 +34,87 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <Title order={1} mb={30}>
-        Hello 🤙
-      </Title>
       {!data ? (
         <CustomLoader />
       ) : (
-        <Box>
-          <Group position="apart">
-            <Group direction="column" spacing={2}>
-              <Text>I&apos;m a frontend developer based in İzmir, Turkey.</Text>
-              <Text>
-                I love to&nbsp;
-                <Anchor
-                  href="https://github.com/aycanogut"
-                  target="_blank"
-                  variant="link"
-                  color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                >
-                  <strong>create things</strong>
-                </Anchor>
-                &nbsp;with JavaScript and publish&nbsp;
-                <Anchor
-                  href="https://aycanogut.medium.com/"
-                  target="_blank"
-                  variant="link"
-                  color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                >
-                  <strong>articles</strong>
-                </Anchor>
-                &nbsp;regularly.
-              </Text>
-              <Text mt={20}>
-                Find out&nbsp;
-                <Link href="/about">
+        <>
+          <Title order={1} mb={30}>
+            Hello 🤙
+          </Title>
+          <Box>
+            <Group position="apart">
+              <Group direction="column" spacing={2}>
+                <Text>
+                  I&apos;m a frontend developer based in İzmir, Turkey.
+                </Text>
+                <Text>
+                  I love to&nbsp;
                   <Anchor
+                    href="https://github.com/aycanogut"
+                    target="_blank"
                     variant="link"
                     color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                   >
-                    <strong>more</strong>
+                    <strong>create things</strong>
                   </Anchor>
-                </Link>
-                .
-              </Text>
-            </Group>
-          </Group>
-          <Group direction="column" mt={60}>
-            <Title order={2}>Latest Articles</Title>
-            <Stack spacing="xs">
-              {data &&
-                data
-                  .slice(0, 5)
-                  .sort((a, b) => b.stargazers_count - a.stargazers_count)
-                  .map(
-                    (article: { link: string; title: string }, i: number) => (
-                      <Text component="a" target="_blank" href={article.link}>
-                        {article.title}
-                      </Text>
-                    )
-                  )}
-            </Stack>
-          </Group>
-          <Group direction="column" mt={60}>
-            <Title order={2}>Tech Stack</Title>
-            <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
-              <Group position="center" spacing="lg">
-                <Javascript color="#F7DF1E" size={70} />
-                <Typescript color="#3178C6" size={70} />
-                <ReactJs color="#61DAFB" size={70} />
-                <Nextdotjs color="#000000" size={70} />
-                <Sass color="#CC6699" size={70} />
-                <Styledcomponents color="#DB7093" size={70} />
-                <Tailwindcss color="#06B6D4" size={70} />
-                <Bootstrap color="#7952B3" size={70} />
+                  &nbsp;with JavaScript and publish&nbsp;
+                  <Anchor
+                    href="https://aycanogut.medium.com/"
+                    target="_blank"
+                    variant="link"
+                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                  >
+                    <strong>articles</strong>
+                  </Anchor>
+                  &nbsp;regularly.
+                </Text>
+                <Text mt={20}>
+                  Find out&nbsp;
+                  <Link href="/about">
+                    <Anchor
+                      variant="link"
+                      color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                    >
+                      <strong>more</strong>
+                    </Anchor>
+                  </Link>
+                  .
+                </Text>
               </Group>
-            </Paper>
-          </Group>
-        </Box>
+            </Group>
+            <Group direction="column" mt={60}>
+              <Title order={2}>Latest Articles</Title>
+              <Stack spacing="xs">
+                {data &&
+                  data
+                    .slice(0, 5)
+                    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+                    .map(
+                      (article: { link: string; title: string }, i: number) => (
+                        <Text component="a" target="_blank" href={article.link}>
+                          {article.title}
+                        </Text>
+                      )
+                    )}
+              </Stack>
+            </Group>
+            <Group direction="column" mt={60}>
+              <Title order={2}>Tech Stack</Title>
+              <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
+                <Group position="center" spacing="lg">
+                  <Javascript color="#F7DF1E" size={70} />
+                  <Typescript color="#3178C6" size={70} />
+                  <ReactJs color="#61DAFB" size={70} />
+                  <Nextdotjs color="#000000" size={70} />
+                  <Sass color="#CC6699" size={70} />
+                  <Styledcomponents color="#DB7093" size={70} />
+                  <Tailwindcss color="#06B6D4" size={70} />
+                  <Bootstrap color="#7952B3" size={70} />
+                </Group>
+              </Paper>
+            </Group>
+          </Box>
+        </>
       )}
     </Layout>
   )

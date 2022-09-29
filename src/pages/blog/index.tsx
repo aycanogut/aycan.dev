@@ -15,27 +15,29 @@ const Blog: FC<IBlogProps> = () => {
 
   return (
     <Layout>
-      <Title order={1} mb={30}>
-        Blog Posts
-      </Title>
-      <Grid gutter="xl" grow>
-        {!data ? (
-          <CustomLoader />
-        ) : (
-          data &&
-          data.map((article: IArticleProps, i: number) => (
-            <Grid.Col xs={12} sm={6} md={4} key={i}>
-              <Article
-                key={article.title}
-                title={article.title}
-                categories={article.categories}
-                link={article.link}
-                pubDate={article.pubDate}
-              />
-            </Grid.Col>
-          ))
-        )}
-      </Grid>
+      {!data ? (
+        <CustomLoader />
+      ) : (
+        <>
+          <Title order={1} mb={30}>
+            Blog Posts
+          </Title>
+          <Grid gutter="xl" grow>
+            {data &&
+              data.map((article: IArticleProps, i: number) => (
+                <Grid.Col xs={12} sm={6} md={4} key={i}>
+                  <Article
+                    key={article.title}
+                    title={article.title}
+                    categories={article.categories}
+                    link={article.link}
+                    pubDate={article.pubDate}
+                  />
+                </Grid.Col>
+              ))}
+          </Grid>
+        </>
+      )}
     </Layout>
   )
 }
