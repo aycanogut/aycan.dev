@@ -3,7 +3,6 @@ import {
   Card,
   Badge,
   useMantineTheme,
-  Title,
   Text,
   Group,
   Anchor,
@@ -22,7 +21,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
   const badges = categories.slice(4).map((category: {}, i: number) => (
     <Badge
       key={i}
-      color={theme.colorScheme === 'dark' ? 'yellow' : 'orange'}
+      color={theme.colorScheme === 'dark' ? 'yellow' : 'dark'}
       size="xs"
       variant="outline"
     >
@@ -41,13 +40,19 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
             <Text size="xs" color="dimmed">
               {dayjs(pubDate).format('MMMM D, YYYY')}
             </Text>
-            <Anchor href={link} target="_blank">
+            <Anchor
+              href={link}
+              target="_blank"
+              aria-label="Link to article on Medium"
+            >
               <ExternalLink size={24} strokeWidth={2} color="#808080" />
             </Anchor>
           </Group>
         </Card.Section>
         <Card.Section px="md" py="sm">
-          <Title order={4}>{title}</Title>
+          <Text size="lg" weight={700}>
+            {title}
+          </Text>
         </Card.Section>
         <Card.Section py="md" pb="sm">
           <Box className={classes.badges}>{badges}</Box>

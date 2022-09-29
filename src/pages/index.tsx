@@ -1,5 +1,14 @@
 import Link from 'next/link'
-import { Title, Text, Anchor, Group, Paper, Stack, Box } from '@mantine/core'
+import {
+  Title,
+  Text,
+  Anchor,
+  Group,
+  Paper,
+  Stack,
+  Box,
+  useMantineColorScheme,
+} from '@mantine/core'
 import useSWR from 'swr'
 import {
   Javascript,
@@ -19,6 +28,7 @@ import { IArticleProps } from '../interfaces/Blog.interface'
 
 const HomePage = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
+  const { colorScheme } = useMantineColorScheme()
 
   if (error) return <Error />
 
@@ -40,8 +50,7 @@ const HomePage = () => {
                   href="https://github.com/aycanogut"
                   target="_blank"
                   variant="link"
-                  weight={500}
-                  color="orange"
+                  color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                 >
                   <strong>create things</strong>
                 </Anchor>
@@ -50,8 +59,7 @@ const HomePage = () => {
                   href="https://aycanogut.medium.com/"
                   target="_blank"
                   variant="link"
-                  weight={500}
-                  color="orange"
+                  color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                 >
                   <strong>articles</strong>
                 </Anchor>
@@ -60,7 +68,10 @@ const HomePage = () => {
               <Text mt={20}>
                 Find out&nbsp;
                 <Link href="/about">
-                  <Anchor variant="link" weight={500} color="orange">
+                  <Anchor
+                    variant="link"
+                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                  >
                     <strong>more</strong>
                   </Anchor>
                 </Link>
@@ -69,7 +80,7 @@ const HomePage = () => {
             </Group>
           </Group>
           <Group direction="column" mt={60}>
-            <Title order={3}>Latest Articles</Title>
+            <Title order={2}>Latest Articles</Title>
             <Stack spacing="xs">
               {data &&
                 data
@@ -85,7 +96,7 @@ const HomePage = () => {
             </Stack>
           </Group>
           <Group direction="column" mt={60}>
-            <Title order={3}>Tech Stack</Title>
+            <Title order={2}>Tech Stack</Title>
             <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
               <Group position="center" spacing="lg">
                 <Javascript color="#F7DF1E" size={70} />

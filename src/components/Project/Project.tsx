@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import {
   Text,
-  Title,
   Group,
   useMantineTheme,
   Paper,
@@ -32,9 +31,9 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
         px="md"
         pb="xs"
       >
-        <Title order={4} mb="xs">
+        <Text size="xl" weight={700} mb="xs">
           {title}
-        </Title>
+        </Text>
         <Text className={classes.text} size="sm" my="auto">
           {description}
         </Text>
@@ -50,6 +49,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                       href={link.link}
                       target="_blank"
                       mr={12}
+                      aria-label="Link to project on GitHub"
                     >
                       <BrandGithub
                         size={28}
@@ -68,6 +68,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                         size={28}
                         strokeWidth={2}
                         color={theme.colorScheme === 'dark' ? 'white' : 'black'}
+                        aria-label="Link to project on Vercel"
                       />
                     </Anchor>
                   )
@@ -79,7 +80,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                   <Badge
                     size="xs"
                     variant="outline"
-                    color={theme.colorScheme === 'dark' ? 'yellow' : 'orange'}
+                    color={theme.colorScheme === 'dark' ? 'yellow' : 'dark'}
                     key={i}
                     ml={theme.breakpoints.xs ? 0 : 10}
                     mr={theme.breakpoints.xs ? 10 : 0}

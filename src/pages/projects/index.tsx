@@ -22,7 +22,7 @@ const Projects = () => {
     <Layout>
       <Group position="apart" mb={30}>
         <Title order={1}>Projects</Title>
-        <Title order={3}>
+        <Title order={2}>
           <Link href="projects/repos">
             <a
               tabIndex={0}
@@ -32,7 +32,7 @@ const Projects = () => {
                 color:
                   theme.colorScheme === 'dark'
                     ? theme.colors.yellow[4]
-                    : theme.colors.orange[7],
+                    : theme.colors.dark[8],
               }}
             >
               Github Repos
