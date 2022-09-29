@@ -40,8 +40,7 @@ const HomePage = () => {
                   href="https://github.com/aycanogut"
                   target="_blank"
                   variant="link"
-                  weight={500}
-                  color="orange"
+                  color="dark"
                 >
                   <strong>create things</strong>
                 </Anchor>
@@ -50,8 +49,7 @@ const HomePage = () => {
                   href="https://aycanogut.medium.com/"
                   target="_blank"
                   variant="link"
-                  weight={500}
-                  color="orange"
+                  color="dark"
                 >
                   <strong>articles</strong>
                 </Anchor>
@@ -60,7 +58,7 @@ const HomePage = () => {
               <Text mt={20}>
                 Find out&nbsp;
                 <Link href="/about">
-                  <Anchor variant="link" weight={500} color="orange">
+                  <Anchor variant="link" color="dark">
                     <strong>more</strong>
                   </Anchor>
                 </Link>

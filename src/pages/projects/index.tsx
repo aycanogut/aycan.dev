@@ -32,7 +32,7 @@ const Projects = () => {
                 color:
                   theme.colorScheme === 'dark'
                     ? theme.colors.yellow[4]
-                    : theme.colors.orange[7],
+                    : theme.colors.indigo[8],
               }}
             >
               Github Repos

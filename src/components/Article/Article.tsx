@@ -22,7 +22,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
   const badges = categories.slice(4).map((category: {}, i: number) => (
     <Badge
       key={i}
-      color={theme.colorScheme === 'dark' ? 'yellow' : 'orange'}
+      color={theme.colorScheme === 'dark' ? 'yellow' : 'indigo'}
       size="xs"
       variant="outline"
     >
