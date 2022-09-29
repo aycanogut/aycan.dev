@@ -69,7 +69,7 @@ const HomePage = () => {
             </Group>
           </Group>
           <Group direction="column" mt={60}>
-            <Title order={3}>Latest Articles</Title>
+            <Title order={2}>Latest Articles</Title>
             <Stack spacing="xs">
               {data &&
                 data
@@ -85,7 +85,7 @@ const HomePage = () => {
             </Stack>
           </Group>
           <Group direction="column" mt={60}>
-            <Title order={3}>Tech Stack</Title>
+            <Title order={2}>Tech Stack</Title>
             <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
               <Group position="center" spacing="lg">
                 <Javascript color="#F7DF1E" size={70} />

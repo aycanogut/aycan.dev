@@ -22,7 +22,7 @@ const Projects = () => {
     <Layout>
       <Group position="apart" mb={30}>
         <Title order={1}>Projects</Title>
-        <Title order={3}>
+        <Title order={2}>
           <Link href="projects/repos">
             <a
               tabIndex={0}
