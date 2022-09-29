@@ -3,7 +3,6 @@ import {
   Card,
   Badge,
   useMantineTheme,
-  Title,
   Text,
   Group,
   Anchor,
@@ -47,7 +46,9 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
           </Group>
         </Card.Section>
         <Card.Section px="md" py="sm">
-          <Title order={4}>{title}</Title>
+          <Text size="lg" weight={700}>
+            {title}
+          </Text>
         </Card.Section>
         <Card.Section py="md" pb="sm">
           <Box className={classes.badges}>{badges}</Box>

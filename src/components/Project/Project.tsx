@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import {
   Text,
-  Title,
   Group,
   useMantineTheme,
   Paper,
@@ -32,9 +31,9 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
         px="md"
         pb="xs"
       >
-        <Title order={4} mb="xs">
+        <Text size="xl" weight={700} mb="xs">
           {title}
-        </Title>
+        </Text>
         <Text className={classes.text} size="sm" my="auto">
           {description}
         </Text>
