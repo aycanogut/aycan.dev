@@ -40,7 +40,11 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
             <Text size="xs" color="dimmed">
               {dayjs(pubDate).format('MMMM D, YYYY')}
             </Text>
-            <Anchor href={link} target="_blank">
+            <Anchor
+              href={link}
+              target="_blank"
+              aria-label="Link to article on Medium"
+            >
               <ExternalLink size={24} strokeWidth={2} color="#808080" />
             </Anchor>
           </Group>

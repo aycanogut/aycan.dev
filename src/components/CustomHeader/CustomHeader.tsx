@@ -51,6 +51,8 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
           onClick={() => toggleOpened()}
           className={classes.burger}
           size="md"
+          title="Open navigation"
+          aria-label="Open navigation"
         />
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (

@@ -49,6 +49,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                       href={link.link}
                       target="_blank"
                       mr={12}
+                      aria-label="Link to project on GitHub"
                     >
                       <BrandGithub
                         size={28}
@@ -67,6 +68,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                         size={28}
                         strokeWidth={2}
                         color={theme.colorScheme === 'dark' ? 'white' : 'black'}
+                        aria-label="Link to project on Vercel"
                       />
                     </Anchor>
                   )
