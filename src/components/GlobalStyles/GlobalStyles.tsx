@@ -18,8 +18,12 @@ const GlobalStyles: FC = () => (
       },
 
       '.loader': {
-        margin: '40% auto',
+        margin: '50% auto',
         width: '100%',
+
+        [theme.fn.largerThan('sm')]: {
+          margin: '35% auto',
+        },
       },
     })}
   />
