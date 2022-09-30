@@ -8,7 +8,7 @@ import CustomLoader from '../../components/CustomLoader/CustomLoader'
 import Error from '../../components/Error/Error'
 import { IBlogProps, IArticleProps } from '../../interfaces/Blog.interface'
 
-const Blog: FC<IBlogProps> = () => {
+const Articles: FC<IBlogProps> = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
 
   if (error) return <Error />
@@ -42,4 +42,4 @@ const Blog: FC<IBlogProps> = () => {
   )
 }
 
-export default Blog
+export default Articles
