@@ -42,7 +42,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
             ]}
             onChange={setValue}
             mb={30}
-            sx={{ width: '100%' }}
+            sx={{ width: '100%', zIndex: 0 }}
             transitionDuration={300}
             fullWidth
             orientation={width && width > 450 ? 'horizontal' : 'vertical'}
