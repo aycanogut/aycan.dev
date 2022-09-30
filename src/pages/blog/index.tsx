@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Grid, Title } from '@mantine/core'
+import { Container, Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../lib/fetcher'
 import Layout from '../../components/Layout/Layout'
@@ -18,7 +18,7 @@ const Blog: FC<IBlogProps> = () => {
       {!data ? (
         <CustomLoader />
       ) : (
-        <>
+        <Container>
           <Title order={1} mb={30}>
             Blog Posts
           </Title>
@@ -36,7 +36,7 @@ const Blog: FC<IBlogProps> = () => {
                 </Grid.Col>
               ))}
           </Grid>
-        </>
+        </Container>
       )}
     </Layout>
   )
