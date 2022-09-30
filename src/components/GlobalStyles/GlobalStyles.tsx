@@ -16,6 +16,11 @@ const GlobalStyles: FC = () => (
       '::-webkit-scrollbar': {
         display: 'none',
       },
+
+      '.loader': {
+        margin: '40% auto',
+        width: '100%',
+      },
     })}
   />
 )
