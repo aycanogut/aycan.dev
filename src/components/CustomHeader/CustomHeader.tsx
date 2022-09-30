@@ -23,7 +23,7 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <Group spacing={5} className={classes.links}>
+        <Group spacing={1} className={classes.links}>
           {links.map((link) => (
             <Link key={link.label} href={link.link}>
               <a
