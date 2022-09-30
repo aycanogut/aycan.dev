@@ -8,12 +8,12 @@ const CustomLoader: FC = () => {
     <Loader
       variant="dots"
       size="xl"
+      className="loader"
       color={
         theme.colorScheme === 'dark'
           ? theme.colors.yellow[4]
           : theme.colors.dark[9]
       }
-      sx={{ margin: '1rem auto', width: '100%', marginTop: '50%' }}
     />
   )
 }
