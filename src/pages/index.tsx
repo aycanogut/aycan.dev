@@ -54,6 +54,7 @@ const HomePage = () => {
                     href="https://github.com/aycanogut"
                     target="_blank"
                     variant="link"
+                    underline
                     color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                   >
                     <strong>create things</strong>
@@ -63,6 +64,7 @@ const HomePage = () => {
                     href="https://aycanogut.medium.com/"
                     target="_blank"
                     variant="link"
+                    underline
                     color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                   >
                     <strong>articles</strong>
@@ -74,6 +76,7 @@ const HomePage = () => {
                   <Link href="/about">
                     <Anchor
                       variant="link"
+                      underline
                       color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                     >
                       <strong>more</strong>
@@ -92,8 +95,13 @@ const HomePage = () => {
                     .sort((a, b) => b.stargazers_count - a.stargazers_count)
                     .map(
                       (article: { link: string; title: string }, i: number) => (
-                        <Text component="a" target="_blank" href={article.link}>
-                          {article.title}
+                        <Text
+                          component="a"
+                          target="_blank"
+                          href={article.link}
+                          underline
+                        >
+                          <strong>{article.title}</strong>
                         </Text>
                       )
                     )}
