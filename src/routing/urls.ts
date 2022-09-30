@@ -1,7 +1,7 @@
 export const urls = {
   Home: '/',
   Projects: '/projects',
-  Blog: '/blog',
+  Articles: '/articles',
   Bookmarks: '/bookmarks',
   About: '/about',
 }

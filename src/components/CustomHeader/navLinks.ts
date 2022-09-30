@@ -10,8 +10,8 @@ export const navLinks = [
     label: 'Projects',
   },
   {
-    link: urls.Blog,
-    label: 'Blog',
+    link: urls.Articles,
+    label: 'Articles',
   },
   {
     link: urls.Bookmarks,

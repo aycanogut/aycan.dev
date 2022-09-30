@@ -11,6 +11,7 @@ import {
 } from '@mantine/core'
 import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight'
 import { NotificationsProvider } from '@mantine/notifications'
+import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 import { SpotlightContent } from '../utils/spotlight'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
@@ -45,18 +46,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <style jsx global>
-        {`
-          #__next {
-            min-height: 100vh;
-          }
-
-          //! remove it
-          ::-webkit-scrollbar {
-            display: none;
-          }
-        `}
-      </style>
+      <GlobalStyles />
       <ColorSchemeProvider
         colorScheme={colorScheme}
         toggleColorScheme={toggleColorScheme}
