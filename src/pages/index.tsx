@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {
   Title,
   Text,
@@ -72,15 +71,15 @@ const HomePage = () => {
                 </Text>
                 <Text mt={20}>
                   Find out&nbsp;
-                  <Link href="/about">
-                    <Anchor
-                      variant="link"
-                      underline
-                      color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                    >
-                      <strong>more</strong>
-                    </Anchor>
-                  </Link>
+                  <Anchor
+                    variant="link"
+                    href="https://read.cv/aycanogut"
+                    target="_blank"
+                    underline
+                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                  >
+                    <strong>more</strong>
+                  </Anchor>
                   .
                 </Text>
               </Group>
