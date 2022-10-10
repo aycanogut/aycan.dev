@@ -113,6 +113,7 @@ const HomePage = () => {
                           target="_blank"
                           href={article.link}
                           underline
+                          color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                         >
                           <strong>{article.title}</strong>
                         </Text>
