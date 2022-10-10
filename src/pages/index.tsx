@@ -69,7 +69,7 @@ const HomePage = () => {
                   </Anchor>
                   &nbsp;regularly.
                 </Text>
-                <Text mt={20}>
+                <Text mt={10}>
                   Find out&nbsp;
                   <Anchor
                     variant="link"
