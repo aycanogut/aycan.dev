@@ -1,29 +1,25 @@
 export const projects = [
   {
     id: 1,
-    image:
-      'https://github.com/aycanogut/todo-app-react/raw/main/src/assets/images/screenshot.gif',
-    title: 'Todo App',
+    title: 'aycan.dev',
     description:
-      'Simple responsive todo app built with React. Users can add, complete and delete todo items. When the page is loaded, the app collects previous todos from localStorage.',
-    stack: ['React', 'styled', 'typescript', 'axios'],
+      'Source code of my portfolio web app.',
+    stack: ['React.js', 'Next.js', 'TypeScript', 'Mantine'],
     links: [
       {
-        link: 'https://github.com/aycanogut/todo-app-react',
+        link: 'https://github.com/aycanogut/portfolio-next',
       },
       {
-        link: 'https://todo-app-react-rosy.vercel.app/',
+        link: 'https://aycan.vercel.app',
       },
     ],
   },
   {
     id: 2,
-    image:
-      'https://raw.githubusercontent.com/aycanogut/fem-rest-countries-flag-api/main/src/assets/screenshot/screenshot.png',
     title: 'REST Countries API',
     description:
-      'This is a solution to the REST Countries API with color theme switcher challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
-    stack: ['React', 'styled', 'typescript', 'axios'],
+      'Solution to the REST Countries API with color theme switcher challenge on Frontend Mentor.',
+    stack: ['React.js', 'TypeScript', 'styled'],
     links: [
       {
         link: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
@@ -35,49 +31,76 @@ export const projects = [
   },
   {
     id: 3,
-    image:
-      'https://github.com/aycanogut/weather-app-react/raw/main/src/assets/images/screenshot.gif',
-    title: 'Weather App React',
+    title: 'More E-Commerce',
     description:
-      "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: ['React', 'styled', 'typescript', 'axios'],
+      'React based e-commerce shopping platform with MockAPI.',
+    stack: ['React.js', 'SASS', 'Redux', 'Firebase'],
     links: [
       {
-        link: 'https://github.com/aycanogut/weather-app-react',
+        link: 'https://github.com/aycanogut/e-commerce-react',
       },
       {
-        link: 'https://weather-app-react-beta.vercel.app/',
+        link: 'https://more-shopping.netlify.app/',
       },
     ],
   },
   {
     id: 4,
-    image:
-      'https://raw.githubusercontent.com/aycanogut/fem-rest-countries-flag-api/main/src/assets/screenshot/screenshot.png',
-    title: 'React Calculator',
+    title: 'Social Media Dashboard',
     description:
-      "A responsive forecast application for the weather. It obtains the user's specified city value via an input box and delivers the requested data to the DOM using the MetaWeather API.",
-    stack: ['React', 'styled', 'typescript', 'axios'],
+      'Responsive grid layout social media theme with theme switch.',
+    stack: ['JavaScript', 'SASS', 'gulp.js', 'cssnano'],
     links: [
       {
-        link: 'https://github.com/aycanogut/weather-app-react',
+        link: 'https://github.com/aycanogut/fem-social-media-dashboard',
       },
       {
-        link: 'https://weather-app-react-beta.vercel.app/',
+        link: 'https://fem-social-media-dashboard-fawn.vercel.app/',
       },
     ],
   },
   {
     id: 5,
-    image:
-      'https://raw.githubusercontent.com/aycanogut/sass-boilerplate/main/src/assets/images/tech-stack.png',
-    title: 'SASS Boilerplate',
+    title: 'Etch-A Sketch',
     description:
-      'Ready to use SASS boilerplate to develop web projects with gulp.js including SASS features like mixins, breakpoints, variables and normalize.css.',
-    stack: ['React', 'styled', 'typescript', 'axios'],
+      'A game project for The Odin Projcet task assigment.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
     links: [
       {
-        link: 'https://github.com/aycanogut/sass-boilerplate',
+        link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/etch-a-sketch',
+      },
+      {
+        link: 'https://odin-project-curriculum.vercel.app/fundamentals/etch-a-sketch/index.html',
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Calculator',
+    description:
+      'Calculator project for The Odin Projcet task assigment.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    links: [
+      {
+        link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/calculator',
+      },
+      {
+        link: 'https://odin-project-curriculum.vercel.app/fundamentals/calculator/index.html',
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Rock Paper Scissors',
+    description:
+    'A game project for The Odin Projcet task assigment.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    links: [
+      {
+        link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/rock-paper-scissors',
+      },
+      {
+        link: 'https://odin-project-curriculum.vercel.app/fundamentals/rock-paper-scissors',
       },
     ],
   },
