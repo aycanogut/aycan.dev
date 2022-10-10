@@ -86,6 +86,21 @@ const HomePage = () => {
               </Group>
             </Group>
             <Group direction="column" mt={60}>
+              <Title order={2}>Tech Stack</Title>
+              <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
+                <Group position="center" spacing="lg">
+                  <Javascript color="#F7DF1E" size={70} />
+                  <Typescript color="#3178C6" size={70} />
+                  <ReactJs color="#61DAFB" size={70} />
+                  <Nextdotjs color="#000000" size={70} />
+                  <Sass color="#CC6699" size={70} />
+                  <Styledcomponents color="#DB7093" size={70} />
+                  <Tailwindcss color="#06B6D4" size={70} />
+                  <Bootstrap color="#7952B3" size={70} />
+                </Group>
+              </Paper>
+            </Group>
+            <Group direction="column" mt={60}>
               <Title order={2}>Latest Articles</Title>
               <Stack spacing="xs">
                 {data &&
@@ -105,21 +120,6 @@ const HomePage = () => {
                       )
                     )}
               </Stack>
-            </Group>
-            <Group direction="column" mt={60}>
-              <Title order={2}>Tech Stack</Title>
-              <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
-                <Group position="center" spacing="lg">
-                  <Javascript color="#F7DF1E" size={70} />
-                  <Typescript color="#3178C6" size={70} />
-                  <ReactJs color="#61DAFB" size={70} />
-                  <Nextdotjs color="#000000" size={70} />
-                  <Sass color="#CC6699" size={70} />
-                  <Styledcomponents color="#DB7093" size={70} />
-                  <Tailwindcss color="#06B6D4" size={70} />
-                  <Bootstrap color="#7952B3" size={70} />
-                </Group>
-              </Paper>
             </Group>
           </Box>
         </>
