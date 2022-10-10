@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Container, Grid, Title } from '@mantine/core'
+import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../../lib/fetcher'
 import Layout from '../../../components/Layout/Layout'
@@ -21,7 +21,7 @@ const Repos: FC<IRepoProps> = () => {
       {!data ? (
         <CustomLoader />
       ) : (
-        <Container>
+        <>
           <Title order={1} mb={30}>
             Repos
           </Title>
@@ -40,7 +40,7 @@ const Repos: FC<IRepoProps> = () => {
                   </Grid.Col>
                 ))}
           </Grid>
-        </Container>
+        </>
       )}
     </Layout>
   )

@@ -8,7 +8,6 @@ import {
   Stack,
   Box,
   useMantineColorScheme,
-  Container,
 } from '@mantine/core'
 import useSWR from 'swr'
 import {
@@ -38,7 +37,7 @@ const HomePage = () => {
       {!data ? (
         <CustomLoader />
       ) : (
-        <Container>
+        <>
           <Title order={1} mb={30}>
             Hello 🤙
           </Title>
@@ -123,7 +122,7 @@ const HomePage = () => {
               </Paper>
             </Group>
           </Box>
-        </Container>
+        </>
       )}
     </Layout>
   )
