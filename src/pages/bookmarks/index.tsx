@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { Container, SegmentedControl, Title } from '@mantine/core'
+import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../lib/fetcher'
 import useWidth from '../../hooks/useWidth'
@@ -25,7 +25,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
       {!data ? (
         <CustomLoader />
       ) : (
-        <Container>
+        <>
           <Title order={1} mb={30}>
             Bookmarks that I liked all around the web
           </Title>
@@ -60,7 +60,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
                   link={bookmark.link}
                 />
               ))}
-        </Container>
+        </>
       )}
     </Layout>
   )

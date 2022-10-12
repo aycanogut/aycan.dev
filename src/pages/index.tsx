@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {
   Title,
   Text,
@@ -8,7 +7,6 @@ import {
   Stack,
   Box,
   useMantineColorScheme,
-  Container,
 } from '@mantine/core'
 import useSWR from 'swr'
 import {
@@ -38,7 +36,7 @@ const HomePage = () => {
       {!data ? (
         <CustomLoader />
       ) : (
-        <Container>
+        <>
           <Title order={1} mb={30}>
             Hello 🤙
           </Title>
@@ -71,41 +69,20 @@ const HomePage = () => {
                   </Anchor>
                   &nbsp;regularly.
                 </Text>
-                <Text mt={20}>
+                <Text mt={10}>
                   Find out&nbsp;
-                  <Link href="/about">
-                    <Anchor
-                      variant="link"
-                      underline
-                      color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                    >
-                      <strong>more</strong>
-                    </Anchor>
-                  </Link>
+                  <Anchor
+                    variant="link"
+                    href="https://read.cv/aycanogut"
+                    target="_blank"
+                    underline
+                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                  >
+                    <strong>more</strong>
+                  </Anchor>
                   .
                 </Text>
               </Group>
-            </Group>
-            <Group direction="column" mt={60}>
-              <Title order={2}>Latest Articles</Title>
-              <Stack spacing="xs">
-                {data &&
-                  data
-                    .slice(0, 5)
-                    .sort((a, b) => b.stargazers_count - a.stargazers_count)
-                    .map(
-                      (article: { link: string; title: string }, i: number) => (
-                        <Text
-                          component="a"
-                          target="_blank"
-                          href={article.link}
-                          underline
-                        >
-                          <strong>{article.title}</strong>
-                        </Text>
-                      )
-                    )}
-              </Stack>
             </Group>
             <Group direction="column" mt={60}>
               <Title order={2}>Tech Stack</Title>
@@ -122,8 +99,30 @@ const HomePage = () => {
                 </Group>
               </Paper>
             </Group>
+            <Group direction="column" mt={60}>
+              <Title order={2}>Latest Articles</Title>
+              <Stack spacing="xs">
+                {data &&
+                  data
+                    .slice(0, 5)
+                    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+                    .map(
+                      (article: { link: string; title: string }, i: number) => (
+                        <Text
+                          component="a"
+                          target="_blank"
+                          href={article.link}
+                          underline
+                          color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                        >
+                          <strong>{article.title}</strong>
+                        </Text>
+                      )
+                    )}
+              </Stack>
+            </Group>
           </Box>
-        </Container>
+        </>
       )}
     </Layout>
   )
