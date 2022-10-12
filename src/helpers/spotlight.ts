@@ -8,9 +8,8 @@ export const SpotlightContent = [
     url: '/projects',
   },
   {
-    title: 'Blog',
-
-    url: '/blog',
+    title: 'Articles',
+    url: '/articles',
   },
   {
     title: 'Bookmarks',
