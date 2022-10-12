@@ -1,4 +1,4 @@
-import { urls } from '../../routing/urls'
+import { urls } from '../routing/urls'
 
 export const navLinks = [
   {
