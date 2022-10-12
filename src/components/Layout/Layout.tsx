@@ -3,7 +3,7 @@ import { Container } from '@mantine/core'
 import { motion } from 'framer-motion'
 import CustomHeader from '../CustomHeader/CustomHeader'
 import { ILayoutProps } from '../../interfaces/Layout.interface'
-import { navLinks } from '../CustomHeader/navLinks'
+import { navLinks } from '../../helpers/navLinks'
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
   <>

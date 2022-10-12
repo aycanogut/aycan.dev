@@ -2,8 +2,7 @@ export const projects = [
   {
     id: 1,
     title: 'aycan.dev',
-    description:
-      'Source code of my portfolio web app.',
+    description: 'Source code of my portfolio web app.',
     stack: ['React.js', 'Next.js', 'TypeScript', 'Mantine'],
     links: [
       {
@@ -32,8 +31,7 @@ export const projects = [
   {
     id: 3,
     title: 'More E-Commerce',
-    description:
-      'React based e-commerce shopping platform with MockAPI.',
+    description: 'React based e-commerce shopping platform with MockAPI.',
     stack: ['React.js', 'SASS', 'Redux', 'Firebase'],
     links: [
       {
@@ -47,8 +45,7 @@ export const projects = [
   {
     id: 4,
     title: 'Social Media Dashboard',
-    description:
-      'Responsive grid layout social media theme with theme switch.',
+    description: 'Responsive grid layout social media theme with theme switch.',
     stack: ['JavaScript', 'SASS', 'gulp.js', 'cssnano'],
     links: [
       {
@@ -62,8 +59,7 @@ export const projects = [
   {
     id: 5,
     title: 'Etch-A Sketch',
-    description:
-      'A game project for The Odin Projcet task assigment.',
+    description: 'A game project for The Odin Projcet task assigment.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     links: [
       {
@@ -77,8 +73,7 @@ export const projects = [
   {
     id: 6,
     title: 'Calculator',
-    description:
-      'Calculator project for The Odin Projcet task assigment.',
+    description: 'Calculator project for The Odin Projcet task assigment.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     links: [
       {
@@ -92,8 +87,7 @@ export const projects = [
   {
     id: 7,
     title: 'Rock Paper Scissors',
-    description:
-    'A game project for The Odin Projcet task assigment.',
+    description: 'A game project for The Odin Projcet task assigment.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     links: [
       {

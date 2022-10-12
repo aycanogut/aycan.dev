@@ -12,7 +12,7 @@ import {
 import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight'
 import { NotificationsProvider } from '@mantine/notifications'
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
-import { SpotlightContent } from '../utils/spotlight'
+import { SpotlightContent } from '../helpers/spotlight'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props
