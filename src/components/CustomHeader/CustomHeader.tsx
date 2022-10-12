@@ -6,9 +6,12 @@ import {
   Container,
   Group,
   Burger,
+  Text,
   Paper,
   Transition,
+  ActionIcon,
 } from '@mantine/core'
+import { openSpotlight } from '@mantine/spotlight'
 import { useBooleanToggle } from '@mantine/hooks'
 import ColorSchemeToggle from '../ColorSchemeToggle/ColorSchemeToggle'
 import { ICustomHeaderProps } from '../../interfaces/CustomHeader.interface'
@@ -77,6 +80,21 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
             </Paper>
           )}
         </Transition>
+        <ActionIcon
+          className={classes.spotlight}
+          onClick={() => openSpotlight()}
+          size="lg"
+          radius="sm"
+          aria-label="Spotlight Button"
+        >
+          <Text size="md" weight={600}>
+            ⌘
+          </Text>
+          &nbsp;<Text>+</Text>&nbsp;
+          <Text size="md" weight={600}>
+            K
+          </Text>
+        </ActionIcon>
         <ColorSchemeToggle />
       </Container>
     </Header>

@@ -20,7 +20,7 @@ const Articles: FC<IBlogProps> = () => {
       ) : (
         <>
           <Title order={1} mb={30}>
-            Blog Posts
+            Articles
           </Title>
           <Grid gutter="xl" grow>
             {data &&
