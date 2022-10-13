@@ -110,12 +110,13 @@ const HomePage = () => {
                       <Text
                         key={article.title}
                         component="a"
-                        target="_blank"
                         href={article.link}
-                        underline
+                        target="_blank"
                         color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                        weight={700}
+                        underline
                       >
-                        <strong>{article.title}</strong>
+                        {article.title}
                       </Text>
                     ))}
               </Stack>
