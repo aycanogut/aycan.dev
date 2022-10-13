@@ -106,19 +106,18 @@ const HomePage = () => {
                   data
                     .slice(0, 5)
                     .sort((a, b) => b.stargazers_count - a.stargazers_count)
-                    .map(
-                      (article: { link: string; title: string }, i: number) => (
-                        <Text
-                          component="a"
-                          target="_blank"
-                          href={article.link}
-                          underline
-                          color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                        >
-                          <strong>{article.title}</strong>
-                        </Text>
-                      )
-                    )}
+                    .map((article: { link: string; title: string }) => (
+                      <Text
+                        key={article.title}
+                        component="a"
+                        target="_blank"
+                        href={article.link}
+                        underline
+                        color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                      >
+                        <strong>{article.title}</strong>
+                      </Text>
+                    ))}
               </Stack>
             </Group>
           </Box>
