@@ -27,29 +27,44 @@ const About = () => {
         <Title order={1} mb={30}>
           About
         </Title>
-        <Text weight={500}>Hi, </Text>
         <Text weight={500} mt={8}>
-          My name is <strong>Aycan Öğüt</strong>, and I’m a Frontend Developer.
+          <strong>Aycan Öğüt</strong>. 1989, Izmir.
         </Text>
-        <Text weight={500} mt={8}>
-          I&apos;ve been working to improve myself in the software development
-          field for the past year. I have a passion for learning new concepts
-          and technologies. My motivation is to grow as a person by learning new
-          skills and using what I&apos;ve learned to solve problems, help others
-          and contribute to the community.
+        <Text weight={500} mt={20}>
+          I&apos;m a self-taught developer with about a year of industry
+          experience. I enjoy learning about new technologies and tools, writing
+          articles, and working on open source projects.
         </Text>
-        <Text mt={8}>
+        <Text my={20}>
           Currently, I&apos;m working at{' '}
-          <Text
-            component="a"
+          <Anchor
             href="https://www.oplog.io"
-            target="about_blank"
-            transform="uppercase"
+            target="_blank"
+            variant="link"
             weight={700}
+            underline
+            transform="uppercase"
           >
             oplog
-          </Text>
-          .
+          </Anchor>{' '}
+          as a front-end developer.
+        </Text>
+        <Text weight={500} mt={20}>
+          Along with pixel hunting, I also like to skate, attend live music
+          events, play video games, watch TV shows, and hang out with my
+          friends.
+        </Text>
+        <Text weight={500} mt={20}>
+          More details&nbsp;
+          <Anchor
+            variant="link"
+            href="https://read.cv/aycanogut"
+            target="_blank"
+            weight={500}
+            underline
+          >
+            <strong>here</strong>.
+          </Anchor>
         </Text>
       </Box>
       <Box>
