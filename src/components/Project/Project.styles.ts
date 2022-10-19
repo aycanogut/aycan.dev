@@ -9,20 +9,26 @@ export default createStyles((theme) => ({
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
 
-    [theme.fn.largerThan('xs')]: {
-      minHeight: 265,
-    },
-
-    [theme.fn.largerThan('sm')]: {
-      minHeight: 224,
-    },
-
     ...theme.fn.focusStyles(),
   },
 
-  text: {
-    [theme.fn.smallerThan('sm')]: {
-      marginBlock: 12,
+  cardLayout: {
+    [theme.fn.largerThan('xs')]: {
+      minHeight: 244,
+    },
+
+    [theme.fn.largerThan('sm')]: {
+      minHeight: 194,
     },
   },
+
+  title: {
+    width: '65%',
+
+    [theme.fn.largerThan('xs')]: {
+      fontSize: theme.fontSizes.lg,
+    },
+  },
+
+  description: { marginBottom: '20px' },
 }))
