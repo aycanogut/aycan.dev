@@ -29,6 +29,4 @@ export default createStyles((theme) => ({
       fontSize: theme.fontSizes.lg,
     },
   },
-
-  description: { marginBottom: '20px' },
 }))

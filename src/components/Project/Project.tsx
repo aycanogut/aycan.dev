@@ -72,7 +72,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                 )}
             </Box>
           </Group>
-          <Text className={classes.description} size="sm">
+          <Text mb={20} size="sm">
             {description}
           </Text>
           <Box sx={{ width: '100%', height: '100%' }}>
