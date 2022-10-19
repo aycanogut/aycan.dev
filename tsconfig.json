@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/routing/urls.tsx",
+    "src/routes/urls.tsx",
     "src/lib/spotify.js"
   ],
   "exclude": ["node_modules"]
