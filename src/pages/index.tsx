@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   Title,
   Text,
@@ -52,8 +53,8 @@ const HomePage = () => {
                     href="https://github.com/aycanogut"
                     target="_blank"
                     variant="link"
+                    weight={500}
                     underline
-                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                   >
                     <strong>create things</strong>
                   </Anchor>
@@ -62,8 +63,8 @@ const HomePage = () => {
                     href="https://aycanogut.medium.com/"
                     target="_blank"
                     variant="link"
+                    weight={500}
                     underline
-                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
                   >
                     <strong>articles</strong>
                   </Anchor>
@@ -71,16 +72,11 @@ const HomePage = () => {
                 </Text>
                 <Text mt={10}>
                   Find out&nbsp;
-                  <Anchor
-                    variant="link"
-                    href="https://read.cv/aycanogut"
-                    target="_blank"
-                    underline
-                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                  >
-                    <strong>more</strong>
-                  </Anchor>
-                  .
+                  <Link href="/about">
+                    <Anchor component="a" weight={500} underline>
+                      <strong>more</strong>.
+                    </Anchor>
+                  </Link>
                 </Text>
               </Group>
             </Group>
