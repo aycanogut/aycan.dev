@@ -25,6 +25,16 @@ const GlobalStyles: FC = () => (
           margin: '35% auto',
         },
       },
+
+      '::selection': {
+        color: theme.colors.dark[9],
+        background: theme.colors.yellow[4],
+      },
+
+      '::-moz-selection': {
+        color: theme.colors.dark[9],
+        background: theme.colors.yellow[4],
+      },
     })}
   />
 )

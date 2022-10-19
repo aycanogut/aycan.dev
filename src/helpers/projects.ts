@@ -7,9 +7,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/portfolio-next',
+        id: 1,
       },
       {
         link: 'https://aycan.vercel.app',
+        id: 2,
       },
     ],
   },
@@ -22,9 +24,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
+        id: 1,
       },
       {
         link: 'https://fem-rest-countries-flag-api.vercel.app/',
+        id: 2,
       },
     ],
   },
@@ -36,9 +40,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/e-commerce-react',
+        id: 1,
       },
       {
         link: 'https://more-shopping.netlify.app/',
+        id: 2,
       },
     ],
   },
@@ -50,9 +56,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/fem-social-media-dashboard',
+        id: 1,
       },
       {
         link: 'https://fem-social-media-dashboard-fawn.vercel.app/',
+        id: 2,
       },
     ],
   },
@@ -64,9 +72,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/etch-a-sketch',
+        id: 1,
       },
       {
         link: 'https://odin-project-curriculum.vercel.app/fundamentals/etch-a-sketch/index.html',
+        id: 2,
       },
     ],
   },
@@ -78,9 +88,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/calculator',
+        id: 1,
       },
       {
         link: 'https://odin-project-curriculum.vercel.app/fundamentals/calculator/index.html',
+        id: 2,
       },
     ],
   },
@@ -92,9 +104,11 @@ export const projects = [
     links: [
       {
         link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/rock-paper-scissors',
+        id: 1,
       },
       {
         link: 'https://odin-project-curriculum.vercel.app/fundamentals/rock-paper-scissors',
+        id: 2,
       },
     ],
   },

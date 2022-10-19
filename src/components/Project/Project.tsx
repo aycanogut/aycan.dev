@@ -7,6 +7,7 @@ import {
   Badge,
   Anchor,
   Box,
+  Divider,
 } from '@mantine/core'
 import { motion } from 'framer-motion'
 import { BrandGithub, BrandVercel } from 'tabler-icons-react'
@@ -27,45 +28,41 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
         withBorder
         radius="sm"
         shadow="md"
-        pt="md"
         px="md"
-        pb="xs"
+        py="xs"
       >
-        <Text size="xl" weight={700} mb="xs">
-          {title}
-        </Text>
-        <Text className={classes.text} size="sm" my="auto">
-          {description}
-        </Text>
-        <Paper mt="auto" pt={8} sx={{ background: 'none' }}>
-          <Group position="apart">
+        <Group className={classes.cardLayout}>
+          <Group position="apart" sx={{ width: '100%' }}>
+            <Text className={classes.title} size="md" weight={700} mb="xs">
+              {title}
+            </Text>
             <Box>
               {links &&
-                links.map((link: { name: string; link: string }, i: number) =>
+                links.map((link: { link: string; id: number }) =>
                   link.link.includes('github') ? (
                     <Anchor
-                      key={i}
+                      key={link.id}
                       component="a"
                       href={link.link}
                       target="_blank"
-                      mr={12}
+                      mr={8}
                       aria-label="Link to project on GitHub"
                     >
                       <BrandGithub
-                        size={28}
+                        size={22}
                         strokeWidth={2}
                         color={theme.colorScheme === 'dark' ? 'white' : 'black'}
                       />
                     </Anchor>
                   ) : (
                     <Anchor
-                      key={i}
+                      key={link.id}
                       component="a"
                       href={link.link}
                       target="_blank"
                     >
                       <BrandVercel
-                        size={28}
+                        size={22}
                         strokeWidth={2}
                         color={theme.colorScheme === 'dark' ? 'white' : 'black'}
                         aria-label="Link to project on Vercel"
@@ -74,23 +71,27 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                   )
                 )}
             </Box>
-            <Box mb={8}>
-              {stack &&
-                stack.map((item: string, i: number) => (
-                  <Badge
-                    size="xs"
-                    variant="outline"
-                    color={theme.colorScheme === 'dark' ? 'yellow' : 'dark'}
-                    key={i}
-                    ml={theme.breakpoints.xs ? 0 : 10}
-                    mr={theme.breakpoints.xs ? 10 : 0}
-                  >
-                    {item}
-                  </Badge>
-                ))}
-            </Box>
           </Group>
-        </Paper>
+          <Text mb={20} size="sm">
+            {description}
+          </Text>
+          <Box sx={{ width: '100%', height: '100%' }}>
+            <Divider my="xs" mt="auto" size="xs" />
+            {stack &&
+              stack.map((item: string) => (
+                <Badge
+                  key={item}
+                  size="xs"
+                  variant="outline"
+                  color={theme.colorScheme === 'dark' ? 'yellow' : 'dark'}
+                  ml={theme.breakpoints.xs ? 0 : 10}
+                  mr={theme.breakpoints.xs ? 10 : 0}
+                >
+                  {item}
+                </Badge>
+              ))}
+          </Box>
+        </Group>
       </Paper>
     </motion.div>
   )

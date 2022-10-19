@@ -29,16 +29,24 @@ const Repos: FC<IRepoProps> = () => {
             {data &&
               data
                 .sort((a, b) => b.stargazers_count - a.stargazers_count)
-                .map((repo: any) => (
-                  <Grid.Col span={12} xs={6} sm={4} key={repo.id}>
-                    <Repo
-                      title={repo.name}
-                      description={repo.description}
-                      url={repo.html_url}
-                      starCount={repo.stargazers_count}
-                    />
-                  </Grid.Col>
-                ))}
+                .map(
+                  (repo: {
+                    id: number
+                    name: string
+                    description: string
+                    html_url: string
+                    stargazers_count: number
+                  }) => (
+                    <Grid.Col span={12} xs={6} sm={4} key={repo.id}>
+                      <Repo
+                        title={repo.name}
+                        description={repo.description}
+                        url={repo.html_url}
+                        starCount={repo.stargazers_count}
+                      />
+                    </Grid.Col>
+                  )
+                )}
           </Grid>
         </>
       )}
