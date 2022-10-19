@@ -24,8 +24,8 @@ const Articles: FC<IBlogProps> = () => {
           </Title>
           <Grid gutter="xl" grow>
             {data &&
-              data.map((article: IArticleProps, i: number) => (
-                <Grid.Col xs={12} sm={6} md={4} key={i}>
+              data.map((article: IArticleProps) => (
+                <Grid.Col xs={12} sm={6} md={4} key={article.title}>
                   <Article
                     key={article.title}
                     title={article.title}

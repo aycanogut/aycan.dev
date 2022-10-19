@@ -38,10 +38,10 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
             </Text>
             <Box>
               {links &&
-                links.map((link: { name: string; link: string }, i: number) =>
+                links.map((link: { link: string; id: number }) =>
                   link.link.includes('github') ? (
                     <Anchor
-                      key={i}
+                      key={link.id}
                       component="a"
                       href={link.link}
                       target="_blank"
@@ -56,7 +56,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
                     </Anchor>
                   ) : (
                     <Anchor
-                      key={i}
+                      key={link.id}
                       component="a"
                       href={link.link}
                       target="_blank"
@@ -78,12 +78,12 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
           <Box sx={{ width: '100%', height: '100%' }}>
             <Divider my="xs" mt="auto" size="xs" />
             {stack &&
-              stack.map((item: string, i: number) => (
+              stack.map((item: string) => (
                 <Badge
+                  key={item}
                   size="xs"
                   variant="outline"
                   color={theme.colorScheme === 'dark' ? 'yellow' : 'dark'}
-                  key={i}
                   ml={theme.breakpoints.xs ? 0 : 10}
                   mr={theme.breakpoints.xs ? 10 : 0}
                 >

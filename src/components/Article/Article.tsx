@@ -45,9 +45,9 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
         </Card.Section>
         <Card.Section py="md" pb="sm">
           <Box className={classes.badges}>
-            {categories.slice(4).map((category: {}, i: number) => (
+            {categories.slice(4).map((category: string) => (
               <Badge
-                key={i}
+                key={category}
                 color={theme.colorScheme === 'dark' ? 'yellow' : 'dark'}
                 size="xs"
                 variant="outline"
