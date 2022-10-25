@@ -35,7 +35,7 @@ const About = () => {
           experience. I enjoy learning about new technologies and tools, writing
           articles, and working on open source projects.
         </Text>
-        <Text my={20}>
+        <Text weight={500} my={20}>
           Currently, I&apos;m working at{' '}
           <Anchor
             href="https://www.oplog.io"
