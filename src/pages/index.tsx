@@ -11,6 +11,8 @@ import {
 } from '@mantine/core'
 import useSWR from 'swr'
 import {
+  Html5,
+  CssThree,
   Javascript,
   Typescript,
   ReactJs,
@@ -18,7 +20,6 @@ import {
   Sass,
   Styledcomponents,
   Tailwindcss,
-  Bootstrap,
 } from '@icons-pack/react-simple-icons'
 import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
@@ -84,6 +85,8 @@ const HomePage = () => {
               <Title order={2}>Tech Stack</Title>
               <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
                 <Group position="center" spacing="lg">
+                  <Html5 color="#E34F26" size={70} />
+                  <CssThree color="#1572B6" size={70} />
                   <Javascript color="#F7DF1E" size={70} />
                   <Typescript color="#3178C6" size={70} />
                   <ReactJs color="#61DAFB" size={70} />
@@ -91,7 +94,6 @@ const HomePage = () => {
                   <Sass color="#CC6699" size={70} />
                   <Styledcomponents color="#DB7093" size={70} />
                   <Tailwindcss color="#06B6D4" size={70} />
-                  <Bootstrap color="#7952B3" size={70} />
                 </Group>
               </Paper>
             </Group>
