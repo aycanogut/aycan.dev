@@ -35,7 +35,7 @@ const About = () => {
         </Text>
         <Text weight={500} mt={20}>
           I&apos;ve been working to improve myself in web development field
-          since 2022 with a focus on responsive design and JavaScript. I enjoy
+          since 2020 with a focus on responsive design and JavaScript. I enjoy
           learning new technologies and tools, writing articles, and working on
           open source projects. My motivation for developing this website is to
           share my learnings with the rest of the world.
