@@ -28,15 +28,20 @@ const About = () => {
           About
         </Title>
         <Text weight={500} mt={8}>
-          <strong>Aycan Öğüt</strong>. 1989, Izmir.
+          <strong>Aycan Öğüt</strong>. 1989.
         </Text>
         <Text weight={500} mt={20}>
-          I&apos;m a self-taught developer with about a year of industry
-          experience. I enjoy learning about new technologies and tools, writing
-          articles, and working on open source projects.
+          I&apos;m a self-taught developer from Izmir.
+        </Text>
+        <Text weight={500} mt={20}>
+          I&apos;ve been working to improve myself in web development field
+          since 2022 with a focus on responsive design and JavaScript. I enjoy
+          learning new technologies and tools, writing articles, and working on
+          open source projects. My motivation for developing this website is to
+          share my learnings with the rest of the world.
         </Text>
         <Text weight={500} my={20}>
-          Currently, I&apos;m working at{' '}
+          Currently, I&apos;m working at&nbsp;
           <Anchor
             href="https://www.oplog.io"
             target="_blank"
@@ -46,16 +51,16 @@ const About = () => {
             transform="uppercase"
           >
             oplog
-          </Anchor>{' '}
-          as a front-end developer.
+          </Anchor>
+          &nbsp;as a front-end developer.
         </Text>
         <Text weight={500} mt={20}>
-          Along with pixel hunting, I also like to skate, attend live music
-          events, play video games, watch TV shows, and hang out with my
+          Along with pixel hunting, I enjoy skating, going to live music events,
+          playing video games, watching TV series, and hanging out with my
           friends.
         </Text>
         <Text weight={500} mt={20}>
-          More details&nbsp;
+          Find out more about me&nbsp;
           <Anchor
             variant="link"
             href="https://read.cv/aycanogut"
@@ -63,7 +68,7 @@ const About = () => {
             weight={500}
             underline
           >
-            <strong>here</strong>.
+            <strong>by visiting this page</strong>.
           </Anchor>
         </Text>
       </Box>
