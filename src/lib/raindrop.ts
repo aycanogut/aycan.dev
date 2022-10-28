@@ -1,13 +1,11 @@
 const token = process.env.RAINDROP_TOKEN
-const token_endpoint = process.env.RAINDROP_URL
 
-export const getBookmarks = async () => {
-  const response = await fetch(token_endpoint, {
+export const getBookmarks = async (url) => {
+  const response = await fetch(url, {
     method: 'GET',
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
     },
   })
-
   return response.json()
 }
