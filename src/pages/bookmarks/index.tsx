@@ -6,6 +6,7 @@ import { getBookmarks } from '../../lib/raindrop'
 import { collections } from '../../helpers/collections'
 import Layout from '../../components/Layout/Layout'
 import Bookmark from '../../components/Bookmark/Bookmark'
+import CustomLoader from '../../components/CustomLoader/CustomLoader'
 import Error from '../../components/Error/Error'
 import {
   IBookmarksProps,
@@ -51,14 +52,18 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         fullWidth
         orientation={width && width < 750 ? 'vertical' : 'horizontal'}
       />
-      {data &&
+      {!data ? (
+        <CustomLoader />
+      ) : (
+        data &&
         data.items.map((bookmark: IBookmarkProps) => (
           <Bookmark
             key={bookmark._id}
             title={bookmark.title}
             link={bookmark.link}
           />
-        ))}
+        ))
+      )}
     </Layout>
   )
 }
