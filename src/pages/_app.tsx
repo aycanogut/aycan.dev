@@ -1,8 +1,9 @@
-import { GetServerSidePropsContext } from 'next'
 import { useState } from 'react'
+import { GetServerSidePropsContext } from 'next'
 import { AppProps } from 'next/app'
 import { getCookie, setCookies } from 'cookies-next'
 import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
 import {
   MantineProvider,
   ColorScheme,
@@ -10,6 +11,7 @@ import {
 } from '@mantine/core'
 import { NotificationsProvider } from '@mantine/notifications'
 import Spotlight from '../components/Spotlight/Spotlight'
+import SEO from '../next-seo.config'
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
@@ -34,6 +36,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
+      <DefaultSeo {...SEO} />
       <GlobalStyles />
       <ColorSchemeProvider
         colorScheme={colorScheme}
@@ -56,5 +59,5 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
 }
 
 App.getInitialProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
-  colorScheme: getCookie('mantine-color-scheme', ctx) || 'light',
+  colorScheme: getCookie('mantine-color-scheme', ctx) || 'dark',
 })
