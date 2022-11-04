@@ -21,6 +21,7 @@ import {
   Styledcomponents,
   Tailwindcss,
 } from '@icons-pack/react-simple-icons'
+import useWidth from '../hooks/useWidth'
 import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
@@ -30,6 +31,7 @@ import { IArticleProps } from '../interfaces/Blog.interface'
 const HomePage = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
   const { colorScheme } = useMantineColorScheme()
+  const { width } = useWidth()
 
   if (error) return <Error />
 
@@ -83,8 +85,8 @@ const HomePage = () => {
             </Group>
             <Group direction="column" mt={60}>
               <Title order={2}>Tech Stack</Title>
-              <Paper p="md" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
-                <Group position="center" spacing="lg">
+              <Paper py="lg" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
+                <Group position={width < 650 ? 'apart' : 'center'} spacing="lg">
                   <Html5 color="#E34F26" size={70} />
                   <CssThree color="#1572B6" size={70} />
                   <Javascript color="#F7DF1E" size={70} />
