@@ -1,6 +1,9 @@
 ## Overview
 
-Portfolio web app built with Next, Mantine, and TypeScript. Page contents provided by Github, Raindrop, and rss2json APIs.
+Portfolio web app built with Next, Mantine, and TypeScript.  
+Page contents provided by Github, Raindrop, and rss2json APIs.
+
+<br />
 
 ![aycan.dev](https://user-images.githubusercontent.com/74212439/199970839-6f0ab4f3-c63a-4052-a05c-e8503d7943de.png)
 
