@@ -33,7 +33,7 @@ Page contents provided by Github, Raindrop, and rss2json APIs.
 - `prettier:write` – formats all files with Prettier
 -->
 
-### Built with
+## Built with
 
 - [React](https://reactjs.org/)
 - [Next](https://nextjs.org/)
@@ -42,7 +42,7 @@ Page contents provided by Github, Raindrop, and rss2json APIs.
 - [SWR](https://swr.vercel.app/)
 - [Framer Motion](https://www.framer.com/motion/)
 
-### Author
+## Author
 
 - [Github](https://github.com/aycanogut)
 - [LinkedIn](https://www.linkedin.com/in/aycanogut/)
