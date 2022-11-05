@@ -16,6 +16,7 @@ Page contents provided by Github, Raindrop, and rss2json APIs.
 - `export` – exports static website to `out` folder
 - `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 
+<!--
 ### Testing scripts
 
 - `typecheck` – checks TypeScript types
@@ -30,7 +31,7 @@ Page contents provided by Github, Raindrop, and rss2json APIs.
 - `storybook` – starts storybook dev server
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
-
+-->
 
 ### Built with
 
