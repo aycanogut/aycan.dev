@@ -33,14 +33,12 @@ const Repos: FC<IRepoProps> = () => {
                   (repo: {
                     id: number
                     name: string
-                    description: string
                     html_url: string
                     stargazers_count: number
                   }) => (
                     <Grid.Col span={12} xs={6} sm={4} key={repo.id}>
                       <Repo
                         title={repo.name}
-                        description={repo.description}
                         url={repo.html_url}
                         starCount={repo.stargazers_count}
                       />
