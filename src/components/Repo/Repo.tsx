@@ -23,12 +23,10 @@ const Repo: FC<IRepoProps> = ({ title, description, url, starCount }) => {
       transition={{ type: 'spring', stiffness: 100, damping: 10 }}
     >
       <Anchor href={url} target="_blank" className={classes.link}>
-        <Card withBorder radius="md" className={classes.card}>
+        <Card withBorder radius="md">
           <Stack>
             <Title order={5}>{title}</Title>
-            <Text size="sm" my="md">
-              {description}
-            </Text>
+            <Text size="sm">{description}</Text>
             <Group spacing={4}>
               <Text size="sm">{starCount}</Text>
               <Star
