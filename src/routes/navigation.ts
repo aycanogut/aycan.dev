@@ -1,6 +1,6 @@
-import { urls } from '../routes/urls'
+import { urls } from './urls'
 
-export const navLinks = [
+export const navigation = [
   {
     link: urls.Home,
     label: 'Home',
