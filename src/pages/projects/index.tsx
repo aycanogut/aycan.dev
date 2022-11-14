@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Grid, Title, Group, useMantineTheme } from '@mantine/core'
-import { projects } from '../../helpers/projects'
+import { projects } from '../../data/projects'
 import Layout from '../../components/Layout/Layout'
 import Project from '../../components/Project/Project'
 import { IProjectProps } from '../../interfaces/Project.interface'
