@@ -3,11 +3,11 @@ import { Container } from '@mantine/core'
 import { motion } from 'framer-motion'
 import CustomHeader from '../CustomHeader/CustomHeader'
 import { ILayoutProps } from '../../interfaces/Layout.interface'
-import { navLinks } from '../../helpers/navLinks'
+import { navigation } from '../../routes/navigation'
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
   <>
-    <CustomHeader links={navLinks} />
+    <CustomHeader links={navigation} />
     <main>
       <Container size="md" px="xl" pt={60} pb={70}>
         <motion.div
