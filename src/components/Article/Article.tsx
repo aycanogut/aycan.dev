@@ -38,7 +38,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
             </Anchor>
           </Group>
         </Card.Section>
-        <Card.Section px="md" py="sm">
+        <Card.Section p="md" mb="md">
           <Text size="lg" weight={700}>
             {title}
           </Text>
