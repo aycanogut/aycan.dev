@@ -1,7 +1,11 @@
 ## Overview
 
-Web app for a portfolio being developed with Next, Mantine, and TypeScript.
-It is actively under construction.
+Portfolio web app built with Next, Mantine, and TypeScript.  
+Page contents provided by Github, Raindrop, and rss2json APIs.
+
+<br />
+
+![aycan.dev](https://user-images.githubusercontent.com/74212439/199970839-6f0ab4f3-c63a-4052-a05c-e8503d7943de.png)
 
 ## npm scripts
 
@@ -12,6 +16,7 @@ It is actively under construction.
 - `export` – exports static website to `out` folder
 - `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 
+<!--
 ### Testing scripts
 
 - `typecheck` – checks TypeScript types
@@ -26,3 +31,20 @@ It is actively under construction.
 - `storybook` – starts storybook dev server
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
+-->
+
+## Built with
+
+- [React](https://reactjs.org/)
+- [Next](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Mantine](https://mantine.dev/)
+- [SWR](https://swr.vercel.app/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+## Author
+
+- [Github](https://github.com/aycanogut)
+- [LinkedIn](https://www.linkedin.com/in/aycanogut/)
+- [Twitter](https://www.twitter.com/bleedeleventh)
+- [Medium](https://medium.com/@aycanogut)
