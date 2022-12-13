@@ -59,7 +59,7 @@ const HomePage = () => {
                     weight={500}
                     underline
                   >
-                    <strong>create things</strong>
+                    <strong>build things</strong>
                   </Anchor>
                   &nbsp;with JavaScript and publish&nbsp;
                   <Anchor
