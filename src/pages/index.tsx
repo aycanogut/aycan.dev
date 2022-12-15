@@ -75,7 +75,7 @@ const HomePage = () => {
                 </Text>
                 <Text mt={10}>
                   Find out&nbsp;
-                  <Link href="/about">
+                  <Link href="/about" passHref>
                     <Anchor component="a" weight={500} underline>
                       <strong>more</strong>.
                     </Anchor>
