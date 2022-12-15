@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NextRouter, useRouter } from 'next/router'
 import { GetServerSidePropsContext } from 'next'
 import { AppProps } from 'next/app'
 import { getCookie, setCookies } from 'cookies-next'
@@ -17,6 +18,11 @@ import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
+  const router: NextRouter = useRouter()
+
+  const canonicalUrl = `https://aycan.dev${
+    router.asPath === '/' ? '' : router.asPath
+  }`.split('?')[0]
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
@@ -36,7 +42,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <DefaultSeo {...SEO} />
+      <DefaultSeo {...SEO} canonical={canonicalUrl} />
       <GlobalStyles />
       <ColorSchemeProvider
         colorScheme={colorScheme}
