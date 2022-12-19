@@ -5,6 +5,7 @@ import { AppProps } from 'next/app'
 import { getCookie, setCookies } from 'cookies-next'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
+import { Analytics } from '@vercel/analytics/react';
 import {
   MantineProvider,
   ColorScheme,
@@ -56,6 +57,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           <NotificationsProvider>
             <Spotlight>
               <Component {...pageProps} />
+              <Analytics />
             </Spotlight>
           </NotificationsProvider>
         </MantineProvider>

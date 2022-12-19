@@ -32,6 +32,7 @@
     "@mantine/prism": "4.2.2",
     "@mantine/spotlight": "^4.2.11",
     "@next/bundle-analyzer": "^12.1.4",
+    "@vercel/analytics": "^0.1.6",
     "cookies-next": "^2.0.4",
     "dayjs": "^1.11.5",
     "framer-motion": "^7.3.2",
