@@ -7,11 +7,11 @@ Page contents provided by Github, Raindrop, and rss2json APIs.
 
 ![aycan.dev](https://user-images.githubusercontent.com/74212439/199970839-6f0ab4f3-c63a-4052-a05c-e8503d7943de.png)
 
-<!--
+
 ## PageSpeed Metrics
 
 ![Metrics](https://metrics.lecoq.io/metrics?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&pagespeed=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&pagespeed=false&pagespeed.url=https%3A%2F%2Faycan.dev&pagespeed.detailed=true&pagespeed.screenshot=false&pagespeed.pwa=false&config.timezone=Europe%2FIstanbul)
--->
+
 
 ## npm scripts
 
