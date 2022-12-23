@@ -14,40 +14,35 @@ const Repos: FC<IRepoProps> = () => {
     fetcher
   )
 
+  if (!data) return <CustomLoader />
   if (error) return <Error />
 
   return (
     <Layout>
-      {!data ? (
-        <CustomLoader />
-      ) : (
-        <>
-          <Title order={1} mb={30}>
-            Repos
-          </Title>
-          <Grid gutter="lg" grow>
-            {data &&
-              data
-                .sort((a, b) => b.stargazers_count - a.stargazers_count)
-                .map(
-                  (repo: {
-                    id: number
-                    name: string
-                    html_url: string
-                    stargazers_count: number
-                  }) => (
-                    <Grid.Col span={12} xs={6} sm={4} key={repo.id}>
-                      <Repo
-                        title={repo.name}
-                        url={repo.html_url}
-                        starCount={repo.stargazers_count}
-                      />
-                    </Grid.Col>
-                  )
-                )}
-          </Grid>
-        </>
-      )}
+      <Title order={1} mb={30}>
+        Repos
+      </Title>
+      <Grid gutter="lg" grow>
+        {data &&
+          data
+            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .map(
+              (repo: {
+                id: number
+                name: string
+                html_url: string
+                stargazers_count: number
+              }) => (
+                <Grid.Col span={12} xs={6} sm={4} key={repo.id}>
+                  <Repo
+                    title={repo.name}
+                    url={repo.html_url}
+                    starCount={repo.stargazers_count}
+                  />
+                </Grid.Col>
+              )
+            )}
+      </Grid>
     </Layout>
   )
 }

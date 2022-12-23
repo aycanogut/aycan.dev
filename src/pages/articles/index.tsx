@@ -11,33 +11,28 @@ import { IBlogProps, IArticleProps } from '../../interfaces/Blog.interface'
 const Articles: FC<IBlogProps> = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
 
+  if (!data) return <CustomLoader />
   if (error) return <Error />
 
   return (
     <Layout>
-      {!data ? (
-        <CustomLoader />
-      ) : (
-        <>
-          <Title order={1} mb={30}>
-            Articles
-          </Title>
-          <Grid gutter="xl" grow>
-            {data &&
-              data.map((article: IArticleProps) => (
-                <Grid.Col xs={12} sm={6} md={4} key={article.title}>
-                  <Article
-                    key={article.title}
-                    title={article.title}
-                    categories={article.categories}
-                    link={article.link}
-                    pubDate={article.pubDate}
-                  />
-                </Grid.Col>
-              ))}
-          </Grid>
-        </>
-      )}
+      <Title order={1} mb={30}>
+        Articles
+      </Title>
+      <Grid gutter="xl" grow>
+        {data &&
+          data.map((article: IArticleProps) => (
+            <Grid.Col xs={12} sm={6} md={4} key={article.title}>
+              <Article
+                key={article.title}
+                title={article.title}
+                categories={article.categories}
+                link={article.link}
+                pubDate={article.pubDate}
+              />
+            </Grid.Col>
+          ))}
+      </Grid>
     </Layout>
   )
 }
