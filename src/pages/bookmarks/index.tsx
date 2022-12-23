@@ -41,9 +41,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
           { value: collections.talks, label: 'Talks' },
           { value: collections.books, label: 'Books' },
           { value: collections.js, label: 'JavaScript' },
-          { value: collections.react, label: 'React' },
           { value: collections.webdev, label: 'Web Dev' },
-          { value: collections.design, label: 'Design' },
         ]}
         onChange={updateActiveTab}
         mb={30}
