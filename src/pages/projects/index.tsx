@@ -13,7 +13,7 @@ const Projects = () => {
       <Group position="apart" mb={30}>
         <Title order={1}>Projects</Title>
         <Title order={2}>
-          <Link href="projects/repos">
+          <Link href="projects/repos" prefetch={false}>
             <a
               tabIndex={0}
               role="link"

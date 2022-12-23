@@ -28,7 +28,7 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
       <Container className={classes.header}>
         <Group spacing={1} className={classes.links}>
           {links.map((link) => (
-            <Link key={link.label} href={link.link}>
+            <Link key={link.label} href={link.link} prefetch={false}>
               <a
                 tabIndex={0}
                 role="link"
@@ -59,7 +59,7 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
               {links.map((link) => (
-                <Link key={link.label} href={link.link}>
+                <Link key={link.label} href={link.link} prefetch={false}>
                   <a
                     tabIndex={0}
                     role="link"
