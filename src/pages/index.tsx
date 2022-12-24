@@ -71,7 +71,7 @@ const HomePage = () => {
             <Text mt={10}>
               Find out&nbsp;
               <Link href="/about" passHref prefetch={false}>
-                <Anchor component="a" weight={500} underline>
+                <Anchor component="span" weight={500} underline>
                   <strong>more</strong>.
                 </Anchor>
               </Link>

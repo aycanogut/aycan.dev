@@ -13,20 +13,20 @@ const Projects = () => {
       <Group position="apart" mb={30}>
         <Title order={1}>Projects</Title>
         <Title order={2}>
-          <Link href="projects/repos" prefetch={false}>
-            <a
-              tabIndex={0}
-              role="link"
-              style={{
-                textDecoration: 'none',
-                color:
-                  theme.colorScheme === 'dark'
-                    ? theme.colors.yellow[4]
-                    : theme.colors.dark[8],
-              }}
-            >
-              Github Repos
-            </a>
+          <Link
+            href="projects/repos"
+            prefetch={false}
+            tabIndex={0}
+            role="link"
+            style={{
+              textDecoration: 'none',
+              color:
+                theme.colorScheme === 'dark'
+                  ? theme.colors.yellow[4]
+                  : theme.colors.dark[8],
+            }}
+          >
+            Github Repos
           </Link>
         </Title>
       </Group>
