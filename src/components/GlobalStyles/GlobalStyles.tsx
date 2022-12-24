@@ -12,11 +12,6 @@ const GlobalStyles: FC = () => (
         minHeight: '100vh',
       },
 
-      //! remove it
-      '::-webkit-scrollbar': {
-        display: 'none',
-      },
-
       '.loader': {
         margin: '50% auto',
         width: '100%',
