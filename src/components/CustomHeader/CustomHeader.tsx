@@ -28,22 +28,23 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
       <Container className={classes.header}>
         <Group spacing={1} className={classes.links}>
           {links.map((link) => (
-            <Link key={link.label} href={link.link} prefetch={false}>
-              <a
-                tabIndex={0}
-                role="link"
-                className={cx(
-                  classes.link,
-                  router.pathname === link.link ? classes.linkActive : ''
-                )}
-                onClick={() => {
-                  setActive(link.link)
-                  toggleOpened(false)
-                }}
-                onKeyDown={undefined}
-              >
-                {link.label}
-              </a>
+            <Link
+              key={link.label}
+              href={link.link}
+              prefetch={false}
+              tabIndex={0}
+              role="link"
+              className={cx(
+                classes.link,
+                router.pathname === link.link ? classes.linkActive : ''
+              )}
+              onClick={() => {
+                setActive(link.link)
+                toggleOpened(false)
+              }}
+              onKeyDown={undefined}
+            >
+              {link.label}
             </Link>
           ))}
         </Group>
@@ -59,22 +60,23 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
               {links.map((link) => (
-                <Link key={link.label} href={link.link} prefetch={false}>
-                  <a
-                    tabIndex={0}
-                    role="link"
-                    className={cx(
-                      classes.link,
-                      router.pathname === link.link ? classes.linkActive : ''
-                    )}
-                    onClick={() => {
-                      setActive(link.link)
-                      toggleOpened(false)
-                    }}
-                    onKeyDown={undefined}
-                  >
-                    {link.label}
-                  </a>
+                <Link
+                  key={link.label}
+                  href={link.link}
+                  prefetch={false}
+                  tabIndex={0}
+                  role="link"
+                  className={cx(
+                    classes.link,
+                    router.pathname === link.link ? classes.linkActive : ''
+                  )}
+                  onClick={() => {
+                    setActive(link.link)
+                    toggleOpened(false)
+                  }}
+                  onKeyDown={undefined}
+                >
+                  {link.label}
                 </Link>
               ))}
             </Paper>
