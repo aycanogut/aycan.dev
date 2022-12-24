@@ -16,9 +16,9 @@ import Spotlight from '../components/Spotlight/Spotlight'
 import SEO from '../next-seo.config'
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 
-export default function App(props: AppProps & { colorScheme: ColorScheme }) {
+export default function App(props: AppProps) {
   const { Component, pageProps } = props
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
   const router: NextRouter = useRouter()
 
   const canonicalUrl = `https://aycan.dev${
