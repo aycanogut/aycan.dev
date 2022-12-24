@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import { getCookie, setCookies } from 'cookies-next'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 import {
   MantineProvider,
   ColorScheme,
@@ -65,7 +65,3 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     </>
   )
 }
-
-App.getInitialProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
-  colorScheme: getCookie('mantine-color-scheme', ctx) || 'dark',
-})
