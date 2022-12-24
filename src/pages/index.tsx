@@ -24,10 +24,10 @@ import {
 } from '@icons-pack/react-simple-icons'
 import useWidth from '../hooks/useWidth'
 import fetcher from '../lib/fetcher'
+import Layout from '../components/Layout/Layout'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
 import { IArticleProps } from '../interfaces/Blog.interface'
 
-const Layout = dynamic(() => import('../components/Layout/Layout'))
 const Error = dynamic(() => import('../components/Error/Error'))
 
 const HomePage = () => {

@@ -3,10 +3,10 @@ import dynamic from 'next/dynamic'
 import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../../lib/fetcher'
+import Layout from '../../../components/Layout/Layout'
 import CustomLoader from '../../../components/CustomLoader/CustomLoader'
 import { IRepoProps } from '../../../interfaces/Repo.interface'
 
-const Layout = dynamic(() => import('../../../components/Layout/Layout'))
 const Repo = dynamic(() => import('../../../components/Repo/Repo'))
 const Error = dynamic(() => import('../../../components/Error/Error'))
 

@@ -14,8 +14,8 @@ import {
   Twitter,
   Gmail,
 } from '@icons-pack/react-simple-icons'
+import Layout from '../../components/Layout/Layout'
 
-const Layout = dynamic(() => import('../../components/Layout/Layout'))
 const GitHubCalendar = dynamic(() => import('react-github-calendar'))
 const NowPlaying = dynamic(
   () => import('../../components/NowPlaying/NowPlaying')

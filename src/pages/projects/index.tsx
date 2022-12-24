@@ -2,9 +2,9 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Grid, Title, Group, useMantineTheme } from '@mantine/core'
 import { projects } from '../../data/projects'
+import Layout from '../../components/Layout/Layout'
 import { IProjectProps } from '../../interfaces/Project.interface'
 
-const Layout = dynamic(() => import('../../components/Layout/Layout'))
 const Project = dynamic(() => import('../../components/Project/Project'))
 
 const Projects = () => {

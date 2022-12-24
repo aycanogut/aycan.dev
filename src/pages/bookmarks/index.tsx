@@ -5,13 +5,13 @@ import useSWR from 'swr'
 import useWidth from '../../hooks/useWidth'
 import { getBookmarks } from '../../lib/raindrop'
 import { collections } from '../../data/collections'
+import Layout from '../../components/Layout/Layout'
 import CustomLoader from '../../components/CustomLoader/CustomLoader'
 import {
   IBookmarksProps,
   IBookmarkProps,
 } from '../../interfaces/Bookmark.interface'
 
-const Layout = dynamic(() => import('../../components/Layout/Layout'))
 const Bookmark = dynamic(() => import('../../components/Bookmark/Bookmark'))
 const Error = dynamic(() => import('../../components/Error/Error'))
 
