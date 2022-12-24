@@ -3,14 +3,12 @@ import React, { FC } from 'react'
 import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../lib/fetcher'
+import CustomLoader from '../../components/CustomLoader/CustomLoader'
 import { IBlogProps, IArticleProps } from '../../interfaces/Blog.interface'
 
 const Layout = dynamic(() => import('../../components/Layout/Layout'))
 const Article = dynamic(() => import('../../components/Article/Article'))
 const Error = dynamic(() => import('../../components/Error/Error'))
-const CustomLoader = dynamic(
-  () => import('../../components/CustomLoader/CustomLoader')
-)
 
 const Articles: FC<IBlogProps> = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)

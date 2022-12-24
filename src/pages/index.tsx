@@ -24,13 +24,11 @@ import {
 } from '@icons-pack/react-simple-icons'
 import useWidth from '../hooks/useWidth'
 import fetcher from '../lib/fetcher'
+import CustomLoader from '../components/CustomLoader/CustomLoader'
 import { IArticleProps } from '../interfaces/Blog.interface'
 
 const Layout = dynamic(() => import('../components/Layout/Layout'))
 const Error = dynamic(() => import('../components/Error/Error'))
-const CustomLoader = dynamic(
-  () => import('../components/CustomLoader/CustomLoader')
-)
 
 const HomePage = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)

@@ -5,6 +5,7 @@ import useSWR from 'swr'
 import useWidth from '../../hooks/useWidth'
 import { getBookmarks } from '../../lib/raindrop'
 import { collections } from '../../data/collections'
+import CustomLoader from '../../components/CustomLoader/CustomLoader'
 import {
   IBookmarksProps,
   IBookmarkProps,
@@ -13,9 +14,6 @@ import {
 const Layout = dynamic(() => import('../../components/Layout/Layout'))
 const Bookmark = dynamic(() => import('../../components/Bookmark/Bookmark'))
 const Error = dynamic(() => import('../../components/Error/Error'))
-const CustomLoader = dynamic(
-  () => import('../../components/CustomLoader/CustomLoader')
-)
 
 const Bookmarks: FC<IBookmarksProps> = () => {
   const [activeTab, setActiveTab] = useState<string>(collections.blogs)
