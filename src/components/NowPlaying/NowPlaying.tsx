@@ -1,7 +1,7 @@
 // https://github.com/leerob/leerob.io/blob/main/components/NowPlaying.tsx
 
 import { FC, useEffect } from 'react'
-import NextImage from 'next/future/image'
+import Image from 'next/image'
 import { Box, Paper, Text } from '@mantine/core'
 import useSWR from 'swr'
 import { animate } from 'motion'
@@ -79,7 +79,7 @@ const NowPlaying: FC = () => {
     <Box className={classes.spotifyWidget}>
       {data?.songUrl ? (
         <Box className={classes.nowPlaying}>
-          <NextImage
+          <Image
             className={classes.songImage}
             src={data.albumImageUrl}
             alt={data.title}
