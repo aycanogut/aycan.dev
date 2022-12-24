@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import { getCookie, setCookies } from 'cookies-next'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 import {
   MantineProvider,
   ColorScheme,
@@ -16,9 +16,9 @@ import Spotlight from '../components/Spotlight/Spotlight'
 import SEO from '../next-seo.config'
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 
-export default function App(props: AppProps & { colorScheme: ColorScheme }) {
+export default function App(props: AppProps) {
   const { Component, pageProps } = props
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
   const router: NextRouter = useRouter()
 
   const canonicalUrl = `https://aycan.dev${
@@ -65,7 +65,3 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     </>
   )
 }
-
-App.getInitialProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
-  colorScheme: getCookie('mantine-color-scheme', ctx) || 'dark',
-})

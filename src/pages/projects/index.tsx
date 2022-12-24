@@ -1,12 +1,17 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Grid, Title, Group, useMantineTheme } from '@mantine/core'
 import { projects } from '../../data/projects'
 import Layout from '../../components/Layout/Layout'
-import Project from '../../components/Project/Project'
+import CustomLoader from '../../components/CustomLoader/CustomLoader'
 import { IProjectProps } from '../../interfaces/Project.interface'
+
+const Project = dynamic(() => import('../../components/Project/Project'))
 
 const Projects = () => {
   const theme = useMantineTheme()
+
+  if (!projects) return <CustomLoader />
 
   return (
     <Layout>

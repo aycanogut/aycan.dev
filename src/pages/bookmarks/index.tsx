@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import { FC, useState } from 'react'
 import { SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
@@ -5,13 +6,14 @@ import useWidth from '../../hooks/useWidth'
 import { getBookmarks } from '../../lib/raindrop'
 import { collections } from '../../data/collections'
 import Layout from '../../components/Layout/Layout'
-import Bookmark from '../../components/Bookmark/Bookmark'
 import CustomLoader from '../../components/CustomLoader/CustomLoader'
-import Error from '../../components/Error/Error'
 import {
   IBookmarksProps,
   IBookmarkProps,
 } from '../../interfaces/Bookmark.interface'
+
+const Bookmark = dynamic(() => import('../../components/Bookmark/Bookmark'))
+const Error = dynamic(() => import('../../components/Error/Error'))
 
 const Bookmarks: FC<IBookmarksProps> = () => {
   const [activeTab, setActiveTab] = useState<string>(collections.blogs)

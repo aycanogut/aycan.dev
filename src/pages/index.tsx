@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import {
   Title,
@@ -25,8 +26,9 @@ import useWidth from '../hooks/useWidth'
 import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
 import CustomLoader from '../components/CustomLoader/CustomLoader'
-import Error from '../components/Error/Error'
 import { IArticleProps } from '../interfaces/Blog.interface'
+
+const Error = dynamic(() => import('../components/Error/Error'))
 
 const HomePage = () => {
   const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)

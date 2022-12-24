@@ -4,7 +4,7 @@ import Project from './Project'
 describe('Welcome component', () => {
   it('has correct Next.js theming section link', () => {
     render(
-      <Project image="" title="" description="" stack="" github="" vercel="" />
+      <Project id={1} image="" title="" description="" stack={['']} links="" />
     )
     expect(screen.getByText('this guide')).toHaveAttribute(
       'href',

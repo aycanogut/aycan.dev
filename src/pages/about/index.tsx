@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import {
   Group,
   Title,
@@ -13,9 +14,12 @@ import {
   Twitter,
   Gmail,
 } from '@icons-pack/react-simple-icons'
-import GitHubCalendar from 'react-github-calendar'
 import Layout from '../../components/Layout/Layout'
-import NowPlaying from '../../components/NowPlaying/NowPlaying'
+
+const GitHubCalendar = dynamic(() => import('react-github-calendar'))
+const NowPlaying = dynamic(
+  () => import('../../components/NowPlaying/NowPlaying')
+)
 
 const About = () => {
   const { colorScheme } = useMantineColorScheme()
