@@ -13,12 +13,10 @@ const GlobalStyles: FC = () => (
       },
 
       '.loader': {
-        margin: '50% auto',
+        position: 'absolute',
+        top: '50%',
         width: '100%',
-
-        [theme.fn.largerThan('sm')]: {
-          margin: '35% auto',
-        },
+        margin: '0 auto',
       },
 
       '::selection': {
