@@ -1,6 +1,6 @@
-import dynamic from 'next/dynamic'
 import { FC, useState } from 'react'
-import { SegmentedControl, Title } from '@mantine/core'
+import dynamic from 'next/dynamic'
+import { Box, SegmentedControl, Title } from '@mantine/core'
 import useSWR from 'swr'
 import useWidth from '../../hooks/useWidth'
 import { getBookmarks } from '../../lib/raindrop'
@@ -53,7 +53,9 @@ const Bookmarks: FC<IBookmarksProps> = () => {
         orientation={width && width < 750 ? 'vertical' : 'horizontal'}
       />
       {!data ? (
-        <CustomLoader />
+        <Box sx={{ position: 'relative', height: '100%', paddingTop: '50%' }}>
+          <CustomLoader />
+        </Box>
       ) : (
         data &&
         data.items.map((bookmark: IBookmarkProps) => (
