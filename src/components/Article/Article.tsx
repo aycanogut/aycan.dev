@@ -8,9 +8,9 @@ import {
   Anchor,
   Box,
 } from '@mantine/core'
-import { motion } from 'framer-motion'
 import dayjs from 'dayjs'
 import { ExternalLink } from 'tabler-icons-react'
+import Transition from '../Transition/Transition'
 import { IArticleProps } from '../../interfaces/Article.interface'
 import useStyles from './Article.styles'
 
@@ -19,10 +19,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
   const theme = useMantineTheme()
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 10 }}
-    >
+    <Transition whileHover={{ scale: 1.01 }}>
       <Card className={classes.card} withBorder radius="sm" shadow="sm">
         <Card.Section pl="md" pr="sm" pt="sm">
           <Group position="apart">
@@ -58,7 +55,7 @@ const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {
           </Box>
         </Card.Section>
       </Card>
-    </motion.div>
+    </Transition>
   )
 }
 
