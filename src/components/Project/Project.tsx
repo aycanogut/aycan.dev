@@ -9,8 +9,8 @@ import {
   Box,
   Divider,
 } from '@mantine/core'
-import { motion } from 'framer-motion'
 import { BrandGithub, BrandVercel } from 'tabler-icons-react'
+import Transition from '../Transition/Transition'
 import { IProjectProps } from '../../interfaces/Project.interface'
 import useStyles from './Project.styles'
 
@@ -19,10 +19,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
   const theme = useMantineTheme()
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 10 }}
-    >
+    <Transition whileHover={{ scale: 1.01 }}>
       <Paper
         className={classes.card}
         withBorder
@@ -93,7 +90,7 @@ const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
           </Box>
         </Group>
       </Paper>
-    </motion.div>
+    </Transition>
   )
 }
 

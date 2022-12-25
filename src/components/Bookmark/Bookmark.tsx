@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Card, Text } from '@mantine/core'
-import { motion } from 'framer-motion'
+import Transition from '../Transition/Transition'
 import { IBookmarkProps } from '../../interfaces/Bookmark.interface'
 import useStyles from './Bookmark.styles'
 
@@ -8,10 +8,7 @@ const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
   const { classes } = useStyles()
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 10 }}
-    >
+    <Transition whileHover={{ scale: 1.01 }}>
       <Card
         className={classes.card}
         component="a"
@@ -25,7 +22,7 @@ const Bookmark: FC<IBookmarkProps> = ({ title, link }) => {
       >
         <Text weight={600}>{title}</Text>
       </Card>
-    </motion.div>
+    </Transition>
   )
 }
 

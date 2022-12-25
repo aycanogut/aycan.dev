@@ -8,8 +8,8 @@ import {
   Text,
   Title,
 } from '@mantine/core'
-import { motion } from 'framer-motion'
 import { Star } from 'tabler-icons-react'
+import Transition from '../Transition/Transition'
 import { IRepoProps } from '../../interfaces/Repo.interface'
 import useStyles from './Repo.styles'
 
@@ -18,10 +18,7 @@ const Repo: FC<IRepoProps> = ({ title, description, url, starCount }) => {
   const theme = useMantineTheme()
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 10 }}
-    >
+    <Transition whileHover={{ scale: 1.01 }}>
       <Anchor href={url} target="_blank" className={classes.link}>
         <Card withBorder radius="md">
           <Stack>
@@ -38,7 +35,7 @@ const Repo: FC<IRepoProps> = ({ title, description, url, starCount }) => {
           </Stack>
         </Card>
       </Anchor>
-    </motion.div>
+    </Transition>
   )
 }
 
