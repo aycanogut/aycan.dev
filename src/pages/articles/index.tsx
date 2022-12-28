@@ -11,7 +11,10 @@ const Article = dynamic(() => import('../../components/Article/Article'))
 const Error = dynamic(() => import('../../components/Error/Error'))
 
 const Articles: FC<IBlogProps> = () => {
-  const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
+  const { data, error } = useSWR<IArticleProps>(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut',
+    fetcher
+  )
 
   if (!data) return <CustomLoader />
   if (error) return <Error />
@@ -23,7 +26,7 @@ const Articles: FC<IBlogProps> = () => {
       </Title>
       <Grid gutter="xl" grow>
         {data &&
-          data.map((article: IArticleProps) => (
+          data.items.map((article: IArticleProps) => (
             <Grid.Col xs={12} sm={6} md={4} key={article.title}>
               <Article
                 key={article.title}
