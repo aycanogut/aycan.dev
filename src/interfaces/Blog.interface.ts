@@ -7,11 +7,11 @@ export interface IBlogProps {
 }
 
 export interface IArticleProps {
-  thumbnail: string
+  items: []
   title: string
   link: string
   categories: any
   pubDate: string
-  map: Function
+  map: (items: any) => any
   slice: Function
 }

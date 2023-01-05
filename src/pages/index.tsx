@@ -31,7 +31,11 @@ import { IArticleProps } from '../interfaces/Blog.interface'
 const Error = dynamic(() => import('../components/Error/Error'))
 
 const HomePage = () => {
-  const { data, error } = useSWR<IArticleProps>('api/medium', fetcher)
+  const { data, error } = useSWR<IArticleProps>(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut',
+    fetcher
+  )
+
   const { colorScheme } = useMantineColorScheme()
   const { width } = useWidth()
 
@@ -100,22 +104,19 @@ const HomePage = () => {
           <Title order={2}>Latest Articles</Title>
           <Stack spacing="xs">
             {data &&
-              data
-                .slice(0, 5)
-                .sort((a, b) => b.stargazers_count - a.stargazers_count)
-                .map((article: { link: string; title: string }) => (
-                  <Text
-                    key={article.title}
-                    component="a"
-                    href={article.link}
-                    target="_blank"
-                    color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                    weight={700}
-                    underline
-                  >
-                    {article.title}
-                  </Text>
-                ))}
+              data.items.slice(0, 6).map((article: IArticleProps) => (
+                <Text
+                  key={article.title}
+                  component="a"
+                  href={article.link}
+                  target="_blank"
+                  color={colorScheme === 'dark' ? 'yellow' : 'dark'}
+                  weight={700}
+                  underline
+                >
+                  {article.title}
+                </Text>
+              ))}
           </Stack>
         </Group>
       </Box>
