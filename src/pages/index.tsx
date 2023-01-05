@@ -88,15 +88,42 @@ const HomePage = () => {
           <Title order={2}>Tech Stack</Title>
           <Paper py="lg" sx={{ background: 'rgba(0,0,0, 0.03)' }}>
             <Group position={width < 650 ? 'apart' : 'center'} spacing="lg">
-              <Html5 color="#E34F26" size={70} />
-              <CssThree color="#1572B6" size={70} />
-              <Javascript color="#F7DF1E" size={70} />
-              <Typescript color="#3178C6" size={70} />
-              <ReactJs color="#61DAFB" size={70} />
-              <Nextdotjs color="#000000" size={70} />
-              <Sass color="#CC6699" size={70} />
-              <Styledcomponents color="#DB7093" size={70} />
-              <Tailwindcss color="#06B6D4" size={70} />
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+                target="_blank"
+              >
+                <Html5 color="#E34F26" size={70} />
+              </Link>
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+              >
+                <CssThree color="#1572B6" size={70} />
+              </Link>
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+              >
+                <Javascript color="#F7DF1E" size={70} />
+              </Link>
+              <Link href="https://www.typescriptlang.org/" target="_blank">
+                <Typescript color="#3178C6" size={70} />
+              </Link>
+              <Link href="https://reactjs.org/" target="_blank">
+                <ReactJs color="#61DAFB" size={70} />
+              </Link>
+              <Link href="https://nextjs.org/" target="_blank">
+                <Nextdotjs color="#000000" size={70} />
+              </Link>
+              <Link href="https://sass-lang.com/" target="_blank">
+                <Sass color="#CC6699" size={70} />
+              </Link>
+              <Link href="https://styled-components.com/" target="_blank">
+                <Styledcomponents color="#DB7093" size={70} />
+              </Link>
+              <Link href="https://tailwindcss.com/" target="_blank">
+                <Tailwindcss color="#06B6D4" size={70} />
+              </Link>
             </Group>
           </Paper>
         </Group>
