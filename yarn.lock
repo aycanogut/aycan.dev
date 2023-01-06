@@ -1617,12 +1617,12 @@
   resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-4.2.2.tgz#b124776724caad5ec7cf2c07b8942d8a55e1998e"
   integrity sha512-H580XCbgH0UnmaiHOvWGGFcFpNnXwl3zFTFLAH8fhp80AeLhIoYdI9+kvbg4G69UZlZrhr1h9naWCN9O8gjizg==
 
-"@mantine/next@4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@mantine/next/-/next-4.2.2.tgz#b429741e237da31b0acc6370b573bec8b2c6e81b"
-  integrity sha512-KuRZHzQ6Asp5y78JqBZlwxXjmxbC27tFCwqDTDD4X6ypsdEqILgxSyBC1um+kFzi5hfauftLQ5Q8FGdiEtPfsA==
+"@mantine/next@4.2.12":
+  version "4.2.12"
+  resolved "https://registry.yarnpkg.com/@mantine/next/-/next-4.2.12.tgz#02c3893803c098f492d1be5ae041dd2caf4071c4"
+  integrity sha512-Wpjjp5lLy14gFV84EV3Yu4j1uLFugf8mSwQOJa+gD5IT9ENpOHEGykmo7SHS3EormFLPE9seDD28dACC2sNM5Q==
   dependencies:
-    "@mantine/ssr" "4.2.2"
+    "@mantine/ssr" "4.2.12"
 
 "@mantine/notifications@4.2.2":
   version "4.2.2"
@@ -1643,19 +1643,31 @@
   resolved "https://registry.yarnpkg.com/@mantine/spotlight/-/spotlight-4.2.12.tgz#9296f8997034c23ba89e46299ebf58a53507ad80"
   integrity sha512-eUOV1rN8iCCQZc1es8Kq9Wgrbo3xuKb4KqY7yBRvP5E6FQqwZ0F2RlwT4YDWkYOPisFpeuVeoZa4kiOs3rS0Fw==
 
-"@mantine/ssr@4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-4.2.2.tgz#83c4d2bc6393d4fe9bfcc2f635731489b1bb8fbf"
-  integrity sha512-xZV+kAgiDIGoxTRXJFoY8LqjxTzmvX1YxRO5QCK0Ky7JuA/iiCwSDsHf5fRqGj6e/ZNJh0MHr/M52PdpYBrpuQ==
+"@mantine/ssr@4.2.12":
+  version "4.2.12"
+  resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-4.2.12.tgz#86e86243f7c3e010ad4ae0a2f0f6ce6f7154434a"
+  integrity sha512-PhM+nYzKs7ooPgMyJGPrdE0KaBB1T72yln3K/3ydkJBAMb/gl08Gm8gpzInzfn2kB7bdRVNwuF0i8Ba0pDbvJg==
   dependencies:
     "@emotion/cache" "11.7.1"
     "@emotion/react" "11.7.1"
     "@emotion/serialize" "1.0.2"
     "@emotion/server" "11.4.0"
     "@emotion/utils" "1.0.0"
-    "@mantine/styles" "4.2.2"
+    "@mantine/styles" "4.2.12"
     csstype "3.0.9"
     html-react-parser "1.3.0"
+
+"@mantine/styles@4.2.12":
+  version "4.2.12"
+  resolved "https://registry.yarnpkg.com/@mantine/styles/-/styles-4.2.12.tgz#298ceb87114928916fb69e14efd99958379adf4f"
+  integrity sha512-9q1DzW0UNW/ORMGLHfN2XABOSEm0ZQebhNlLD757R6OQouoLuUf9elUwgGOXSyogMlsAYoy84XbJ3ZbbTm4YCA==
+  dependencies:
+    "@emotion/cache" "11.7.1"
+    "@emotion/react" "11.7.1"
+    "@emotion/serialize" "1.0.2"
+    "@emotion/utils" "1.0.0"
+    clsx "^1.1.1"
+    csstype "3.0.9"
 
 "@mantine/styles@4.2.2":
   version "4.2.2"
