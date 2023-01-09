@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^5.7.0",
+    "@mantine/dates": "4.2.12",
     "@mantine/core": "4.2.12",
-    "@mantine/dates": "4.2.2",
     "@mantine/hooks": "4.2.12",
     "@mantine/next": "4.2.2",
     "@mantine/notifications": "4.2.2",
