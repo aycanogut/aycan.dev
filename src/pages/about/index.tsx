@@ -93,7 +93,7 @@ const About = () => {
           <Anchor href="https://twitter.com/bleedeleventh">
             <Twitter color={iconColor} size={32} />
           </Anchor>
-          <Anchor href="mailto:aycanonfire@gmail.com">
+          <Anchor href="mailto:me@aycan.dev">
             <Gmail color={iconColor} size={32} />
           </Anchor>
         </Group>
