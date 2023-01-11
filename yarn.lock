@@ -1631,10 +1631,10 @@
   dependencies:
     react-transition-group "^4.4.2"
 
-"@mantine/prism@4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@mantine/prism/-/prism-4.2.2.tgz#d575fe249d6556114bc4614c3a602fc36a131b8c"
-  integrity sha512-I3S7xAX74EQD8LNO/FuyR5EHNAhcNaWcXcEQZZITTYKbUv3/ieAcV8k5DybWa2FbFtVEhCSTrT+9YIjhIcGWOA==
+"@mantine/prism@4.2.12":
+  version "4.2.12"
+  resolved "https://registry.yarnpkg.com/@mantine/prism/-/prism-4.2.12.tgz#728169dfad2a05a2bf920ba0bf16acf66fb95460"
+  integrity sha512-zFwkBs0+4kaYnKPWbFaulM6cZGQCJgQzxTzXmZsLoBn5d/3U7pIbm0wX9ZvDoEscpN4YTp4WqvZGYGOMkIjgZw==
   dependencies:
     prism-react-renderer "^1.2.1"
 
