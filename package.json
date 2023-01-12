@@ -28,7 +28,7 @@
     "@mantine/core": "4.2.12",
     "@mantine/hooks": "4.2.12",
     "@mantine/next": "4.2.12",
-    "@mantine/notifications": "4.2.2",
+    "@mantine/notifications": "4.2.12",
     "@mantine/prism": "4.2.12",
     "@mantine/spotlight": "^4.2.11",
     "@next/bundle-analyzer": "^12.1.4",
