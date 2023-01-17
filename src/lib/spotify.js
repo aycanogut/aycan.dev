@@ -3,11 +3,10 @@
 const client_id = process.env.SPOTIFY_CLIENT_ID
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN
+const now_playing_endpoint = process.env.SPOTIFY_NOW_PLAYING_ENDPOINT
+const token_endpoint = process.env.SPOTIFY_TOKEN_ENDPOINT
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64')
-const now_playing_endpoint =
-  'https://api.spotify.com/v1/me/player/currently-playing'
-const token_endpoint = 'https://accounts.spotify.com/api/token'
 
 const getAccessToken = async () => {
   const response = await fetch(token_endpoint, {

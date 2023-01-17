@@ -11,10 +11,7 @@ const Article = dynamic(() => import('../../components/Article/Article'))
 const Error = dynamic(() => import('../../components/Error/Error'))
 
 const Articles: FC<IBlogProps> = () => {
-  const { data, error } = useSWR<IArticleProps>(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut',
-    fetcher
-  )
+  const { data, error } = useSWR<IArticleProps>(process.env.MEDIUM_URL, fetcher)
 
   if (!data) return <CustomLoader />
   if (error) return <Error />

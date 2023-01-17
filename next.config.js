@@ -13,15 +13,17 @@ module.exports = withBundleAnalyzer({
     defaultLocale: 'en',
   },
   images: {
-    domains: [
-      'www.simplilearn.com',
-      'cdn-images-1.medium.com',
-      'i.scdn.co',
-      'github.com',
-      'raw.githubusercontent.com',
-    ],
+    domains: ['i.scdn.co'],
   },
   env: {
+    GITHUB_URL: process.env.GITHUB_URL,
+    MEDIUM_URL: process.env.MEDIUM_URL,
+    RAINDROP_URL: process.env.RAINDROP_URL,
     RAINDROP_TOKEN: process.env.RAINDROP_TOKEN,
+    SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
+    SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
+    SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN,
+    SPOTIFY_NOW_PLAYING_ENDPOINT: process.env.SPOTIFY_NOW_PLAYING_ENDPOINT,
+    SPOTIFY_TOKEN_ENDPOINT: process.env.SPOTIFY_TOKEN_ENDPOINT,
   },
 })
