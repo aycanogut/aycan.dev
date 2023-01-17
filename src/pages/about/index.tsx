@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import dynamic from 'next/dynamic'
 import {
   Group,
@@ -24,6 +25,29 @@ const NowPlaying = dynamic(
 const About = () => {
   const { colorScheme } = useMantineColorScheme()
   const iconColor = colorScheme === 'dark' ? '#fff' : '#000'
+
+  const socialMediaIcons: { component: ReactNode; url: string }[] = [
+    {
+      component: <Github color={iconColor} size={32} />,
+      url: 'https://www.github.com/aycanogut',
+    },
+    {
+      component: <Linkedin color={iconColor} size={32} />,
+      url: 'https://www.linkedin.com/in/aycanogut',
+    },
+    {
+      component: <Medium color={iconColor} size={32} />,
+      url: 'https://medium.com/@aycanogut',
+    },
+    {
+      component: <Twitter color={iconColor} size={32} />,
+      url: 'https://twitter.com/bleedeleventh',
+    },
+    {
+      component: <Gmail color={iconColor} size={32} />,
+      url: 'mailto:me@aycan.dev',
+    },
+  ]
 
   return (
     <Layout>
@@ -81,21 +105,13 @@ const About = () => {
           Contact Me
         </Title>
         <Group>
-          <Anchor href="https://www.github.com/aycanogut">
-            <Github color={iconColor} size={32} />
-          </Anchor>
-          <Anchor href="https://www.linkedin.com/in/aycanogut">
-            <Linkedin color={iconColor} size={32} />
-          </Anchor>
-          <Anchor href="https://medium.com/@aycanogut">
-            <Medium color={iconColor} size={32} />
-          </Anchor>
-          <Anchor href="https://twitter.com/bleedeleventh">
-            <Twitter color={iconColor} size={32} />
-          </Anchor>
-          <Anchor href="mailto:me@aycan.dev">
-            <Gmail color={iconColor} size={32} />
-          </Anchor>
+          {socialMediaIcons.map(
+            (icon: { component: ReactNode; url: string }) => (
+              <Anchor key={icon.url} href={icon.url} target="_blank">
+                {icon.component}
+              </Anchor>
+            )
+          )}
         </Group>
       </Box>
       <Box>
