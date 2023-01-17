@@ -18,7 +18,7 @@ const Error = dynamic(() => import('../../components/Error/Error'))
 const Bookmarks: FC<IBookmarksProps> = () => {
   const [activeTab, setActiveTab] = useState<string>(collections.blogs)
   const { data, error } = useSWR(
-    `https://api.raindrop.io/rest/v1/raindrops/${activeTab}`,
+    `${process.env.RAINDROP_URL}${activeTab}`,
     getBookmarks
   )
   const { width } = useWidth()
