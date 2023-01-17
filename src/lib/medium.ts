@@ -1,7 +1,5 @@
-const token_endpoint = process.env.MEDIUM_URL
-
 export const getBlogPosts = async () => {
-  const response = await fetch(token_endpoint, {
+  const response = await fetch(process.env.MEDIUM_URL, {
     method: 'GET',
   })
 

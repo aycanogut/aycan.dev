@@ -11,10 +11,7 @@ const Repo = dynamic(() => import('../../../components/Repo/Repo'))
 const Error = dynamic(() => import('../../../components/Error/Error'))
 
 const Repos: FC<IRepoProps> = () => {
-  const { data, error } = useSWR<IRepoProps>(
-    'https://api.github.com/users/aycanogut/repos',
-    fetcher
-  )
+  const { data, error } = useSWR<IRepoProps>(process.env.GITHUB_URL, fetcher)
 
   if (!data) return <CustomLoader />
   if (error) return <Error />

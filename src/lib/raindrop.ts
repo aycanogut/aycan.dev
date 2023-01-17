@@ -1,5 +1,3 @@
-const token = process.env.RAINDROP_TOKEN
-
 export const getBookmarks = async (url) => {
   const response = await fetch(url, {
     method: 'GET',
