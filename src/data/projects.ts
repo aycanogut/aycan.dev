@@ -12,7 +12,7 @@ export const projects = [
         id: 1,
       },
       {
-        link: 'https://aycan.vercel.app',
+        link: 'https://aycan.dev',
         id: 2,
       },
     ],
