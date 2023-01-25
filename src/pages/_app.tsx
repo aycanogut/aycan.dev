@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { NextRouter, useRouter } from 'next/router'
 import { AppProps } from 'next/app'
 import { setCookies } from 'cookies-next'
@@ -10,6 +10,7 @@ import {
   ColorScheme,
   ColorSchemeProvider,
 } from '@mantine/core'
+import TagManager, { TagManagerArgs } from 'react-gtm-module'
 import { NotificationsProvider } from '@mantine/notifications'
 import Spotlight from '../components/Spotlight/Spotlight'
 import SEO from '../next-seo.config'
@@ -31,6 +32,16 @@ export default function App(props: AppProps) {
       maxAge: 60 * 60 * 24 * 30,
     })
   }
+
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || ''
+
+  const tagManagerArgs: TagManagerArgs = {
+    gtmId,
+  }
+
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
+  }, [])
 
   return (
     <>
