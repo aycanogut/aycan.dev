@@ -27,5 +27,6 @@ module.exports = withBundleAnalyzer({
     SPOTIFY_TOKEN_ENDPOINT: process.env.SPOTIFY_TOKEN_ENDPOINT,
     NEXT_PUBLIC_GTM_ID: process.env.NEXT_PUBLIC_GTM_ID,
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+    SITE_URL: process.env.SITE_URL,
   },
 })
