@@ -13,7 +13,7 @@ import {
 import TagManager, { TagManagerArgs } from 'react-gtm-module'
 import { NotificationsProvider } from '@mantine/notifications'
 import Spotlight from '../components/Spotlight/Spotlight'
-import SEO from '../next-seo.config'
+import SEO from '../../next-seo.config'
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 
 export default function App(props: AppProps) {
