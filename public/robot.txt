@@ -1,0 +1,7 @@
+# Allow all user agents.
+User-agent: *
+Allow: /
+
+# User agent "Googlebot" should not crawl the `http://example.com/nogooglebot/` folder or any of its subdirectories.
+User-agent: Googlebot
+Disallow: /nogooglebot/
