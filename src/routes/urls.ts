@@ -3,5 +3,6 @@ export const urls = {
   Projects: '/projects',
   Articles: '/articles',
   Bookmarks: '/bookmarks',
+  Timeline: '/timeline',
   About: '/about',
 }
