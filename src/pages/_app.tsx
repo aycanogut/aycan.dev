@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
-import { NextRouter, useRouter } from 'next/router'
 import { AppProps } from 'next/app'
 import { setCookies } from 'cookies-next'
 import Head from 'next/head'
-import { DefaultSeo } from 'next-seo'
 import { Analytics } from '@vercel/analytics/react'
 import {
   MantineProvider,
@@ -13,17 +11,12 @@ import {
 import TagManager, { TagManagerArgs } from 'react-gtm-module'
 import { NotificationsProvider } from '@mantine/notifications'
 import Spotlight from '../components/Spotlight/Spotlight'
-import SEO from '../../next-seo.config'
+import Seo from '../components/Seo/Seo'
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
-  const router: NextRouter = useRouter()
-
-  const canonicalUrl = `https://aycan.dev${
-    router.asPath === '/' ? '' : router.asPath
-  }`.split('?')[0]
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
@@ -51,10 +44,9 @@ export default function App(props: AppProps) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <meta name="robots" content="all" />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <DefaultSeo {...SEO} canonical={canonicalUrl} />
+      <Seo />
       <GlobalStyles />
       <ColorSchemeProvider
         colorScheme={colorScheme}
