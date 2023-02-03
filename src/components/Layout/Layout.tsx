@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import { Container } from '@mantine/core'
-import CustomHeader from '../CustomHeader/CustomHeader'
+import Header from '../Header/Header'
 import Transition from '../Transition/Transition'
 import { ILayoutProps } from '../../interfaces/Layout.interface'
 import { navigation } from '../../routes/navigation'
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
   <>
-    <CustomHeader links={navigation} />
+    <Header links={navigation} />
     <main>
       <Container size="md" px="xl" pt={60} pb={70}>
         <Transition

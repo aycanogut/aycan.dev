@@ -4,7 +4,7 @@ import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../lib/fetcher'
 import Layout from '../../components/Layout/Layout'
-import CustomLoader from '../../components/CustomLoader/CustomLoader'
+import Loader from '../../components/Loader/Loader'
 import { IBlogProps, IArticleProps } from '../../interfaces/Blog.interface'
 
 const Article = dynamic(() => import('../../components/Article/Article'))
@@ -13,7 +13,7 @@ const Error = dynamic(() => import('../../components/Error/Error'))
 const Articles: FC<IBlogProps> = () => {
   const { data, error } = useSWR<IArticleProps>(process.env.MEDIUM_URL, fetcher)
 
-  if (!data) return <CustomLoader />
+  if (!data) return <Loader />
   if (error) return <Error />
 
   return (

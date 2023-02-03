@@ -25,7 +25,7 @@ import {
 import useWidth from '../hooks/useWidth'
 import fetcher from '../lib/fetcher'
 import Layout from '../components/Layout/Layout'
-import CustomLoader from '../components/CustomLoader/CustomLoader'
+import Loader from '../components/Loader/Loader'
 import { IArticleProps } from '../interfaces/Blog.interface'
 
 const Error = dynamic(() => import('../components/Error/Error'))
@@ -39,7 +39,7 @@ const HomePage = () => {
   const { colorScheme } = useMantineColorScheme()
   const { width } = useWidth()
 
-  if (!data) return <CustomLoader />
+  if (!data) return <Loader />
   if (error) return <Error />
 
   return (
