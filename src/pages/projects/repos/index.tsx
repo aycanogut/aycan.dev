@@ -4,7 +4,7 @@ import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
 import fetcher from '../../../lib/fetcher'
 import Layout from '../../../components/Layout/Layout'
-import CustomLoader from '../../../components/CustomLoader/CustomLoader'
+import Loader from '../../../components/Loader/Loader'
 import { IRepoProps } from '../../../interfaces/Repo.interface'
 
 const Repo = dynamic(() => import('../../../components/Repo/Repo'))
@@ -13,7 +13,7 @@ const Error = dynamic(() => import('../../../components/Error/Error'))
 const Repos: FC<IRepoProps> = () => {
   const { data, error } = useSWR<IRepoProps>(process.env.GITHUB_URL, fetcher)
 
-  if (!data) return <CustomLoader />
+  if (!data) return <Loader />
   if (error) return <Error />
 
   return (

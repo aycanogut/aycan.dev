@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Grid, Title, Group, useMantineTheme } from '@mantine/core'
 import { projects } from '../../data/projects'
 import Layout from '../../components/Layout/Layout'
-import CustomLoader from '../../components/CustomLoader/CustomLoader'
+import Loader from '../../components/Loader/Loader'
 import { IProjectProps } from '../../interfaces/Project.interface'
 
 const Project = dynamic(() => import('../../components/Project/Project'))
@@ -11,7 +11,7 @@ const Project = dynamic(() => import('../../components/Project/Project'))
 const Projects = () => {
   const theme = useMantineTheme()
 
-  if (!projects) return <CustomLoader />
+  if (!projects) return <Loader />
 
   return (
     <Layout>

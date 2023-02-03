@@ -6,7 +6,7 @@ import useWidth from '../../hooks/useWidth'
 import { getBookmarks } from '../../lib/raindrop'
 import { collections } from '../../data/collections'
 import Layout from '../../components/Layout/Layout'
-import CustomLoader from '../../components/CustomLoader/CustomLoader'
+import Loader from '../../components/Loader/Loader'
 import {
   IBookmarksProps,
   IBookmarkProps,
@@ -54,7 +54,7 @@ const Bookmarks: FC<IBookmarksProps> = () => {
       />
       {!data ? (
         <Box sx={{ position: 'relative', height: '100%', paddingTop: '50%' }}>
-          <CustomLoader />
+          <Loader />
         </Box>
       ) : (
         data &&

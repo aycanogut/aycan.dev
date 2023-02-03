@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {
-  Header,
+  Header as MantineHeader,
   Container,
   Group,
   Burger,
@@ -14,17 +14,17 @@ import {
 import { openSpotlight } from '@mantine/spotlight'
 import { useBooleanToggle } from '@mantine/hooks'
 import ColorSchemeToggle from '../ColorSchemeToggle/ColorSchemeToggle'
-import { ICustomHeaderProps } from '../../interfaces/CustomHeader.interface'
-import useStyles, { HEADER_HEIGHT } from './CustomHeader.styles'
+import { IHeaderProps } from '../../interfaces/Header.interface'
+import useStyles, { HEADER_HEIGHT } from './Header.styles'
 
-const CustomHeader = ({ links }: ICustomHeaderProps) => {
+const Header = ({ links }: IHeaderProps) => {
   const [opened, toggleOpened] = useBooleanToggle(false)
   const [_active, setActive] = useState(links[0].link)
   const { classes, cx } = useStyles()
   const router = useRouter()
 
   return (
-    <Header height={HEADER_HEIGHT} className={classes.root}>
+    <MantineHeader height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing={1} className={classes.links}>
           {links.map((link) => (
@@ -99,8 +99,8 @@ const CustomHeader = ({ links }: ICustomHeaderProps) => {
         </ActionIcon>
         <ColorSchemeToggle />
       </Container>
-    </Header>
+    </MantineHeader>
   )
 }
 
-export default CustomHeader
+export default Header

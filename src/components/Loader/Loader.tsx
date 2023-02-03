@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import { Loader, useMantineTheme } from '@mantine/core'
+import { Loader as MantineLoader, useMantineTheme } from '@mantine/core'
 
-const CustomLoader: FC = () => {
+const Loader: FC = () => {
   const theme = useMantineTheme()
 
   return (
-    <Loader
+    <MantineLoader
       variant="dots"
       size="xl"
       className="loader"
@@ -18,4 +18,4 @@ const CustomLoader: FC = () => {
   )
 }
 
-export default CustomLoader
+export default Loader

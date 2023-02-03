@@ -1,3 +1,3 @@
-export interface ICustomHeaderProps {
+export interface IHeaderProps {
   links: { link: string; label: string }[]
 }
