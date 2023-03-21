@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import { NextRouter, useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
+import { NextRouter, useRouter } from 'next/router'
+import React, { FC } from 'react'
 
 const Seo: FC = () => {
   const router: NextRouter = useRouter()

@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import { ActionIcon, Group, useMantineColorScheme } from '@mantine/core'
+import { FC } from 'react'
 import { MoonStars, Sun } from 'tabler-icons-react'
 
 const ColorSchemeToggle: FC = () => {

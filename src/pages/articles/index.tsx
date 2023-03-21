@@ -1,11 +1,12 @@
+import { Grid, Title } from '@mantine/core'
 import dynamic from 'next/dynamic'
 import React, { FC } from 'react'
-import { Grid, Title } from '@mantine/core'
 import useSWR from 'swr'
-import fetcher from '../../lib/fetcher'
+
 import Layout from '../../components/Layout/Layout'
 import Loader from '../../components/Loader/Loader'
-import { IBlogProps, IArticleProps } from '../../interfaces/Blog.interface'
+import { IArticleProps, IBlogProps } from '../../interfaces/Blog.interface'
+import fetcher from '../../lib/fetcher'
 
 const Article = dynamic(() => import('../../components/Article/Article'))
 const Error = dynamic(() => import('../../components/Error/Error'))

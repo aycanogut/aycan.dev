@@ -1,17 +1,18 @@
-import { FC } from 'react'
-import { useRouter } from 'next/router'
 import { useMantineColorScheme } from '@mantine/core'
 import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight'
+import { useRouter } from 'next/router'
+import { FC } from 'react'
 import {
-  Search,
-  Home2,
   AppWindow,
   Article,
   Bookmarks,
-  Pacman,
-  Sun,
+  Home2,
   Moon,
+  Pacman,
+  Search,
+  Sun,
 } from 'tabler-icons-react'
+
 import { ISpotlightProps } from '../../interfaces/Spotlight.interface'
 
 const Spotlight: FC<ISpotlightProps> = ({ children }) => {

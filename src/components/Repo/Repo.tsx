@@ -1,16 +1,17 @@
-import React, { FC } from 'react'
 import {
+  Anchor,
   Card,
   Group,
   Stack,
-  useMantineTheme,
-  Anchor,
   Text,
   Title,
+  useMantineTheme,
 } from '@mantine/core'
+import React, { FC } from 'react'
 import { Star } from 'tabler-icons-react'
-import Transition from '../Transition/Transition'
+
 import { IRepoProps } from '../../interfaces/Repo.interface'
+import Transition from '../Transition/Transition'
 import useStyles from './Repo.styles'
 
 const Repo: FC<IRepoProps> = ({ title, description, url, starCount }) => {

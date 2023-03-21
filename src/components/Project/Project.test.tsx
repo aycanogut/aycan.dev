@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+
 import Project from './Project'
 
 describe('Welcome component', () => {

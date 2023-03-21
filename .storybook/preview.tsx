@@ -1,7 +1,7 @@
+import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
+import { NotificationsProvider } from '@mantine/notifications'
 import React from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
-import { MantineProvider, ColorSchemeProvider } from '@mantine/core'
-import { NotificationsProvider } from '@mantine/notifications'
 
 export const parameters = { layout: 'fullscreen' }
 

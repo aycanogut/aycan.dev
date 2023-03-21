@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import {
-  Header as MantineHeader,
+  ActionIcon,
+  Burger,
   Container,
   Group,
-  Burger,
-  Text,
+  Header as MantineHeader,
   Paper,
+  Text,
   Transition,
-  ActionIcon,
 } from '@mantine/core'
-import { openSpotlight } from '@mantine/spotlight'
 import { useBooleanToggle } from '@mantine/hooks'
-import ColorSchemeToggle from '../ColorSchemeToggle/ColorSchemeToggle'
+import { openSpotlight } from '@mantine/spotlight'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
+
 import { IHeaderProps } from '../../interfaces/Header.interface'
+import ColorSchemeToggle from '../ColorSchemeToggle/ColorSchemeToggle'
 import useStyles, { HEADER_HEIGHT } from './Header.styles'
 
 const Header = ({ links }: IHeaderProps) => {

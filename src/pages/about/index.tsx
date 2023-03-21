@@ -1,20 +1,21 @@
-import { ReactNode } from 'react'
-import dynamic from 'next/dynamic'
-import {
-  Group,
-  Title,
-  Text,
-  Box,
-  Anchor,
-  useMantineColorScheme,
-} from '@mantine/core'
 import {
   Github,
+  Gmail,
   Linkedin,
   Medium,
   Twitter,
-  Gmail,
 } from '@icons-pack/react-simple-icons'
+import {
+  Anchor,
+  Box,
+  Group,
+  Text,
+  Title,
+  useMantineColorScheme,
+} from '@mantine/core'
+import dynamic from 'next/dynamic'
+import { ReactNode } from 'react'
+
 import Layout from '../../components/Layout/Layout'
 
 const GitHubCalendar = dynamic(() => import('react-github-calendar'))

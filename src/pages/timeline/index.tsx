@@ -1,5 +1,6 @@
-import { Timeline as MantineTimeline, Title, Text, List } from '@mantine/core'
+import { List, Timeline as MantineTimeline, Text, Title } from '@mantine/core'
 import { Circle, CircleDashed } from 'tabler-icons-react'
+
 import Layout from '../../components/Layout/Layout'
 
 const Timeline = () => (

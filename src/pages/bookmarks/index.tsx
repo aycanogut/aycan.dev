@@ -1,16 +1,17 @@
-import { FC, useState } from 'react'
-import dynamic from 'next/dynamic'
 import { Box, SegmentedControl, Title } from '@mantine/core'
+import dynamic from 'next/dynamic'
+import { FC, useState } from 'react'
 import useSWR from 'swr'
-import useWidth from '../../hooks/useWidth'
-import { getBookmarks } from '../../lib/raindrop'
-import { collections } from '../../data/collections'
+
 import Layout from '../../components/Layout/Layout'
 import Loader from '../../components/Loader/Loader'
+import { collections } from '../../data/collections'
+import useWidth from '../../hooks/useWidth'
 import {
-  IBookmarksProps,
   IBookmarkProps,
+  IBookmarksProps,
 } from '../../interfaces/Bookmark.interface'
+import { getBookmarks } from '../../lib/raindrop'
 
 const Bookmark = dynamic(() => import('../../components/Bookmark/Bookmark'))
 const Error = dynamic(() => import('../../components/Error/Error'))

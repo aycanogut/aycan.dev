@@ -1,17 +1,18 @@
-import React, { FC } from 'react'
 import {
-  Text,
-  Group,
-  useMantineTheme,
-  Paper,
-  Badge,
   Anchor,
+  Badge,
   Box,
   Divider,
+  Group,
+  Paper,
+  Text,
+  useMantineTheme,
 } from '@mantine/core'
+import React, { FC } from 'react'
 import { BrandGithub, BrandVercel } from 'tabler-icons-react'
-import Transition from '../Transition/Transition'
+
 import { IProjectProps } from '../../interfaces/Project.interface'
+import Transition from '../Transition/Transition'
 import useStyles from './Project.styles'
 
 const Project: FC<IProjectProps> = ({ title, description, links, stack }) => {
