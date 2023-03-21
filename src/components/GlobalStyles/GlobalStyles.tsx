@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import { Global } from '@mantine/core'
+import { FC } from 'react'
 
 const GlobalStyles: FC = () => (
   <Global

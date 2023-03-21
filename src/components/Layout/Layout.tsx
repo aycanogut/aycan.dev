@@ -1,9 +1,10 @@
-import { FC } from 'react'
 import { Container } from '@mantine/core'
-import Header from '../Header/Header'
-import Transition from '../Transition/Transition'
+import { FC } from 'react'
+
 import { ILayoutProps } from '../../interfaces/Layout.interface'
 import { navigation } from '../../routes/navigation'
+import Header from '../Header/Header'
+import Transition from '../Transition/Transition'
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
   <>

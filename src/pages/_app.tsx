@@ -1,18 +1,19 @@
-import { useEffect, useState } from 'react'
-import { AppProps } from 'next/app'
-import { setCookies } from 'cookies-next'
-import Head from 'next/head'
-import { Analytics } from '@vercel/analytics/react'
 import {
-  MantineProvider,
   ColorScheme,
   ColorSchemeProvider,
+  MantineProvider,
 } from '@mantine/core'
-import TagManager, { TagManagerArgs } from 'react-gtm-module'
 import { NotificationsProvider } from '@mantine/notifications'
-import Spotlight from '../components/Spotlight/Spotlight'
-import Seo from '../components/Seo/Seo'
+import { Analytics } from '@vercel/analytics/react'
+import { setCookies } from 'cookies-next'
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import { useEffect, useState } from 'react'
+import TagManager, { TagManagerArgs } from 'react-gtm-module'
+
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
+import Seo from '../components/Seo/Seo'
+import Spotlight from '../components/Spotlight/Spotlight'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props

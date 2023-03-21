@@ -1,32 +1,33 @@
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import {
-  Title,
-  Text,
-  Anchor,
-  Group,
-  Paper,
-  Stack,
-  Box,
-  useMantineColorScheme,
-} from '@mantine/core'
-import useSWR from 'swr'
-import {
-  Html5,
   CssThree,
+  Html5,
   Javascript,
-  Typescript,
-  ReactJs,
   Nextdotjs,
+  ReactJs,
   Sass,
   Styledcomponents,
   Tailwindcss,
+  Typescript,
 } from '@icons-pack/react-simple-icons'
-import useWidth from '../hooks/useWidth'
-import fetcher from '../lib/fetcher'
+import {
+  Anchor,
+  Box,
+  Group,
+  Paper,
+  Stack,
+  Text,
+  Title,
+  useMantineColorScheme,
+} from '@mantine/core'
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import useSWR from 'swr'
+
 import Layout from '../components/Layout/Layout'
 import Loader from '../components/Loader/Loader'
+import useWidth from '../hooks/useWidth'
 import { IArticleProps } from '../interfaces/Blog.interface'
+import fetcher from '../lib/fetcher'
 
 const Error = dynamic(() => import('../components/Error/Error'))
 

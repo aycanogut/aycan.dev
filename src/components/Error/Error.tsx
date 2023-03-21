@@ -1,5 +1,6 @@
+import { Button, Container, Group, Text, Title } from '@mantine/core'
 import { FC } from 'react'
-import { Title, Text, Button, Container, Group } from '@mantine/core'
+
 import useStyles from './Error.styles'
 
 const Error: FC = () => {

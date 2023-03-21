@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import { Loader as MantineLoader, useMantineTheme } from '@mantine/core'
+import { FC } from 'react'
 
 const Loader: FC = () => {
   const theme = useMantineTheme()

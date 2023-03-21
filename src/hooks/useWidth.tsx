@@ -1,6 +1,5 @@
 // https://usehooks.com/useWidth/
-
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const useWidth = () => {
   const [windowSize, setWindowSize] = useState<{ width?: number }>({

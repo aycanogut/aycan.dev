@@ -1,11 +1,12 @@
-import { FC } from 'react'
-import dynamic from 'next/dynamic'
 import { Grid, Title } from '@mantine/core'
+import dynamic from 'next/dynamic'
+import { FC } from 'react'
 import useSWR from 'swr'
-import fetcher from '../../../lib/fetcher'
+
 import Layout from '../../../components/Layout/Layout'
 import Loader from '../../../components/Loader/Loader'
 import { IRepoProps } from '../../../interfaces/Repo.interface'
+import fetcher from '../../../lib/fetcher'
 
 const Repo = dynamic(() => import('../../../components/Repo/Repo'))
 const Error = dynamic(() => import('../../../components/Error/Error'))

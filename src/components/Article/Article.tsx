@@ -1,17 +1,18 @@
-import React, { FC } from 'react'
 import {
-  Card,
-  Badge,
-  useMantineTheme,
-  Text,
-  Group,
   Anchor,
+  Badge,
   Box,
+  Card,
+  Group,
+  Text,
+  useMantineTheme,
 } from '@mantine/core'
 import dayjs from 'dayjs'
+import React, { FC } from 'react'
 import { ExternalLink } from 'tabler-icons-react'
-import Transition from '../Transition/Transition'
+
 import { IArticleProps } from '../../interfaces/Article.interface'
+import Transition from '../Transition/Transition'
 import useStyles from './Article.styles'
 
 const Article: FC<IArticleProps> = ({ title, link, categories, pubDate }) => {

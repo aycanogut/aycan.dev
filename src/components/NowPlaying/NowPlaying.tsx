@@ -1,12 +1,12 @@
 // https://github.com/leerob/leerob.io/blob/main/components/NowPlaying.tsx
-
-import { FC, useEffect } from 'react'
-import Image from 'next/image'
 import { Box, Paper, Text } from '@mantine/core'
-import useSWR from 'swr'
 import { animate } from 'motion'
-import fetcher from '../../lib/fetcher'
+import Image from 'next/image'
+import { FC, useEffect } from 'react'
+import useSWR from 'swr'
+
 import { NowPlayingSong } from '../../interfaces/NowPlaying.type'
+import fetcher from '../../lib/fetcher'
 import useStyles from './NowPlaying.styles'
 
 const AnimatedBars = () => {
