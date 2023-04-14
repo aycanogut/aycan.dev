@@ -70,18 +70,7 @@ const About = () => {
           share my learnings with the rest of the world.
         </Text>
         <Text weight={500} my={20}>
-          Currently, I&apos;m working at&nbsp;
-          <Anchor
-            href="https://www.oplog.io"
-            target="_blank"
-            variant="link"
-            weight={700}
-            underline
-            transform="uppercase"
-          >
-            oplog
-          </Anchor>
-          &nbsp;as a front-end developer.
+          Currently, I&apos;m available to work in a remote environment.
         </Text>
         <Text weight={500} mt={20}>
           Along with pixel hunting, I enjoy skating, going to live music events,
