@@ -31,6 +31,9 @@ dependencies:
   '@next/bundle-analyzer':
     specifier: ^12.1.4
     version: 12.3.4
+  '@phntms/next-gtm':
+    specifier: ^0.1.0
+    version: 0.1.0(next@13.2.4)(react@18.2.0)
   '@vercel/analytics':
     specifier: ^0.1.9
     version: 0.1.11(react@18.2.0)
@@ -2708,6 +2711,25 @@ packages:
       mkdirp: 1.0.4
       rimraf: 3.0.2
     dev: true
+
+  /@phntms/next-gtm@0.1.0(next@13.2.4)(react@18.2.0):
+    resolution: {integrity: sha512-TfCpEVwFKRbp7gvJySuqEmedyh9T9IBg5kHexriJYD1GQ41GO/uU/8EnZGqSWH7+aJZ15FSco1jaN058KpCFPg==}
+    peerDependencies:
+      next: '>=11.0.1'
+      react: '>=17.0.2'
+    dependencies:
+      '@phntms/react-gtm': 0.1.1(react@18.2.0)
+      next: 13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@phntms/react-gtm@0.1.1(react@18.2.0):
+    resolution: {integrity: sha512-kZ5LRzvVe0eWFYLHPEhwrK939Z+NN8OETVIw9RQ6xsDie4vMj5i07kN5n2OepGnWlK6Z0Npm7e0QqoWKXTh4rw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@pmmmwh/react-refresh-webpack-plugin@0.5.10(react-refresh@0.11.0)(webpack@5.76.2):
     resolution: {integrity: sha512-j0Ya0hCFZPd4x40qLzbhGsh9TMtdb+CJQiso+WxLOPNasohq9cc5SNUcwsZaRH6++Xh91Xkm/xHCkuIiIu0LUA==}

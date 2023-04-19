@@ -4,17 +4,19 @@ import {
   MantineProvider,
 } from '@mantine/core'
 import { NotificationsProvider } from '@mantine/notifications'
+import { TrackingHeadScript } from '@phntms/next-gtm'
 import { Analytics } from '@vercel/analytics/react'
 import { setCookies } from 'cookies-next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
-import { useEffect, useState } from 'react'
-import TagManager, { TagManagerArgs } from 'react-gtm-module'
+import { useState } from 'react'
 
 import GlobalStyles from '../components/GlobalStyles/GlobalStyles'
 import Seo from '../components/Seo/Seo'
 import Spotlight from '../components/Spotlight/Spotlight'
+
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID || ''
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
@@ -28,16 +30,6 @@ export default function App(props: AppProps) {
     })
   }
 
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || ''
-
-  const tagManagerArgs: TagManagerArgs = {
-    gtmId,
-  }
-
-  useEffect(() => {
-    TagManager.initialize(tagManagerArgs)
-  }, [])
-
   return (
     <>
       <Head>
@@ -49,6 +41,7 @@ export default function App(props: AppProps) {
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <GoogleAnalytics trackPageViews />
+      <TrackingHeadScript id={GA_TRACKING_ID} />
       <Seo />
       <GlobalStyles />
       <ColorSchemeProvider
