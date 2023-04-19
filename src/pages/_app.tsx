@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { setCookies } from 'cookies-next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 import { useEffect, useState } from 'react'
 import TagManager, { TagManagerArgs } from 'react-gtm-module'
 
@@ -47,6 +48,7 @@ export default function App(props: AppProps) {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
+      <GoogleAnalytics trackPageViews />
       <Seo />
       <GlobalStyles />
       <ColorSchemeProvider
