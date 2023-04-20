@@ -4,10 +4,10 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import {
   AppWindow,
-  Article,
   Bookmarks,
   Home2,
   Moon,
+  Notes,
   Pacman,
   Search,
   Sun,
@@ -32,7 +32,7 @@ const Spotlight: FC<ISpotlightProps> = ({ children }) => {
     },
     {
       title: 'Articles',
-      icon: <Article />,
+      icon: <Notes />,
       url: '/articles',
     },
     {
