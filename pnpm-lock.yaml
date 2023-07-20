@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 overrides:
   '@types/react': 17.0.30
 
@@ -3622,6 +3626,7 @@ packages:
   /@storybook/react@6.5.5(@babel/core@7.17.8)(eslint@8.11.0)(react-dom@18.2.0)(react@18.2.0)(require-from-string@2.0.2)(typescript@4.6.3):
     resolution: {integrity: sha512-hWeYkEKm+vLxPb2iRWJtWiD3/9mWkPyA6ExUVvfkeZ+ygLByPI8MEl8JMQbZtsHySoOLypmgHzV4l4YhvLvdQw==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
     peerDependencies:
       '@babel/core': ^7.11.5
       '@storybook/builder-webpack4': '*'
@@ -5341,6 +5346,7 @@ packages:
 
   /bindings@1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     dev: true
@@ -7485,6 +7491,7 @@ packages:
 
   /file-uri-to-path@1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -7768,7 +7775,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -8934,6 +8941,7 @@ packages:
   /jest-cli@27.5.1:
     resolution: {integrity: sha512-Hc6HOOwYq4/74/c62dEE3r5elx8wjYqxY0r0G/nFrLDPMFRu6RA/u8qINOIkvhxG7mMQ5EJsOGfRpI8L6eFUVw==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    hasBin: true
     peerDependencies:
       node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
     peerDependenciesMeta:
@@ -9351,6 +9359,7 @@ packages:
   /jest@27.5.1:
     resolution: {integrity: sha512-Yn0mADZB89zTtjkPJEXwrac3LHudkQMR+Paqa8uxJHCBr9agxztUifWCyiYrjhMPBoUVBjyny0I7XH6ozDr7QQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    hasBin: true
     peerDependencies:
       node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
     peerDependenciesMeta:
@@ -10073,6 +10082,7 @@ packages:
 
   /nan@2.17.0:
     resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -10131,6 +10141,7 @@ packages:
   /next-sitemap@3.1.54(@next/env@13.3.0)(next@13.2.0):
     resolution: {integrity: sha512-/uzk8hjHU5o6ZelzkLt/LJw9MyFhRiz9VKIst9EhZfF1C/Bw4OCGzLmA+8ImUnTzSxFyuiWr6P1sjFJxKBhjAA==}
     engines: {node: '>=14.18'}
+    hasBin: true
     peerDependencies:
       '@next/env': '*'
       next: '*'
@@ -10144,6 +10155,7 @@ packages:
   /next@13.2.0(@babel/core@7.17.8)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-vhByvKHedsaMwNTwXKzK4IMmNp7XI7vN4etcGUoIpLrIuDfoYA3bS0ImS4X9F6lKzopG5aVp7a1CjuzF2NGkvA==}
     engines: {node: '>=14.6.0'}
+    hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.4.0
       fibers: '>= 3.1.0'
@@ -10479,7 +10491,7 @@ packages:
       levn: 0.3.0
       prelude-ls: 1.1.2
       type-check: 0.3.2
-      word-wrap: 1.2.3
+      word-wrap: 1.2.4
     dev: true
 
   /optionator@0.9.1:
@@ -10491,7 +10503,7 @@ packages:
       levn: 0.4.1
       prelude-ls: 1.2.1
       type-check: 0.4.0
-      word-wrap: 1.2.3
+      word-wrap: 1.2.4
     dev: true
 
   /os-browserify@0.3.0:
@@ -12715,6 +12727,7 @@ packages:
   /ts-jest@27.1.4(@babel/core@7.17.8)(@types/jest@27.4.1)(jest@27.5.1)(typescript@4.6.3):
     resolution: {integrity: sha512-qjkZlVPWVctAezwsOD1OPzbZ+k7zA5z3oxII4dGdZo5ggX/PL7kvwTM0pXTr10fAtbiVpJaL3bWd502zAhpgSQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+    hasBin: true
     peerDependencies:
       '@babel/core': '>=7.0.0-beta.0 <8'
       '@types/jest': ^27.0.0
@@ -13034,6 +13047,7 @@ packages:
 
   /update-browserslist-db@1.0.11(browserslist@4.21.5):
     resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==}
+    hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
@@ -13373,6 +13387,7 @@ packages:
   /webpack@4.46.0:
     resolution: {integrity: sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q==}
     engines: {node: '>=6.11.5'}
+    hasBin: true
     peerDependencies:
       webpack-cli: '*'
       webpack-command: '*'
@@ -13412,6 +13427,7 @@ packages:
   /webpack@5.80.0:
     resolution: {integrity: sha512-OIMiq37XK1rWO8mH9ssfFKZsXg4n6klTEDL7S8/HqbAOBBaiy8ABvXvz0dDCXeEF9gqwxSvVk611zFPjS8hJxA==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
     peerDependencies:
       webpack-cli: '*'
     peerDependenciesMeta:
@@ -13525,8 +13541,8 @@ packages:
       string-width: 4.2.3
     dev: true
 
-  /word-wrap@1.2.3:
-    resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
+  /word-wrap@1.2.4:
+    resolution: {integrity: sha512-2V81OA4ugVo5pRo46hAoD2ivUJx8jXmWXfUkY4KFNw0hEptvN0QfH3K4nHiwzGeKl5rFKedV48QVoqYavy4YpA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
