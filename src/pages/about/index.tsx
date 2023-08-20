@@ -70,7 +70,17 @@ const About = () => {
           share my learnings with the rest of the world.
         </Text>
         <Text weight={500} my={20}>
-          Currently, I&apos;m available to work in a remote environment.
+          Currently, I&apos;m working as a frontend developer at&nbsp;
+          <Anchor
+            href="https://90pixel.com/"
+            target="_blank"
+            variant="link"
+            weight={500}
+            underline
+          >
+            <strong>90Pixel</strong>
+          </Anchor>
+          .
         </Text>
         <Text weight={500} mt={20}>
           Along with pixel hunting, I enjoy skating, going to live music events,
