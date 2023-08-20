@@ -16,6 +16,27 @@ const Timeline = () => (
         <List center icon>
           <List.Item>
             <Text color="dimmed" size="sm">
+              - After some relaxed time, I&apos;m back to learning and working.
+            </Text>
+          </List.Item>
+          <List.Item>
+            <Text color="dimmed" size="sm">
+              - Joined a start-up specializing in education technologies.
+            </Text>
+          </List.Item>
+        </List>
+
+        <Text size="xs" mt={4}>
+          Now
+        </Text>
+      </MantineTimeline.Item>
+      <MantineTimeline.Item
+        bullet={<Circle size={48} strokeWidth={4} color="white" />}
+        title="Learning and growing"
+      >
+        <List center icon>
+          <List.Item>
+            <Text color="dimmed" size="sm">
               - Working to enhance and refine my JavaScript skills and
               abilities.
             </Text>
@@ -41,7 +62,7 @@ const Timeline = () => (
           </List.Item>
         </List>
         <Text size="xs" mt={4}>
-          Now
+          2022
         </Text>
       </MantineTimeline.Item>
       <MantineTimeline.Item
