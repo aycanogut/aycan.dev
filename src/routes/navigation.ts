@@ -18,6 +18,10 @@ export const navigation = [
     label: 'Bookmarks',
   },
   {
+    link: urls.Tools,
+    label: 'Tools',
+  },
+  {
     link: urls.Timeline,
     label: 'Timeline',
   },
