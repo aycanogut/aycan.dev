@@ -11,6 +11,8 @@ import {
   Pacman,
   Search,
   Sun,
+  Timeline,
+  Tool,
 } from 'tabler-icons-react'
 
 import { ISpotlightProps } from '../../interfaces/Spotlight.interface'
@@ -40,6 +42,17 @@ const Spotlight: FC<ISpotlightProps> = ({ children }) => {
       icon: <Bookmarks />,
       url: '/bookmarks',
     },
+    {
+      title: 'Tools',
+      icon: <Tool />,
+      url: '/tools',
+    },
+    {
+      title: 'Timeline',
+      icon: <Timeline />,
+      url: '/timeline',
+    },
+
     {
       title: 'About',
       icon: <Pacman />,
