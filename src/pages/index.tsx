@@ -14,7 +14,6 @@ import {
   Box,
   Group,
   Paper,
-  Stack,
   Text,
   Title,
   useMantineColorScheme,
@@ -128,7 +127,7 @@ const HomePage = () => {
             </Group>
           </Paper>
         </Group>
-        <Group direction="column" mt={60}>
+        {/* <Group direction="column" mt={60}>
           <Title order={2}>Latest Articles</Title>
           <Stack spacing="xs">
             {data &&
@@ -146,7 +145,7 @@ const HomePage = () => {
                 </Text>
               ))}
           </Stack>
-        </Group>
+        </Group> */}
       </Box>
     </Layout>
   )
