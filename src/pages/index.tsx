@@ -14,6 +14,7 @@ import {
   Box,
   Group,
   Paper,
+  Stack,
   Text,
   Title,
   useMantineColorScheme,
@@ -127,11 +128,11 @@ const HomePage = () => {
             </Group>
           </Paper>
         </Group>
-        {/* <Group direction="column" mt={60}>
-          <Title order={2}>Latest Articles</Title>
-          <Stack spacing="xs">
-            {data &&
-              data.items.slice(0, 6).map((article: IArticleProps) => (
+        {data && (
+          <Group direction="column" mt={60}>
+            <Title order={2}>Latest Articles</Title>
+            <Stack spacing="xs">
+              {data.items.slice(0, 6).map((article: IArticleProps) => (
                 <Text
                   key={article.title}
                   component="a"
@@ -144,8 +145,9 @@ const HomePage = () => {
                   {article.title}
                 </Text>
               ))}
-          </Stack>
-        </Group> */}
+            </Stack>
+          </Group>
+        )}
       </Box>
     </Layout>
   )

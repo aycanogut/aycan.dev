@@ -9,10 +9,10 @@ export const navigation = [
     link: urls.Projects,
     label: 'Projects',
   },
-  // {
-  //   link: urls.Articles,
-  //   label: 'Articles',
-  // },
+  {
+    link: urls.Articles,
+    label: 'Articles',
+  },
   {
     link: urls.Bookmarks,
     label: 'Bookmarks',
