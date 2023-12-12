@@ -128,11 +128,11 @@ const HomePage = () => {
             </Group>
           </Paper>
         </Group>
-        {data && (
+        {data.items?.length && (
           <Group direction="column" mt={60}>
             <Title order={2}>Latest Articles</Title>
             <Stack spacing="xs">
-              {data.items.slice(0, 6).map((article: IArticleProps) => (
+              {data.items?.slice(0, 6).map((article: IArticleProps) => (
                 <Text
                   key={article.title}
                   component="a"
