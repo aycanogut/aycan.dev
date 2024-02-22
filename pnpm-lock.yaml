@@ -61,7 +61,7 @@ dependencies:
     version: 5.11.1(next@13.5.1)(react-dom@18.2.0)(react@18.2.0)
   next-sitemap:
     specifier: ^3.1.54
-    version: 3.1.54(@next/env@13.3.0)(next@13.5.1)
+    version: 3.1.54(@next/env@13.5.1)(next@13.5.1)
   nextjs-google-analytics:
     specifier: ^2.3.3
     version: 2.3.3(next@13.5.1)(react@18.2.0)
@@ -2611,10 +2611,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@next/env@13.3.0:
-    resolution: {integrity: sha512-AjppRV4uG3No7L1plinoTQETH+j2F10TEnrMfzbTUYwze5sBUPveeeBAPZPm8OkJZ1epq9OyYKhZrvbD6/9HCQ==}
-    dev: false
-
   /@next/env@13.5.1:
     resolution: {integrity: sha512-CIMWiOTyflFn/GFx33iYXkgLSQsMQZV4jB91qaj/TfxGaGOXxn8C1j72TaUSPIyN7ziS/AYG46kGmnvuk1oOpg==}
     dev: false
@@ -3417,7 +3413,7 @@ packages:
       fs-extra: 9.1.0
       global: 4.4.0
       globby: 11.1.0
-      ip: 1.1.8
+      ip: 1.1.9
       lodash: 4.17.21
       node-fetch: 2.6.9
       open: 8.4.2
@@ -8514,8 +8510,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /ip@1.1.8:
-    resolution: {integrity: sha512-PuExPYUiu6qMBQb4l06ecm6T6ujzhmh+MeJcW9wa89PoAz5pvd4zPgN5WJV104mb6S2T1AwNIAaB70JNrLQWhg==}
+  /ip@1.1.9:
+    resolution: {integrity: sha512-cyRxvOEpNHNtchU3Ln9KC/auJgup87llfQpQ+t5ghoC/UhL16SWzbueiCsdTnWmqAWl7LadfuwhlqmtOaqMHdQ==}
     dev: true
 
   /ipaddr.js@1.9.1:
@@ -10214,7 +10210,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /next-sitemap@3.1.54(@next/env@13.3.0)(next@13.5.1):
+  /next-sitemap@3.1.54(@next/env@13.5.1)(next@13.5.1):
     resolution: {integrity: sha512-/uzk8hjHU5o6ZelzkLt/LJw9MyFhRiz9VKIst9EhZfF1C/Bw4OCGzLmA+8ImUnTzSxFyuiWr6P1sjFJxKBhjAA==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -10223,7 +10219,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.43
-      '@next/env': 13.3.0
+      '@next/env': 13.5.1
       minimist: 1.2.8
       next: 13.5.1(@babel/core@7.17.8)(react-dom@18.2.0)(react@18.2.0)
     dev: false
