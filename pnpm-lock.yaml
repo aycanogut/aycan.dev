@@ -3413,7 +3413,7 @@ packages:
       fs-extra: 9.1.0
       global: 4.4.0
       globby: 11.1.0
-      ip: 1.1.8
+      ip: 1.1.9
       lodash: 4.17.21
       node-fetch: 2.6.9
       open: 8.4.2
@@ -8510,8 +8510,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /ip@1.1.8:
-    resolution: {integrity: sha512-PuExPYUiu6qMBQb4l06ecm6T6ujzhmh+MeJcW9wa89PoAz5pvd4zPgN5WJV104mb6S2T1AwNIAaB70JNrLQWhg==}
+  /ip@1.1.9:
+    resolution: {integrity: sha512-cyRxvOEpNHNtchU3Ln9KC/auJgup87llfQpQ+t5ghoC/UhL16SWzbueiCsdTnWmqAWl7LadfuwhlqmtOaqMHdQ==}
     dev: true
 
   /ipaddr.js@1.9.1:
