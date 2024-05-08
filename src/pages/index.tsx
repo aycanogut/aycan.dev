@@ -32,16 +32,16 @@ import fetcher from '../lib/fetcher'
 const Error = dynamic(() => import('../components/Error/Error'))
 
 const HomePage = () => {
-  const { data, error } = useSWR<IArticleProps>(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut',
-    fetcher
-  )
+  // const { data, error } = useSWR<IArticleProps>(
+  //   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut',
+  //   fetcher
+  // )
 
   const { colorScheme } = useMantineColorScheme()
   const { width } = useWidth()
 
-  if (!data) return <Loader />
-  if (error) return <Error />
+  // if (!data) return <Loader />
+  // if (error) return <Error />
 
   return (
     <Layout>
@@ -128,7 +128,7 @@ const HomePage = () => {
             </Group>
           </Paper>
         </Group>
-        {data.items?.length && (
+        {/* {data.items?.length && (
           <Group direction="column" mt={60}>
             <Title order={2}>Latest Articles</Title>
             <Stack spacing="xs">
@@ -147,7 +147,7 @@ const HomePage = () => {
               ))}
             </Stack>
           </Group>
-        )}
+        )} */}
       </Box>
     </Layout>
   )
