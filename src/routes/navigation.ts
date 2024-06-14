@@ -13,10 +13,10 @@ export const navigation = [
   //   link: urls.Articles,
   //   label: 'Articles',
   // },
-  {
-    link: urls.Bookmarks,
-    label: 'Bookmarks',
-  },
+  // {
+  //   link: urls.Bookmarks,
+  //   label: 'Bookmarks',
+  // },
   {
     link: urls.Tools,
     label: 'Tools',
