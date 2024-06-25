@@ -14,35 +14,31 @@ import {
   Box,
   Group,
   Paper,
-  Stack,
   Text,
   Title,
-  useMantineColorScheme,
 } from '@mantine/core'
-import { log } from 'console'
-import dynamic from 'next/dynamic'
+
 import Link from 'next/link'
-import useSWR from 'swr'
+import { useEffect, useState } from 'react'
 
 import Layout from '../components/Layout/Layout'
 import Loader from '../components/Loader/Loader'
 import useWidth from '../hooks/useWidth'
-import { IArticleProps } from '../interfaces/Blog.interface'
-import fetcher from '../lib/fetcher'
-
-const Error = dynamic(() => import('../components/Error/Error'))
 
 const HomePage = () => {
-  // const { data, error } = useSWR<IArticleProps>(
-  //   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@aycanogut',
-  //   fetcher
-  // )
+  const [loading, setLoading] = useState(true)
 
-  const { colorScheme } = useMantineColorScheme()
   const { width } = useWidth()
 
-  // if (!data) return <Loader />
-  // if (error) return <Error />
+  useEffect(() => {
+    setLoading(true)
+
+    if (loading) {
+      setTimeout(() => setLoading(false), 250)
+    }
+  }, []);
+
+  if (loading) return <Loader />
 
   return (
     <Layout>
@@ -129,26 +125,6 @@ const HomePage = () => {
             </Group>
           </Paper>
         </Group>
-        {/* {data.items?.length && (
-          <Group direction="column" mt={60}>
-            <Title order={2}>Latest Articles</Title>
-            <Stack spacing="xs">
-              {data.items?.slice(0, 6).map((article: IArticleProps) => (
-                <Text
-                  key={article.title}
-                  component="a"
-                  href={article.link}
-                  target="_blank"
-                  color={colorScheme === 'dark' ? 'yellow' : 'dark'}
-                  weight={700}
-                  underline
-                >
-                  {article.title}
-                </Text>
-              ))}
-            </Stack>
-          </Group>
-        )} */}
       </Box>
     </Layout>
   )
