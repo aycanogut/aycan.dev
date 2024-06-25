@@ -61,7 +61,7 @@ dependencies:
     version: 5.11.1(next@14.1.1)(react-dom@18.2.0)(react@18.2.0)
   next-sitemap:
     specifier: ^3.1.54
-    version: 3.1.54(@next/env@13.5.1)(next@14.1.1)
+    version: 3.1.54(@next/env@14.1.1)(next@14.1.1)
   nextjs-google-analytics:
     specifier: ^2.3.3
     version: 2.3.3(next@14.1.1)(react@18.2.0)
@@ -2609,10 +2609,6 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
-    dev: false
-
-  /@next/env@13.5.1:
-    resolution: {integrity: sha512-CIMWiOTyflFn/GFx33iYXkgLSQsMQZV4jB91qaj/TfxGaGOXxn8C1j72TaUSPIyN7ziS/AYG46kGmnvuk1oOpg==}
     dev: false
 
   /@next/env@14.1.1:
@@ -9513,7 +9509,7 @@ packages:
       whatwg-encoding: 1.0.5
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
-      ws: 7.5.9
+      ws: 7.5.10
       xml-name-validator: 3.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -10221,7 +10217,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /next-sitemap@3.1.54(@next/env@13.5.1)(next@14.1.1):
+  /next-sitemap@3.1.54(@next/env@14.1.1)(next@14.1.1):
     resolution: {integrity: sha512-/uzk8hjHU5o6ZelzkLt/LJw9MyFhRiz9VKIst9EhZfF1C/Bw4OCGzLmA+8ImUnTzSxFyuiWr6P1sjFJxKBhjAA==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -10230,7 +10226,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.43
-      '@next/env': 13.5.1
+      '@next/env': 14.1.1
       minimist: 1.2.8
       next: 14.1.1(@babel/core@7.17.8)(react-dom@18.2.0)(react@18.2.0)
     dev: false
@@ -13423,7 +13419,7 @@ packages:
       lodash: 4.17.21
       opener: 1.5.2
       sirv: 1.0.19
-      ws: 7.5.9
+      ws: 7.5.10
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -13688,8 +13684,8 @@ packages:
       typedarray-to-buffer: 3.1.5
     dev: true
 
-  /ws@7.5.9:
-    resolution: {integrity: sha512-F+P9Jil7UiSKSkppIiD94dN07AwvFixvLIj1Og1Rl9GGMuNipJnV9JzjD6XuqmAeiswGvUmNLjr5cFuXwNS77Q==}
+  /ws@7.5.10:
+    resolution: {integrity: sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==}
     engines: {node: '>=8.3.0'}
     peerDependencies:
       bufferutil: ^4.0.1
