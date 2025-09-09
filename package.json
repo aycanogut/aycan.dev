@@ -38,7 +38,7 @@
     "dayjs": "^1.11.5",
     "framer-motion": "^7.10.3",
     "motion": "^10.15.5",
-    "next": "^15.2.4",
+    "next": "13.2.0",
     "next-seo": "^5.11.1",
     "next-sitemap": "^3.1.54",
     "nextjs-google-analytics": "^2.3.3",
@@ -47,7 +47,8 @@
     "react-dom": "18.2.0",
     "react-github-calendar": "^3.3.1",
     "swr": "^1.3.0",
-    "tabler-icons-react": "^1.48.0-dev.2"
+    "tabler-icons-react": "^1.48.0-dev.2",
+    "tslib": "^2.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
