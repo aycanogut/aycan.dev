@@ -1,15 +1,16 @@
+import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import astro from 'eslint-plugin-astro';
 import prettier from 'eslint-config-prettier';
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: ['dist/', '.astro/', 'node_modules/'],
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...astro.configs.recommended,
+  tseslint.configs.recommended,
+  astro.configs.recommended,
   {
     // Pass the TS parser as an imported module (not a bare string) so editor
     // integrations resolve it from the project root — under pnpm's strict

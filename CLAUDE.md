@@ -6,7 +6,7 @@ Personal portfolio site. Static, dark-only, type-led design.
 
 - **Astro 7** (`output: 'static'`) — no React, no client framework. Components are `.astro` files.
 - **Tailwind v4** via `@tailwindcss/vite`. Theme tokens live in [src/styles/global.css](src/styles/global.css) under `@theme`. There is no `tailwind.config` and no `@tailwindcss/typography`.
-- **GSAP** for scroll/reveal animations, driven from [src/scripts/animations.ts](src/scripts/animations.ts) via `data-*` attributes.
+- **Vanilla TypeScript** for animations (no animation library) — a hero name-decode and an `IntersectionObserver` scroll-reveal, driven from [src/scripts/animations.ts](src/scripts/animations.ts) via `data-*` attributes.
 - TypeScript (`astro/tsconfigs/strict`). Path alias `@/*` → `./src/*`.
 
 ## Project layout

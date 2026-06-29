@@ -25,5 +25,5 @@ pnpm-debug.log*
 !.vscode/extensions.json
 .idea/
 
-# vercel
-.vercel
+# netlify
+.netlify

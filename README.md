@@ -7,13 +7,13 @@ Personal portfolio of **Aycan Öğüt** — a minimal, type-led, single-page sit
 - [Astro](https://astro.build) (static output)
 - TypeScript (strict)
 - [Tailwind CSS v4](https://tailwindcss.com) (via `@tailwindcss/vite`)
-- [GSAP](https://gsap.com) for the name-decode + scroll-reveal animations
+- Vanilla TypeScript for animations — a hero name-decode + `IntersectionObserver` scroll-reveal (no animation library)
 - Self-hosted fonts (Fontsource): **Anton** (display), **DM Sans** (body), **JetBrains Mono** (labels)
 - `@astrojs/sitemap` for the sitemap, Google Analytics 4 for analytics
 
 ## Develop
 
-Requires Node `>= 22.12` (see `.nvmrc`).
+Requires Node `>= 22` (see `.nvmrc`).
 
 ```sh
 nvm use            # node 22
@@ -36,11 +36,12 @@ pnpm preview       # serve the production build
 
 ```
 src/
-  components/   Header · Hero · Projects · Contact
+  components/   Header · Hero · Projects · Contact · Analytics
   data/         site.ts · projects.ts
   layouts/      Layout.astro (head, SEO, OG, GA)
-  pages/        index.astro
-  scripts/      animations.ts (GSAP decode + ScrollTrigger)
+  pages/        index.astro · 404.astro
+  scripts/      animations.ts (name-decode + IntersectionObserver reveal)
   styles/       global.css (theme tokens, dot grid, keyframes)
-public/         favicon.svg · og.png · robots.txt
+public/         favicon.svg · favicon.ico · favicon-96x96.png · apple-touch-icon.png
+                site.webmanifest · web-app-manifest-{192,512}.png · og.png · robots.txt
 ```
