@@ -1,0 +1,82 @@
+---
+import { site, techStack } from '@/data/site';
+---
+
+<section
+  id="about"
+  class="px-5 pt-28 pb-18 sm:px-8 md:pt-36 md:pb-24 lg:px-16 lg:pt-40 lg:pb-28"
+>
+  <div class="mx-auto w-full max-w-site">
+    <!-- Eyebrow -->
+    <div data-reveal class="flex items-center gap-3">
+      <span class="inline-block size-2 bg-accent"></span>
+      <span class="font-mono text-sm font-medium tracking-label text-fg-3 uppercase">
+        {site.role} @{site.company}
+      </span>
+      <span class="blink h-[1.05em] w-[0.5em] align-[-0.12em]"></span>
+    </div>
+
+    <!-- Name (Anton, decoded on load) -->
+    <h1
+      data-reveal
+      data-decode
+      data-delay="60"
+      class="mt-6 font-display text-5xl leading-none text-ink uppercase sm:text-7xl md:mt-7 md:text-8xl lg:mt-8 lg:text-9xl"
+    >
+      {site.name}
+    </h1>
+
+    <!-- Bio -->
+    <p
+      data-reveal
+      data-delay="150"
+      class="mt-8 max-w-[60ch] text-lg leading-normal text-pretty text-fg-2 md:mt-10 md:text-xl lg:mt-11 lg:text-2xl"
+    >
+      I build <span class="text-ink">production interfaces</span> for the web — turning real
+      product needs into <span class="text-ink">fast, accessible experiences</span>, while <span
+        class="text-ink">open-sourcing my own work</span
+      > on the side. Focused on <span class="text-ink">performance, accessibility</span>,
+      and code that stays calm to maintain.
+    </p>
+
+    {
+      site.available && (
+        <div data-reveal data-delay="220" class="mt-7 md:mt-9 lg:mt-10">
+          <span class="inline-flex items-center gap-3">
+            <span class="size-2 bg-accent shadow-accent-ring" />
+            <span class="font-mono text-sm tracking-wider text-fg-3">
+              Open to interesting problems
+            </span>
+          </span>
+        </div>
+      )
+    }
+
+    <!-- Tech stack -->
+    <div data-reveal data-delay="120" class="mt-16 md:mt-20 lg:mt-24">
+      <div
+        class="mb-6 font-mono text-xs font-medium tracking-label text-fg-5 uppercase md:mb-7 lg:mb-8"
+      >
+        Tech Stack
+      </div>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(11.25rem,1fr))] gap-10">
+        {
+          techStack.map((group) => (
+            <div>
+              <div class="mb-4 font-mono text-xs font-medium tracking-label text-fg-5 uppercase">
+                {group.label}
+              </div>
+              <div class="flex flex-col gap-3">
+                {group.items.map((item) => (
+                  <span class="w-fit text-lg text-fg-1 transition-colors duration-200 hover:text-accent md:text-xl">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

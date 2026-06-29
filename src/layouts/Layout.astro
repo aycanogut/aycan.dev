@@ -1,0 +1,120 @@
+---
+import '@fontsource/anton/latin-400.css';
+import '@fontsource/anton/latin-ext-400.css';
+import '@fontsource-variable/dm-sans';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-500.css';
+import '@fontsource/jetbrains-mono/latin-ext-400.css';
+import '@fontsource/jetbrains-mono/latin-ext-500.css';
+import antonWoff2 from '@fontsource/anton/files/anton-latin-400-normal.woff2?url';
+import '@/styles/global.css';
+import { site, socials } from '@/data/site';
+import Analytics from '@/components/Analytics.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.title, description = site.description } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
+const ogImage = new URL('/og.png', Astro.site ?? site.url).href;
+const ogImageAlt = site.title;
+const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+
+const sameAs = socials.filter((s) => !s.href.startsWith('mailto:')).map((s) => s.href);
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${site.url}/#person`,
+      name: site.name,
+      jobTitle: site.role,
+      url: site.url,
+      email: `mailto:${site.email}`,
+      image: ogImage,
+      description: site.description,
+      worksFor: { '@type': 'Organization', name: site.company },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'İzmir',
+        addressCountry: 'TR',
+      },
+      sameAs,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site.url}/#website`,
+      name: site.title,
+      url: site.url,
+      author: { '@id': `${site.url}/#person` },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+    <link rel="preload" as="font" type="font/woff2" href={antonWoff2} crossorigin />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#0c0c0c" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+
+    <!-- Structured data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+      is:inline
+    />
+
+    {gaId && <Analytics gaId={gaId} />}
+  </head>
+  <body>
+    <a
+      href="#main"
+      class="sr-only rounded-xs bg-bg-alt px-4 py-2 font-mono text-sm text-ink no-underline focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-60 focus:outline-2 focus:outline-offset-2 focus:outline-accent"
+    >
+      Skip to content
+    </a>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,36 @@
+---
+import { site } from '@/data/site';
+
+const nav = [
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#work' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 border-b border-line-soft bg-bg/60 backdrop-blur-md"
+>
+  <div
+    class="mx-auto flex max-w-site items-center justify-between gap-6 px-5 py-4 sm:px-8 lg:px-16"
+  >
+    <a
+      href="#top"
+      class="rounded-xs font-sans text-base font-semibold text-ink no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+    >
+      {site.name}
+    </a>
+    <nav class="flex items-center gap-5 sm:gap-7">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class="rounded-xs font-sans text-sm font-medium text-fg-3 no-underline transition-colors duration-200 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { site } from '@/data/site';
+---
+
+<Layout title={`404 — ${site.name}`} description="Page not found.">
+  <main
+    id="main"
+    class="mx-auto flex min-h-screen max-w-site flex-col justify-center px-5 py-24 sm:px-8 lg:px-16"
+  >
+    <p class="font-mono text-sm tracking-label text-fg-4 uppercase">Error 404</p>
+    <h1 class="mt-6 font-display text-6xl leading-none text-ink uppercase md:text-8xl">
+      Lost the thread
+    </h1>
+    <p class="mt-6 max-w-[48ch] text-lg text-fg-2 md:text-xl">
+      This page doesn’t exist — it may have moved or never been here at all.
+    </p>
+    <a
+      href="/"
+      class="mt-10 inline-flex w-fit items-center gap-2 rounded-xs font-mono text-sm tracking-wide text-ink no-underline transition-colors duration-200 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+    >
+      <span aria-hidden="true">←</span> Back to home
+    </a>
+  </main>
+</Layout>

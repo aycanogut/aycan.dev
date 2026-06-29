@@ -1,0 +1,102 @@
+---
+import { clientProjects, personalProjects } from '@/data/projects';
+
+const pad2 = (n: number) => String(n + 1).padStart(2, '0');
+const hostOf = (url: string) => new URL(url).host.replace(/^www\./, '');
+
+const groups = [
+  { label: 'Client work', caption: 'Selected, in production', items: clientProjects },
+  { label: 'Personal', caption: 'Side & passion projects', items: personalProjects },
+];
+---
+
+<section id="work" class="scroll-mt-18 py-18 md:py-24 lg:py-28">
+  <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-16">
+    <!-- Section heading -->
+    <div data-reveal class="mb-5 flex items-center gap-4 md:mb-7 lg:mb-8">
+      <h2 class="font-mono text-xs font-medium tracking-label text-fg-3 uppercase">
+        Projects
+      </h2>
+      <span class="h-px flex-1 bg-line"></span>
+      <span class="font-mono text-xs tracking-wide text-fg-5">
+        Client &amp; personal
+      </span>
+    </div>
+
+    {
+      groups.map((group) => (
+        <div class="not-first:mt-10 md:not-first:mt-14 lg:not-first:mt-18">
+          {/* Sub-group heading */}
+          <div data-reveal class="mb-3 flex items-center gap-3.5 md:mb-4 lg:mb-5">
+            <h3 class="font-mono text-xs font-medium tracking-label text-fg-4 uppercase">
+              {group.label}
+            </h3>
+            <span class="h-px flex-1 bg-line-soft" />
+            <span class="font-mono text-xs tracking-wide text-fg-5">{group.caption}</span>
+          </div>
+
+          {/* Minimal, scannable list */}
+          <ul class="border-t border-line">
+            {group.items.map((project, i) => {
+              const baseRow =
+                'grid grid-cols-[2.125rem_1fr_auto] items-baseline gap-x-5 gap-y-1 border-b border-line px-1.5 py-3.5 no-underline md:py-4 lg:py-5';
+              // Interactivity (group hover + focus ring) only on real links, so
+              // non-clickable "Internal tool" rows stay visually static.
+              const linkRow =
+                'group transition-colors duration-200 hover:bg-bg-hover focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-accent';
+              const inner = (
+                <>
+                  <span class="relative font-mono text-sm tracking-wide text-fg-5 transition-colors duration-200 group-hover:text-accent">
+                    <span class="absolute top-[0.2em] -left-3 size-1.5 -translate-x-1 bg-accent opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
+                    {pad2(i)}
+                  </span>
+                  <span class="min-w-0">
+                    <span class="block text-xl leading-tight tracking-tight text-ink md:text-2xl lg:text-3xl">
+                      {project.title}
+                    </span>
+                    <span class="mt-1.5 block font-mono text-xs tracking-wide text-fg-5">
+                      {project.stack.join(' · ')}
+                    </span>
+                  </span>
+                  <span class="col-start-2 row-start-2 justify-self-end font-mono text-xs whitespace-nowrap text-fg-3 sm:col-start-3 sm:row-start-1 sm:self-baseline">
+                    {project.url ? (
+                      <span class="inline-flex items-center gap-1.5">
+                        {hostOf(project.url)}
+                        <span
+                          aria-hidden="true"
+                          class="text-sm transition-transform duration-200 group-hover:translate-x-0.5"
+                        >
+                          ↗
+                        </span>
+                        <span class="sr-only">(opens in a new tab)</span>
+                      </span>
+                    ) : (
+                      <span class="text-fg-5">Internal tool</span>
+                    )}
+                  </span>
+                </>
+              );
+
+              return (
+                <li>
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class={`${baseRow} ${linkRow}`}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <div class={`${baseRow} cursor-default`}>{inner}</div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

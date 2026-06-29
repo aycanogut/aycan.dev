@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import Projects from '@/components/Projects.astro';
+import Contact from '@/components/Contact.astro';
+---
+
+<Layout>
+  <div id="top" class="relative w-full overflow-x-hidden">
+    <Header />
+    <main id="main">
+      <Hero />
+      <Projects />
+      <Contact />
+    </main>
+  </div>
+</Layout>
+
+<script>
+  import '@/scripts/animations.ts';
+</script>

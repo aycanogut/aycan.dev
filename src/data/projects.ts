@@ -1,146 +1,71 @@
-// projects api data
+export interface Project {
+  /** Display name of the project. */
+  title: string;
+  /** Tech used, shown inline in the list. */
+  stack: string[];
+  /** Live URL. Omit (or undefined) for internal / not-public work. */
+  url?: string;
+}
 
-export const projects = [
+/**
+ * Client work, newest / most relevant first.
+ * A project without `url` is internal and renders as "Internal tool" (no link).
+ */
+export const clientProjects: Project[] = [
   {
-    id: 0,
-    title: 'aycan.dev',
-    description: 'Source code of my portfolio web app.',
-    stack: ['React.js', 'Next.js', 'TypeScript', 'Mantine'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/portfolio-next',
-        id: 1,
-      },
-      {
-        link: 'https://aycan.dev',
-        id: 2,
-      },
-    ],
+    title: 'Türkiye Bankalar Birliği',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Radix UI'],
+    url: 'https://egitim.tbb.org.tr/',
   },
   {
-    id: 1,
-    title: 'hef.com.tr',
-    description: 'HEF design and construction company website.',
-    stack: ['React.js', 'Next.js', 'TypeScript', 'Mantine'],
-    links: [
-      {
-        link: 'https://hef.com.tr',
-        id: 1,
-      },
-    ],
+    title: 'İSO Akademi',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit'],
+    url: 'https://isoakademi.com/',
   },
   {
-    id: 2,
-    title: 'Frontend Resources',
-    description:
-      'A comprehensive collection of resources for front-end development,.',
-    stack: ['docusaurus'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/front-end-resources',
-        id: 1,
-      },
-      {
-        link: 'https://fe-resources.vercel.app',
-        id: 2,
-      },
-    ],
+    title: 'Eskiz Eğitim ve Danışmanlık',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    url: 'https://eskizegitim.com/',
   },
   {
-    id: 3,
-    title: 'REST Countries API',
-    description:
-      'Solution to the REST Countries API with color theme switcher challenge on Frontend Mentor.',
-    stack: ['React.js', 'TypeScript', 'styled'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/fem-rest-countries-flag-api',
-        id: 1,
-      },
-      {
-        link: 'https://fem-rest-countries-flag-api.vercel.app/',
-        id: 2,
-      },
-    ],
+    title: 'TEGEP',
+    stack: ['Next.js', 'TypeScript', 'styled-components', 'Ant Design'],
+    // url temporarily removed — tegep.org's TLS certificate has expired and the
+    // browser shows a security interstitial. Restore once the cert is renewed.
+    // url: 'https://tegep.org/',
   },
   {
-    id: 4,
-    title: 'More E-Commerce',
-    description: 'React based e-commerce shopping platform with MockAPI.',
-    stack: ['React.js', 'SASS', 'Redux', 'Firebase'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/e-commerce-react',
-        id: 1,
-      },
-      {
-        link: 'https://more-shopping.netlify.app/',
-        id: 2,
-      },
-    ],
+    title: 'Logo Akademi',
+    stack: ['Next.js', 'styled-components', 'Sass', 'Ant Design'],
+    url: 'https://logoakademi.com.tr/',
   },
   {
-    id: 5,
-    title: 'Social Media Dashboard',
-    description: 'Responsive grid layout social media theme with theme switch.',
-    stack: ['JavaScript', 'SASS', 'gulp.js', 'cssnano'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/fem-social-media-dashboard',
-        id: 1,
-      },
-      {
-        link: 'https://fem-social-media-dashboard-fawn.vercel.app/',
-        id: 2,
-      },
-    ],
+    title: 'Öğretmen Akademisi Vakfı',
+    stack: ['Next.js', 'TypeScript', 'Mantine', 'Redux Toolkit'],
   },
   {
-    id: 6,
-    title: 'Etch-A Sketch',
-    description: 'A game project for The Odin Projcet task assigment.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/etch-a-sketch',
-        id: 1,
-      },
-      {
-        link: 'https://odin-project-curriculum.vercel.app/fundamentals/etch-a-sketch/index.html',
-        id: 2,
-      },
-    ],
+    title: 'Kamu İhale Kurumu',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Radix UI'],
+  },
+];
+
+/**
+ * Personal / passion projects, newest / most relevant first.
+ */
+export const personalProjects: Project[] = [
+  {
+    title: 'TOYZ Webzine',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Payload CMS'],
+    url: 'https://toyzwebzine.com',
   },
   {
-    id: 7,
-    title: 'Calculator',
-    description: 'Calculator project for The Odin Projcet task assigment.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/calculator',
-        id: 1,
-      },
-      {
-        link: 'https://odin-project-curriculum.vercel.app/fundamentals/calculator/index.html',
-        id: 2,
-      },
-    ],
+    title: 'Efe Karadağlı Portfolio',
+    stack: ['Astro', 'React', 'TypeScript', 'Tailwind CSS'],
+    url: 'https://efekaradagli.com',
   },
   {
-    id: 8,
-    title: 'Rock Paper Scissors',
-    description: 'A game project for The Odin Projcet task assigment.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    links: [
-      {
-        link: 'https://github.com/aycanogut/odin-project-curriculum/tree/main/fundamentals/rock-paper-scissors',
-        id: 1,
-      },
-      {
-        link: 'https://odin-project-curriculum.vercel.app/fundamentals/rock-paper-scissors',
-        id: 2,
-      },
-    ],
+    title: 'All Eyes on Masafer Yatta Website',
+    stack: ['Astro', 'Tailwind CSS'],
+    url: 'https://www.alleyesonmasaferyatta.com/',
   },
-]
+];
