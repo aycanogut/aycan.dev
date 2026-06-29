@@ -1,56 +1,46 @@
-## Overview
+# aycan.dev
 
-Portfolio web app built with Next, Mantine, and TypeScript.  
-Page contents provided by Github, Raindrop, and rss2json APIs.
+Personal portfolio of **Aycan Öğüt** — a minimal, type-led, single-page site.
 
-<br />
+## Stack
 
-![aycan.dev](https://user-images.githubusercontent.com/74212439/199970839-6f0ab4f3-c63a-4052-a05c-e8503d7943de.png)
+- [Astro](https://astro.build) (static output)
+- TypeScript (strict)
+- [Tailwind CSS v4](https://tailwindcss.com) (via `@tailwindcss/vite`)
+- [GSAP](https://gsap.com) for the name-decode + scroll-reveal animations
+- Self-hosted fonts (Fontsource): **Anton** (display), **DM Sans** (body), **JetBrains Mono** (labels)
+- `@astrojs/sitemap` for the sitemap, Google Analytics 4 for analytics
 
+## Develop
 
-## PageSpeed Metrics
+Requires Node `>= 22.12` (see `.nvmrc`).
 
-![Metrics](https://metrics.lecoq.io/metrics?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&pagespeed=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&pagespeed=false&pagespeed.url=https%3A%2F%2Faycan.dev&pagespeed.detailed=true&pagespeed.screenshot=false&pagespeed.pwa=false&config.timezone=Europe%2FIstanbul)
+```sh
+nvm use            # node 22
+pnpm install
+pnpm dev           # local dev server
+pnpm build         # type-check + static build to dist/
+pnpm preview       # serve the production build
+```
 
+## Configuration
 
-## npm scripts
+- Site content lives in `src/data/` — `site.ts` (identity, socials, tech stack) and
+  `projects.ts` (project list).
+- Analytics: set `PUBLIC_GA_MEASUREMENT_ID` in `.env` (see `.env.example`). The GA snippet
+  only renders when this is present.
+- Contact is a `mailto:info@aycan.dev` link. Forwarding `info@aycan.dev` to a real inbox is
+  configured at the email/DNS provider, not in this repo.
 
-### Build and dev scripts
+## Structure
 
-- `start` – start dev server
-- `build` – bundle application for production
-- `export` – exports static website to `out` folder
-- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
-
-<!--
-### Testing scripts
-
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
-
-### Other scripts
-
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
--->
-
-## Built with
-
-- [React](https://reactjs.org/)
-- [Next](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Mantine](https://mantine.dev/)
-- [SWR](https://swr.vercel.app/)
-- [Framer Motion](https://www.framer.com/motion/)
-
-## Author
-
-- [Github](https://github.com/aycanogut)
-- [LinkedIn](https://www.linkedin.com/in/aycanogut/)
-- [Twitter](https://www.twitter.com/bleedeleventh)
-- [Medium](https://medium.com/@aycanogut)
+```
+src/
+  components/   Header · Hero · Projects · Contact
+  data/         site.ts · projects.ts
+  layouts/      Layout.astro (head, SEO, OG, GA)
+  pages/        index.astro
+  scripts/      animations.ts (GSAP decode + ScrollTrigger)
+  styles/       global.css (theme tokens, dot grid, keyframes)
+public/         favicon.svg · og.png · robots.txt
+```
