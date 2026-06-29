@@ -1,0 +1,7 @@
+dist
+.astro
+node_modules
+pnpm-lock.yaml
+
+# prettier-plugin-astro can't parse the GA `define:vars` inline script (uses `arguments`)
+src/components/Analytics.astro
