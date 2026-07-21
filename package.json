@@ -25,7 +25,7 @@
     "@fontsource-variable/dm-sans": "^5.2.8",
     "@fontsource/anton": "^5.2.7",
     "@fontsource/jetbrains-mono": "^5.2.8",
-    "astro": "^7.0.3"
+    "astro": "^7.1.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
