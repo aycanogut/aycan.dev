@@ -63,9 +63,4 @@ export const personalProjects: Project[] = [
     stack: ['Astro', 'React', 'TypeScript', 'Tailwind CSS'],
     url: 'https://efekaradagli.com',
   },
-  {
-    title: 'All Eyes on Masafer Yatta Website',
-    stack: ['Astro', 'Tailwind CSS'],
-    url: 'https://www.alleyesonmasaferyatta.com/',
-  },
 ];
