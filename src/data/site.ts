@@ -29,6 +29,6 @@ export interface StackGroup {
 export const techStack: StackGroup[] = [
   { label: 'Languages', items: ['TypeScript', 'JavaScript', 'HTML & CSS'] },
   { label: 'Frameworks', items: ['Next.js', 'React', 'Astro'] },
-  { label: 'Styling & UI', items: ['Tailwind CSS', 'styled-components', 'Radix UI'] },
-  { label: 'Motion & Tooling', items: ['Framer Motion', 'Git', 'Figma'] },
+  { label: 'Styling & Motion', items: ['Tailwind CSS', 'Radix UI', 'Framer Motion'] },
+  { label: 'Tooling', items: ['Git', 'Figma', 'Claude'] },
 ];
