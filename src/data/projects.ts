@@ -30,9 +30,7 @@ export const clientProjects: Project[] = [
   {
     title: 'TEGEP',
     stack: ['Next.js', 'TypeScript', 'styled-components', 'Ant Design'],
-    // url temporarily removed — tegep.org's TLS certificate has expired and the
-    // browser shows a security interstitial. Restore once the cert is renewed.
-    // url: 'https://tegep.org/',
+    url: 'https://tegep.org/',
   },
   {
     title: 'Logo Akademi',
